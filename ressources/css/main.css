@@ -122,13 +122,16 @@ footer .colonnes {
 
 footer a {
     text-decoration: none;
+    color: #828282;
 }
 
 footer a:hover, a:visited:hover {
     color: #fff;
 }
 
-footer a:visited {
+footer a:visited, a:active {
     color: #828282;
 }
+
+
 /* Fin du pied de page */
