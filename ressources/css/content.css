@@ -1,0 +1,44 @@
+article .intro {
+    display : flex;
+    text-align: justify;
+    background-color: #505050;
+    padding: 10px 10px;
+    border-radius: 10px;
+}
+
+article .experience {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 40px 0px;
+}
+
+article .experience .titre {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px 25px;
+    border-radius: 10px 10px 0 0;
+    background-color: #c07cff;
+    width: 100%;
+    font-weight: bold;
+}
+
+article .experience .entreprise {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px 25px;
+    background-color: #dcc4f3;
+    color: #141414;
+    width: 100%;
+    font-weight: bold;
+}
+
+article .experience .info {
+    padding: 10px 25px;
+    border-radius: 0 0 10px 10px;
+    background-color: #dcc4f3;
+    color: #141414;
+    width: 100%;
+}

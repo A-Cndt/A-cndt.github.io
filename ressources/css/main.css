@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+IT+Moderna:wght@100..400&display=swap');
+@media screen and (max-width: 640px) {
+    body .page {
+        margin: 10px;
+    }
+    
+    nav .onglets {
+        display: none;
+    }
+
+    header {
+        margin-top: 20px;
+        background-size: 250px 250px;
+    }
+    
+    header h1 {
+        font-size: 10px;
+        padding: 100px;
+    }
+}
+
+body {
+    font-family: "Playwrite IT Moderna", serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    background-color: #141414;
+    color: #fff;
+    margin: 0;
+    padding: 0; 
+}
+
+body .page {
+    margin: 20px 80px;
+}
+
+/* Barre de navigation*/
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    background-color: #141414;
+    padding: 10px 0px;
+}
+
+nav .onglets {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5px;
+}
+
+nav .onglets a {
+    margin-right: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+}
+
+nav .onglets a:hover {
+    color: #f54266;
+}
+
+nav .buttons button {
+    font-family: "Playwrite IT Moderna", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    padding: 13px 20px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+
+nav .buttons .contact {
+    background-color: #f54266;
+    margin-right: 10px;
+    color: #fff
+}
+
+nav .buttons .contact:hover {
+    background-color: #fff;
+    margin-right: 10px;
+    color: #141414
+}
+/* Fin de barre de nav*/
+
+/* Partie Header */
+header {
+    margin-top: 25px;
+    background:url('https://i.pinimg.com/originals/87/ba/e7/87bae7e17cbef8f6be1d19f0962e0983.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+}
+header h1 {
+    text-align: center;
+    font-size: 60px;
+    padding: 500px 0px;
+}
+header p  {
+    text-align: center;
+    font-size: 30px;
+}
+/* Fin de la partie Header */
+
+/* Pied de page */
+footer {
+    background-color: #1a1a1a;
+    padding: 25px 100px;
+    color: #828282
+}
+
+footer .colonnes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer a:hover, a:visited:hover {
+    color: #fff;
+}
+
+footer a:visited {
+    color: #828282;
+}
+/* Fin du pied de page */
