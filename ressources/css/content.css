@@ -28,7 +28,7 @@ article .experience .entreprise {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 10px 25px;
+    padding: 10px 25px 0px;
     background-color: #dcc4f3;
     color: #141414;
     width: 100%;
@@ -36,7 +36,7 @@ article .experience .entreprise {
 }
 
 article .experience .info {
-    padding: 10px 25px;
+    padding: 0px 25px;
     border-radius: 0 0 10px 10px;
     background-color: #dcc4f3;
     color: #141414;
