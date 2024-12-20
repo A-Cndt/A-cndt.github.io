@@ -135,7 +135,7 @@ footer a:visited, a:active {
 
 /* Fin du pied de page */
 
-.simple_text {
+header .simple_text {
     font-size: 24px;
     text-align: justify;
     background-color: rgba(250, 250, 250, 0.25);
