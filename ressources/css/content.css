@@ -26,7 +26,7 @@ article .experience .titre {
     padding: 10px 25px;
     border-radius: 10px 10px 0 0;
     background-color: #c07cff;
-    width: max-content;
+    width: 100vw;
     font-weight: bold;
 }
 
