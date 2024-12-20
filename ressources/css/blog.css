@@ -1,0 +1,76 @@
+body {
+    background:url('https://images3.alphacoders.com/135/thumb-1920-1354186.jpeg');
+    background-repeat: repeat;
+    background-size: cover;
+    height:100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.article {
+    display: grid;
+    grid-template-columns: 200px auto auto;
+    grid-auto-rows: 62.5px auto 50px;
+    color: #fff;
+    background-color: #1a1a1a;
+    border-radius: 25px;
+    margin: 40px 10px;
+    padding-right: 10px;
+}
+
+.article:hover {
+    outline: 2px solid #f54266;
+}
+
+.article img {
+    grid-column: 1;
+    grid-row: 2 / 3;
+    border: none;
+    outline: none;
+    padding: 10px 10px;
+    border-radius: 10px;
+}
+
+.article .titre {
+    grid-column: 2;
+    grid-row: 1;
+    margin-left: 10px;
+    padding: 0px 10px;
+    font-weight: bold;
+    background-color: #f54266;
+    border-radius: 10px;
+    width: fit-content;
+}
+
+.article .titre:focus {
+    background-color: #141414;
+}
+
+.article .date {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.article .resume {
+    grid-column: 2;
+    grid-row: 2;
+    margin-left: 10px;
+    padding-left: 10px;
+}
+
+button {
+    grid-column: 3;
+    grid-row: 3;
+    font-family: "Playwrite IT Moderna", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    padding: 13px 20px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    background-color: #f54266;
+}

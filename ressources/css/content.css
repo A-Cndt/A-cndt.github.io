@@ -1,3 +1,9 @@
+body {
+    background:url('https://images3.alphacoders.com/135/thumb-1920-1354186.jpeg');
+    background-repeat: repeat;
+    background-size: auto;
+}
+
 article .intro {
     display : flex;
     text-align: justify;
@@ -20,7 +26,7 @@ article .experience .titre {
     padding: 10px 25px;
     border-radius: 10px 10px 0 0;
     background-color: #c07cff;
-    width: 100%;
+    width: max-content;
     font-weight: bold;
 }
 
@@ -41,4 +47,14 @@ article .experience .info {
     background-color: #dcc4f3;
     color: #141414;
     width: 100%;
+}
+
+article .entreprise a, a:visited{
+    text-decoration: none;
+    color: #141414;
+}
+
+article .entreprise a:hover {
+    text-decoration: none;
+    color: #fff;
 }
