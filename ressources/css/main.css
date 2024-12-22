@@ -78,13 +78,25 @@ nav .buttons button {
 nav .buttons .contact {
     background-color: #f54266;
     margin-right: 10px;
-    color: #fff
+    color: #fff;
+}
+
+nav .buttons .tipee {
+    background-color: #141414;
+    margin-right: 10px;
+    color: #fff;
 }
 
 nav .buttons .contact:hover {
     background-color: #fff;
     margin-right: 10px;
     color: #141414
+}
+
+nav .buttons .tipee:hover {
+    background-color: #fff;
+    margin-right: 10px;
+    color: #141414;
 }
 /* Fin de barre de nav*/
 
