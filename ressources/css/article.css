@@ -1,0 +1,41 @@
+body {
+    background:url('https://images3.alphacoders.com/135/thumb-1920-1354186.jpeg');
+    background-repeat: repeat;
+    background-size: cover;
+    height:100%;
+}
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.content a:hover {
+    color: #f54266;
+}
+
+.article .content {
+    grid-row: 2;
+    grid-column: 1;
+    background-color: #141414;
+    border-radius: 25px;
+}
+
+.article .titre {
+    grid-column: 1;
+    grid-row: 1;
+    margin-left: 10px;
+    padding: 0px 10px;
+    font-weight: bold;
+    background-color: #f54266;
+    border-radius: 10px;
+    width: fit-content;
+}
+
+.article .main_img {
+    display: block;
+    margin: auto;
+    width: 400px;
+    align-items: center;
+    border-radius: 25px;
+    border: 2px solid #000;
+}
