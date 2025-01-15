@@ -19,13 +19,19 @@ article .experience {
     margin: 40px 0px;
 }
 
+article img {
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+}
+
 article .experience .titre {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 10px 25px;
     border-radius: 10px 10px 0 0;
-    background-color: #c07cff;
+    background-color: #f54266;
     width: 100vw;
     font-weight: bold;
 }
@@ -35,26 +41,27 @@ article .experience .entreprise {
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 10px 25px 0px;
-    background-color: #dcc4f3;
-    color: #141414;
+    background-color: #141414;
+    color: #fff;
     width: 100%;
     font-weight: bold;
 }
 
 article .experience .info {
+    margin-top: -20px;
     padding: 0px 25px;
     border-radius: 0 0 10px 10px;
-    background-color: #dcc4f3;
-    color: #141414;
+    background-color: #141414;
+    color: #fff;
     width: 100%;
 }
 
 article .entreprise a, a:visited{
     text-decoration: none;
-    color: #141414;
+    color: #fff;
 }
 
 article .entreprise a:hover {
     text-decoration: none;
-    color: #fff;
+    color: #f54266;
 }
