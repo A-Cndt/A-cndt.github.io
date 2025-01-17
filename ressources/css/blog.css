@@ -1,7 +1,6 @@
 body {
     background:url('https://images3.alphacoders.com/135/thumb-1920-1354186.jpeg');
     background-repeat: repeat;
-    background-size: cover;
     height:100%;
 }
 
@@ -31,6 +30,7 @@ a {
     outline: none;
     padding: 10px 10px;
     border-radius: 10px;
+    height: auto;
 }
 
 .article .titre {
@@ -58,6 +58,10 @@ a {
     grid-row: 2;
     margin-left: 10px;
     padding-left: 10px;
+    text-align: justify;
+    padding-right: 10px;
+    margin-right: 5px;
+    border-right: #fff 1px solid;
 }
 
 button {
@@ -73,4 +77,76 @@ button {
     cursor: pointer;
     outline: none;
     background-color: #f54266;
+}
+
+.tags {
+    width: 250px;
+    display: flex;
+    flex-wrap: wrap; /* Permet de faire sauter les tags à la ligne si nécessaire */
+    grid-column: 3; /* Place les tags sur la colonne 3 */
+    grid-row: 2; /* Place les tags sur la deuxième ligne */
+    justify-content: flex-start; /* Aligne les tags à gauche */
+    gap: 1px; /* Espacement entre les tags */
+    height: fit-content;
+    
+}
+
+.item {
+    display: inline-flex;
+    background-color: rgb(136, 59, 236);
+    border-radius: 10px;
+    padding: 5px;
+    margin: 2px; /* Ajoute un petit espacement entre les tags */
+    font-size: 14px; /* Ajuste la taille du texte pour une meilleure lisibilité */
+    height: min-content; /* Empêche l'extension du fond sur toute la hauteur */
+}
+
+.tags-filter {
+    display: block;
+    flex-wrap: nowrap;
+    text-align: justify;
+    justify-content: space-around;
+    background-color: rgb(136, 59, 236, 0.5);
+    padding: 0px 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.pagination {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.pagination button {
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.pagination button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.pagination #pageNumber {
+    font-size: 16px;
+    margin: 0 10px;
+    background-color: #141414;
+    padding: 10px;
+    border-radius: 50px;
+}
+
+.soustitre {
+    display: block;
+    margin-left : 5px;
+    background-color: rgb(136, 59, 236);
+    border-radius: 50px;
+    padding: 5px;
+    font-size: 14px;
+    text-align: center;
+    justify-content: center;
+}
+
+.hide {
+    display: none;
 }

@@ -155,3 +155,11 @@ header .simple_text {
     padding: 5px 20px;
     border-radius: 25px;
 }
+
+embed {
+    display: flex;
+    margin:auto;
+    align-items: center;
+    width: 500px;
+    height: 500px;
+}
