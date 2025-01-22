@@ -1,12 +1,14 @@
+/* Style par défaut pour toutes les tailles d'écran */
 body {
-    background:url('https://images3.alphacoders.com/135/thumb-1920-1354186.jpeg');
+    background: url('https://images3.alphacoders.com/135/thumb-1920-1354186.jpeg');
     background-repeat: repeat;
     background-size: cover;
 }
 
 .page {
-    height:100vh;
+    height: 100vh;
 }
+
 .formulaire {
     display: flex;
     flex-wrap: wrap;
@@ -22,7 +24,8 @@ body {
 .formulaire h1 {
     justify-content: center;
 }
-.formulaire ul{
+
+.formulaire ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -38,7 +41,8 @@ body {
     text-align: justify;
 }
 
-.formulaire input, textarea {
+.formulaire input,
+.formulaire textarea {
     width: 300px;
     box-sizing: border-box;
     border: 1px solid #000;
@@ -69,7 +73,6 @@ body {
     color: #141414;
 }
 
-
 .message_info {
     text-align: justify;
     background-color: rgba(250, 250, 250, 0.7);
@@ -79,4 +82,48 @@ body {
     border-radius: 25px;
     color: #141414;
     width: 25vw;
+}
+
+/* Styles pour les écrans de petite largeur (smartphones) */
+@media screen and (max-width: 640px) {
+    body {
+        background-size: cover;
+        height: auto;
+        margin: 0;
+        padding: 0;
+    }
+
+    .formulaire {
+        width: 90%; /* Utilise presque toute la largeur de l'écran */
+        padding: 15px;
+        margin: 20px auto;
+    }
+
+    .formulaire h1 {
+        font-size: 24px;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .formulaire label {
+        width: 100%; /* Fait en sorte que le label occupe toute la largeur */
+        text-align: left;
+        margin-bottom: 5px;
+    }
+
+    .formulaire input,
+    .formulaire textarea {
+        width: 100%; /* Utilise toute la largeur disponible */
+        margin-bottom: 10px;
+    }
+
+    .formulaire button {
+        width: 100%; /* Le bouton prend toute la largeur */
+        margin-top: 20px;
+    }
+
+    .message_info {
+        width: 100%; /* Le message prend toute la largeur de l'écran */
+        font-size: 14px; /* Ajuste la taille de la police pour les petits écrans */
+    }
 }
