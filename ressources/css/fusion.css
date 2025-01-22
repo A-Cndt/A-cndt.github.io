@@ -1,0 +1,116 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000;
+    margin: 0;
+    overflow: hidden;
+}
+
+.fusion-container {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.noyau {
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    background-image: url("../imgs/animations/hydrogen.png");
+    background-size: cover;
+    animation: deplacement1 4s ease-in forwards infinite;
+}
+
+.noyau2 {
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    background-image: url("../imgs/animations/hydrogen.png");
+    background-size: cover;
+    animation: deplacement2 4s ease-in forwards infinite;
+}
+
+.helium {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background-image: url("../imgs/animations/helium.png");
+    background-size: cover;
+    opacity: 0;
+    animation: fusion 4s infinite;
+    animation-delay: 2s;
+}
+
+@keyframes deplacement1 {
+    0% {
+        transform: translateX(-150px);
+    }
+    50% {
+        transform: translateX(0px);
+    }
+    51% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(0)
+    }
+}
+
+@keyframes deplacement2 {
+    0% {
+        transform: translateX(150px);
+    }
+    50% {
+        transform: translateX(0px);
+    }
+    51% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(0)
+    }
+}
+
+@keyframes fusion {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    10% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    30% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.lumiere {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 2px solid #ff0;
+    opacity: 0;
+    animation: emissionLumiere 4s infinite;
+    animation-delay: 2s;
+    pointer-events: none;
+}
+
+@keyframes emissionLumiere {
+    0% {
+        opacity: 0.8;
+        transform: scale(0.1);
+    }
+    100% {
+        opacity: 0.8;
+        transform: scale(3);
+    }
+}
