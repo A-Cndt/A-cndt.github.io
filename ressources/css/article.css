@@ -1,9 +1,10 @@
 body {
-    background:url('https://images3.alphacoders.com/135/thumb-1920-1354186.jpeg');
+    background: url('https://images3.alphacoders.com/135/thumb-1920-1354186.jpeg');
     background-repeat: repeat;
-    height:100%;
-    text-align: justify
+    height: 100%;
+    text-align: justify;
 }
+
 a {
     text-decoration: none;
     color: #fff;
@@ -18,7 +19,7 @@ a {
     grid-column: 1;
     background-color: #141414;
     border-radius: 25px;
-    padding : 15px;
+    padding: 15px;
 }
 
 .article .titre {
@@ -35,7 +36,8 @@ a {
 .article .main_img {
     display: block;
     margin: auto;
-    width: 400px;
+    width: 100%; /* Adapte l'image à la largeur de l'écran */
+    max-width: 400px;
     align-items: center;
     border-radius: 25px;
     border: 2px solid #000;
@@ -45,7 +47,8 @@ a {
 .imgdesc {
     display: block;
     margin: auto;
-    width: 400px;
+    width: 100%; /* Adapte la largeur */
+    max-width: 400px;
     align-items: center;
     text-align: center;
     font-style: italic;
@@ -58,7 +61,7 @@ a {
     grid-column: 1;
     background-color: #141414;
     border-radius: 25px;
-    padding : 15px;
+    padding: 15px;
 }
 
 .section h2 {
@@ -72,8 +75,8 @@ a {
     background-color: #505050;
     border-radius: 25px;
     padding: 10px;
-    margin-top : 10px;
-    width:fit-content;
+    margin-top: 10px;
+    width: fit-content;
 }
 
 button {
@@ -127,4 +130,42 @@ button {
 
 .source-container a:focus {
     outline: 2px solid #f54266;
+}
+
+/* Responsive styles for smartphones */
+@media screen and (max-width: 768px) {
+    body {
+        background-size: cover;
+        text-align: left;
+        padding: 10px; /* Ajoute des marges internes pour éviter que le contenu touche les bords */
+    }
+
+    .article .main_img, .imgdesc {
+        width: 100%;
+        max-width: 100%; /* S'assure qu'elle occupe toute la largeur */
+    }
+
+    .article .resume, .content div {
+        padding: 10px; /* Réduit les marges pour un meilleur affichage sur mobile */
+        font-size: 14px;
+    }
+
+    .article .titre {
+        font-size: 18px;
+        margin: 10px 0;
+    }
+
+    button {
+        width: 100%; /* Boutons s'étendent sur toute la largeur */
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .section h2 {
+        font-size: 20px;
+    }
+
+    .source-container {
+        font-size: 12px;
+    }
 }
