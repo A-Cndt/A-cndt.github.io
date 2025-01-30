@@ -169,3 +169,30 @@ button {
         font-size: 12px;
     }
 }
+
+.item {
+    padding: 5px;
+    background-color: #f5426669;
+    border-radius: 5px;
+}
+
+li {
+    margin-left: 20px;
+}
+
+ul.item {
+    background: local;
+    background-color: #141414;
+}
+
+.block_imgs {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.block_img {
+    max-width: 400px;
+    max-height: 200px;
+}
