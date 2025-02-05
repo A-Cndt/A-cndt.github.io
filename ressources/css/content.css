@@ -65,3 +65,18 @@ article .entreprise a:hover {
     text-decoration: none;
     color: #f54266;
 }
+
+button {
+    font-family: "Playwrite IT Moderna", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    padding: 13px 20px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    background-color: #f54266;
+    margin-right: 10px;
+    color: #fff;
+}
