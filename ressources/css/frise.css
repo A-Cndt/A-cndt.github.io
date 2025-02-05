@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+  display: none; /* Cache la barre de défilement */
+}
+
 body {
     border: none;
     font-family: Arial, sans-serif;
