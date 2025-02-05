@@ -91,3 +91,27 @@ button {
     margin-right: 10px;
     color: #fff;
 }
+
+.info a, a:visited{
+    text-decoration: none;
+    color: #fff;
+}
+
+.info a:hover {
+    text-decoration: none;
+    color: #f54266;
+}
+
+h2 {
+    background-color: #141414;
+}
+
+embed.frise {
+    background: none;
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre portée légère */
+    padding: 10px;
+    background-color: #141414; /* Fond blanc */
+    width: 90%; /* S'assure que l'élément n'outrepasse pas la largeur */
+    height: 250px;
+}
