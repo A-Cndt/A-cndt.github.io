@@ -170,4 +170,5 @@ embed {
     justify-content: center;
     flex-wrap: nowrap;
     align-items: center;
+    width: 100%;
 }
