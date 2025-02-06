@@ -4,15 +4,13 @@
     box-sizing: border-box;
 }
 
-::-webkit-scrollbar {
-  display: none; /* Cache la barre de défilement */
-}
 
 body {
     border: none;
     font-family: Arial, sans-serif;
     background-color: #141414;
     padding: 20px;
+    overflow-y: hidden;
 }
 
 .timeline {
@@ -23,6 +21,7 @@ body {
     flex-direction: row;
     justify-content: space-evenly;
 }
+
 
 .event {
     display: flex;
