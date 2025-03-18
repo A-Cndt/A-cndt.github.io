@@ -3,375 +3,405 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Alexandre Condette - CV</title>
-        <link rel="stylesheet" href="../../ressources/css/main.css">
-        <link rel="stylesheet" href="../../ressources/css/content.css">
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1271682525986890"
-     crossorigin="anonymous"></script>
+        <meta name="google-adsense-account" content="ca-pub-1271682525986890">
+        <meta name="keywords" content="CV, ingénieur, aérospatial, développeur, astronomie, science, espace, exploration, spatiale, télescope, missions, planètes, mars, lune, technologies, astrophysique, blog">
+        <meta name="description" content="Découvrez le CV en ligne d'un ingénieur aérospatial passionné d'astronomie et d'innovations spatiales. Suivez mon blog sur les dernières avancées en ingénierie aérospatiale et les découvertes en astronomie.">
+        <meta name="author" content="Alexandre Condette">
+        <meta name="robots" content="index, follow">
+        <link rel="canonical" href="https://a-cndt.github.io">
+    
+        <!-- Open Graph meta tags for social media engagement -->
+        <meta property="og:title" content="CV et Blog d'Ingénieur Aérospatial Passionné d'Astronomie">
+        <meta property="og:description" content="Explorez mon CV en ligne et lisez mon blog sur l'astronomie et l'ingénierie aérospatiale. Découvrez mes projets professionnels et mes passions pour l'espace.">
+        <meta property="og:image" content="https://api.tipeee.com/cache/20250203101139/media/200/200/zoom/2484611/2025020367a0884bee3c7.jpeg">
+        <meta property="og:url" content="https://a-cndt.github.io">
+        <meta property="og:type" content="website">
+        <meta property="og:locale" content="fr_FR">
+    
+        <!-- Twitter Card meta tags -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="CV et Blog d'Ingénieur Aérospatial Passionné d'Astronomie">
+        <meta name="twitter:description" content="Explorez mon CV en ligne et lisez mon blog sur l'astronomie et l'ingénierie aérospatiale. Découvrez mes projets professionnels et mes passions pour l'espace.">
+        <meta name="twitter:image" content="https://api.tipeee.com/cache/20250203101139/media/200/200/zoom/2484611/2025020367a0884bee3c7.jpeg">
+    
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <link rel="icon" href="favicon.png" sizes="32x32">
+        <link rel="apple-touch-icon" href="apple-icon.png">
+        <link rel="preload" href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;700&display=swap" as="style">
+        <title>Expériences Professionnelles</title>
+    
+        <link rel="stylesheet" href="../../ressources/css/exp_pro.css">
+        <script src="../../ressources/js/load_html.js"></script>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1271682525986890" crossorigin="anonymous"></script>
+        <script src="../../ressources/js/toggle_resume.js"></script>
     </head>
-    <body>
-        <section class="page">
-            <!-- Barre de navigation -->
-            <nav>
-                <div class="onglets">
-                    <a href="../../index.html">Accueil</a>
-                    <a href="./exp_pro.html">Expériences professionnelles</a>
-                    <a href="./formation.html">Formation</a>
-                    <a href="./blog.html">Blog</a>
-                </div>
-                <div class="buttons">
-                    <a href="https://fr.tipeee.com/alexinthecosmos/"><button class="tipee" target="_blank">Me soutenir</button></a>
-                    <a href=./contact.html><button class="contact">Me contacter</button></a>
-                </div>
-            </nav>
-            <!-- Fin barre de navigation -->
-            <!-- Contenu -->
-            <article>
-                <p class="intro">
-                    Ingénieur d'études et développement logiciel chez Thalès Services Numériques depuis Février 2025, je travaille actuellement pour le compte du CNES, sur les projets de ballons. <br>
-                    Parallèlement, j'ai été enseignant vacataire à l'IPSA de Toulouse de octobre 2022 à Janvier 2024, où je dispensais des cours en électronique numérique (pour les étudiants de 2e année de cycle préparatoire intégré) et en bases de données (pour les étudiants de 1re année du cycle ingénieur). <br>
-                    Diplômé ingénieur de l'IPSA (promotion 2020), j'ai choisi l'option "Systèmes embarqués" avec la majeure "Espace, Lanceurs et Satellites". J'ai également été major de la promotion ELSS. <br>
-                    Durant ma spécialisation, j'ai acquis des compétences solides en programmation (Python, Matlab, C/C++) et me suis initié à des domaines variés comme l'astrophysique, la mécanique spatiale et la détection d'exoplanètes par photométrie. <br>
-                    J'ai également de bonnes connaissances en optique géométrique et ondulatoire appliquées au spatial, ainsi qu’en électronique (analogique et numérique), en systèmes embarqués et en bases de données SQL.
-                </p>
+    
+    <body>       
+        <!-- Barre de navigation --> 
+        <nav>
+            <div id="navbar"></div>
+        </nav>
 
-		<h1>Résumé de mes expériences</h1>
-                <embed class="frise" src="../animations/frise.html">
+        <!-- Contenu de la page -->
+        <main class="page">
+            <section class="intro" id="intro">
+                <h1>Qui suis-je ?</h1>
+                <p>Actuellement ingénieur d'études et développement logiciel chez <a href="https://www.thalesgroup.com/fr" target="_blank" title="Visiter Thales Services Numériques">Thales Services Numériques</a> depuis février 2025, je contribue aux projets de ballons pour le <a href="https://cnes.fr" target="_blank" title="Visiter le CNES">CNES</a>, avec une spécialisation dans la partie contrôle-commande.</p>
+                <p>En parallèle de mon activité professionnelle, je suis secrétaire de l'association <a href="https://tml.celescope.fr/" target="_blank" title="Visiter Célescope">Célescope</a>. Cette association a pour objectif de développer un télescope automatisé aux antipodes de la France, permettant ainsi une observation continue, de jour comme de nuit, grâce à deux télescopes situés respectivement en France et aux antipodes.</p>
+                <p>Diplômé ingénieur de l'<a href="https://www.ipsa.fr" target="_blank" title="Visiter l'IPSA">IPSA</a> (promotion 2020) avec une spécialisation en "Systèmes embarqués" et une majeure en "Espace, Lanceurs et Satellites", j'ai également été major de la promotion ELSS.</p>
+                <p>Mon parcours m'a permis d'acquérir de solides compétences en développement logiciel, en particulier avec les langages <a href="https://en.wikipedia.org/wiki/C_(programming_language)" target="_blank" title="En saVoir plus ▼ sur le C">C</a>, <a href="https://en.wikipedia.org/wiki/C%2B%2B" target="_blank" title="En saVoir plus ▼ sur le C++">C++</a>, <a href="https://www.python.org" target="_blank" title="En saVoir plus ▼ sur Python">Python</a> et <a href="https://www.tcl-lang.org" target="_blank" title="En saVoir plus ▼ sur TCL">TCL</a>. J'ai également enrichi mes connaissances en <a href="https://fr.wikipedia.org/wiki/Astrophysique" target="_blank" title="En saVoir plus ▼ sur l'astrophysique">astrophysique</a>, <a href="https://fr.wikipedia.org/wiki/Mécanique_spatiale" target="_blank" title="En saVoir plus ▼ sur la mécanique spatiale">mécanique spatiale</a>, ainsi qu’en détection d'exoplanètes par photométrie. Mes compétences en <a href="https://fr.wikipedia.org/wiki/Optique" target="_blank" title="En saVoir plus ▼ sur l'optique">optique géométrique et ondulatoire</a> appliquées au spatial, en <a href="https://fr.wikipedia.org/wiki/Électronique" target="_blank" title="En saVoir plus ▼ sur l'électronique">électronique</a> (analogique et numérique), ainsi qu’en <a href="https://fr.wikipedia.org/wiki/Système_embarqué" target="_blank" title="En saVoir plus ▼ sur les systèmes embarqués">systèmes embarqués</a> et bases de données <a href="https://www.sqlshack.com" target="_blank" title="En saVoir plus ▼ sur SQL">SQL</a>, complètent mon expertise technique.</p>
+            </section>
 
-                <div class="experiences">
-                     <!-- TSN -->
-                     <span id="TSN"></span>
-                     <div class="experience">
-                        <div class="titre">
-                            <a>Ingénieur d'études et développement - CDI</a>
-                            <a>Février 2025 - Actuel</a>
-                        </div>
-                        <div class="entreprise">
-                            <a href="https://www.thalesgroup.com/fr" target="_blank">Thalès Services Numériques - Labège, France</a>
-                            <p>
-                                <a href="https://www.thalesgroup.com/fr" target="_blank"><img src="../../ressources/imgs/thales.png" width="75px" height="30px" alt="Spacebel"></a>
-                                <a href="https://cnes.fr/" target="_blank"><img src="../../ressources/imgs/cnes.png" width="30px" height="30px" alt="CNES"></a>
-                            </p>
-                        </div>
-                        <div class="info">
-                            <p>
-                                Activités de développement logiciel sur le programme <a href = "https://cnes.fr/projets/ballons" target="_blank">Ballons</a> du CNES
-
-                            </p>
-                            <p>
-                                <img src="../../ressources/imgs/python.png" alt="Python">
-                                <img width="24px" height="24px" src="../../ressources/imgs/C.png" alt="C">
-                                <img src="../../ressources/imgs/base-de-donnees.png" alt="Base de données">
-                                <img width="24px" height="24px" src="../../ressources/imgs/satellite.png" alt="Satellite">
-                                <img width="24px" height="24px" src="../../ressources/imgs/qt.png" alt="Qt">
-                            </p>
-                        </div>
+            <section class="cv" id="cv">
+                <h1>Résumé de mes expériences</h1>
+                
+                <!-- TSN -->
+                <div class="experience">
+                    <div class="titre" id="TSN">
+                        <a class="poste">Ingénieur d'études et développement - CDI</a>
+                        <a class="dates">Février 2025 - Actuel</a>
                     </div>
-                    <!-- Fin TSN -->
-                    <!-- Spacebel -->
-                    <div class="experience">
-                        <div class="titre">
-                            <a>Ingénieur en Aérospatial - CDI</a>
-                            <a>Septembre 2022 - Février 2025</a>
-                        </div>
+                    <div class="more">
                         <div class="entreprise">
-                            <a href="https://www.spacebel.com/fr/accueil" target="_blank">Spacebel SAS - Labège, France</a>
-                            <p>
-                                <a href="https://www.spacebel.com/fr/accueil" target="_blank"><img src="../../ressources/imgs/spacebel.jpg" width="75px" height="30px" alt="Spacebel"></a>
-                                <a href="https://cnes.fr/" target="_blank"><img src="../../ressources/imgs/cnes.png" width="30px" height="30px" alt="CNES"></a>
-                            </p>
+                            <div class="nom"><a class="lien" href="https://www.thalesgroup.com/fr" target="_blank" title="Visiter Thales">Thales Services Numériques</a></div>
+                            <div class="lieu"><a>- Labège, Occitanie, France</a></div>
+                            <div class="pic un"><a href="https://www.thalesgroup.com/fr" target="_blank"><img src="../../ressources/imgs/thales.png" alt="Logo Thales"></a></div>
+                            <div class="pic deux"><a href="https://www.cnes.fr" target="_blank"><img src="../../ressources/imgs/cnes.png" alt="Logo CNES"></a></div>
                         </div>
-                        <div class="info">
-                            <p>
-                                Actuellement en charge de la gestion opérationnelle des simulateurs numériques de satellites pour le CNES, avec pour missions :
+                        <div class="resumé">
+                            <a class="text">
+                                Activités de développement logiciel sur le programme <a class="lien" href="https://cnes.fr/projets/ballons" target="_blank">Ballons</a> du <a class="lien" href="https://www.cnes.fr" target="_blank">CNES</a>, principalement axées sur la partie commande-contrôle des systèmes de vol.
+                                <br><br>
+                                Le programme Ballons du CNES vise à développer et déployer des ballons stratosphériques pour réaliser des missions d'observation et de collecte de données scientifiques à haute altitude. Dans ce cadre, mes responsabilités incluent :
                                 <ul>
-                                    <li>Analyse et diagnostic des pannes sur les simulateurs de satellites en orbite basse.</li>
-                                    <li>Formation des ingénieurs sur l'utilisation et la maintenance des simulateurs.</li>
-                                    <li>Réalisation d'essais et suivi des procédures de maintien de compétences pour les équipes.</li>
+                                    <li>Conception et mise en œuvre de systèmes de contrôle en temps réel pour assurer la gestion des trajectoires des ballons et garantir le bon fonctionnement des missions.</li>
+                                    <li>Développement et gestion d'une interface de supervision basée sur <a class="lien" href="https://www.pcvue.com/" target="_blank">PcVue</a>, permettant de visualiser en temps réel les paramètres vitaux des ballons (pression, température, position, etc.) et d'ajuster les commandes en fonction des besoins de la mission.</li>
+                                    <li>Création de scripts en <a class="lien" href="https://www.python.org/" target="_blank">Python</a> pour automatiser les tâches de collecte, d'analyse et d'archivage des données télémétriques, facilitant ainsi le traitement des informations recueillies lors des missions.</li>
+                                    <li>Utilisation de XML pour le paramétrage des configurations des systèmes de contrôle et l'intégration avec le système <a class="lien" href="https://fr.wikipedia.org/wiki/SCADA" target="_blank">SCADA</a>, afin d'assurer la fluidité de la communication entre les différents sous-systèmes embarqués et les stations au sol.</li>
+                                    <li>Analyse et validation des données recueillies, en veillant à l'intégrité et à la précision des mesures, tout en optimisant la gestion des communications et de la commande-contrôle en environnement difficile (altitude élevée, conditions météorologiques variables).</li>
                                 </ul>
-                                En parallèle, je développe des logiciels et des scripts pour la conduite de tests en utilisant Python et Qt, afin d'assurer le bon fonctionnement des simulateurs.
-                            </p>
-                            <p>
-                                <img src="../../ressources/imgs/python.png" alt="Python">
-                                <img width="24px" height="24px" src="../../ressources/imgs/C.png" alt="C">
-                                <img src="../../ressources/imgs/base-de-donnees.png" alt="Base de données">
-                                <img width="24px" height="24px" src="../../ressources/imgs/satellite.png" alt="Satellite">
-                                <img width="24px" height="24px" src="../../ressources/imgs/qt.png" alt="Qt">
-                                <img width="24px" height="24px" src="../../ressources/imgs/tcl.png" alt="tcl">
-                            </p>
+                            </a>
+                            <img src="../../ressources/imgs/python.png" alt="Python">
+                            <img width="24px" height="24px" src="../../ressources/imgs/C.png" alt="C">
+                            <img src="../../ressources/imgs/base-de-donnees.png" alt="Base de données">
+                            <img width="24px" height="24px" src="../../ressources/imgs/satellite.png" alt="Satellite">
+                            <img width="24px" height="24px" src="../../ressources/imgs/qt.png" alt="Qt">
                         </div>
+                        <button class="toggle-button" onclick="toggleRésumé(0)">Voir plus ▼</button>
                     </div>
-                    <!-- Fin Spacebel -->
-
-                    <!-- IPSA -->
-                    <div class="experience">
-                        <div class="titre">
-                            <a>Enseignant Vacataire - CDD</a>
-                            <a>Octobre 2022 - Janvier 2024</a>
-                        </div>
+                </div>
+                
+                <!-- SPB -->
+                <div class="experience">
+                    <div class="titre" id="SPB">
+                        <a class="poste">Ingénieur en aérospatial - CDI</a>
+                        <a class="dates">Septembre 2022 - Février 2025</a>
+                    </div>
+                    <div class="more">
                         <div class="entreprise">
-                            <a href="https://www.ipsa.fr" target="_blank">IPSA Toulouse - Toulouse, France</a>
-                            <p>
-                                <a href="https://www.ipsa.fr" target="_blank"><img src="../../ressources/imgs/ipsa.png" width="75px" height="50px" alt="IPSA"></a>
-                            </p>
+                            <div class="nom"><a class="lien" href="https://www.spacebel.com/fr/accueil" target="_blank" title="Visiter Thales">Spacebel SAS</a></div>
+                            <div class="lieu"><a>- Labège, Occitanie, France</a></div>
+                            <div class="pic un"><a href="https://www.spacebel.com/fr/accueil" target="_blank"><img src="../../ressources/imgs/spacebel.jpg" alt="Logo spb"></a></div>
+                            <div class="pic deux"><a href="https://www.cnes.fr" target="_blank"><img src="../../ressources/imgs/cnes.png" alt="Logo CNES"></a></div>
                         </div>
-                        <div class="info">
-                            <p>
-                                Enseignant vacataire pour plusieurs modules à l'IPSA, avec des responsabilités incluant :
+                        <div class="resumé">
+                            <a class="text">
+                                En charge de la gestion opérationnelle des simulateurs numériques de satellites pour le <a class="lien" href="https://www.cnes.fr" target="_blank">Centre National d'Études Spatiales (CNES)</a>, mes responsabilités sont les suivantes :
                                 <ul>
-                                    <li>1re année cycle ingénieur : Enseignement des bases de données relationnelles (MySQL, SQLite) et encadrement des Travaux Dirigés (TD) et Travaux Pratiques (TP).</li>
-                                    <li>2e année cycle préparatoire intégré : Encadrement des cours et TP en électronique numérique, incluant l'algèbre de Boole et la réalisation de circuits logiques avec des MOSFET et diodes.</li>
-                                    <li>Enseignement de Matlab et Simulink pour les applications en automatique et systèmes dynamiques.</li>
+                                    <li>Analyse et diagnostic des pannes sur les simulateurs de satellites en orbite basse, assurant ainsi une surveillance continue et une résolution rapide des problèmes critiques.</li>
+                                    <li>Formation des ingénieurs sur l'utilisation et la maintenance des simulateurs, en veillant à ce qu'ils soient toujours prêts à intervenir efficacement pendant les missions.</li>
+                                    <li>Réalisation d'essais et suivi des procédures de maintien de compétences pour les équipes, garantissant ainsi que les simulateurs fonctionnent dans des conditions optimales.</li>
                                 </ul>
-                                En outre, je participe activement aux événements de l'école, notamment lors des journées portes ouvertes.
-                            </p>
-                            <p>
-                                <img src="../../ressources/imgs/base-de-donnees.png" alt="Base de données">
-                                <img src="../../ressources/imgs/matlab.png" width="24px" height="24px" alt="Matlab">
-                                <img src="../../ressources/imgs/elec.png" width="24px" height="24px" alt="Électronique">
-                            </p>
+                                En parallèle, je développe des logiciels et des scripts pour la conduite de tests en utilisant <a class="lien" href="https://www.python.org/" target="_blank">Python</a> et <a class="lien" href="https://www.qt.io/" target="_blank">Qt</a>, afin d'assurer le bon fonctionnement des simulateurs.
+                            </a>
+                            <img src="../../ressources/imgs/python.png" alt="Python">
+                            <img width="24px" height="24px" src="../../ressources/imgs/C.png" alt="C">
+                            <img src="../../ressources/imgs/base-de-donnees.png" alt="Base de données">
+                            <img width="24px" height="24px" src="../../ressources/imgs/satellite.png" alt="Satellite">
+                            <img width="24px" height="24px" src="../../ressources/imgs/qt.png" alt="Qt">
+                            <img width="24px" height="24px" src="../../ressources/imgs/tcl.png" alt="tcl">
                         </div>
+                        <button class="toggle-button" onclick="toggleRésumé(1)">Voir plus ▼</button>
                     </div>
-                    <!-- Fin IPSA -->
+                </div>
 
-                    <!-- CS -->
-                    <div class="experience">
-                        <div class="titre">
-                            <a>Ingénieur d'études valideur - CDI</a>
-                            <a>Avril 2022 - Septembre 2022</a>
-                        </div>
+                <!-- IPSA -->
+                <div class="experience">
+                    <div class="titre" id="IPSA">
+                        <a class="poste">Enseignant vacataire - CDD</a>
+                        <a class="dates">Octobre 2022 - Janvier 2024</a>
+                    </div>
+                    <div class="more">
                         <div class="entreprise">
-                            <a href="https://www.csgroup.eu/fr/" target="_blank">CS Group - Toulouse, France</a>
-                            <p>
-                                <a href="https://www.csgroup.eu/fr/" target="_blank"><img src="../../ressources/imgs/cs.png" width="75px" height="30px" alt="CS Group"></a>
-                            </p>
+                            <div class="nom"><a class="lien" href="https://ipsa.fr" target="_blank" title="Visiter ipsa">IPSA Toulouse</a></div>
+                            <div class="lieu"><a>- Toulouse, Occitanie, France</a></div>
+                            <div class="pic un"><a href="https://www.ipsa.fr" target="_blank"><img src="../../ressources/imgs/ipsa.png" alt="Logo ipsa"></a></div>
                         </div>
-                        <div class="info">
-                            <p>
+                        <div class="resumé">
+                            <a class="text">
+                                Enseignant vacataire pour plusieurs modules à l'<a class="lien" href="https://www.ipsa.fr" target="_blank">IPSA</a>, avec des responsabilités incluant :
+                                <ul>
+                                    <li>1re année cycle ingénieur : Enseignement des bases de données relationnelles avec <a class="lien" href="https://www.mysql.com/" target="_blank">MySQL</a> et <a class="lien" href="https://www.sqlite.org/" target="_blank">SQLite</a>, ainsi qu'encadrement des Travaux Dirigés (<a class="lien">TD</a>) et Travaux Pratiques (<a class="lien">TP</a>).</li>
+                                    <li>2e année cycle préparatoire intégré : Encadrement des cours et TP en électronique numérique, incluant l'algèbre de Boole et la réalisation de circuits logiques avec des <a class="lien" href="https://en.wikipedia.org/wiki/MOSFET" target="_blank">MOSFET</a> et <a class="lien" href="https://fr.wikipedia.org/wiki/Diode" target="_blank">diodes</a>.</li>
+                                    <li>Enseignement de <a class="lien" href="https://www.mathworks.com/products/matlab.html" target="_blank">Matlab</a> et <a class="lien" href="https://www.mathworks.com/products/simulink.html" target="_blank">Simulink</a> pour les applications en automatique et systèmes dynamiques.</li>
+                                </ul>
+                                En outre, je participe activement aux événements de l'école, notamment lors des <a class="lien" href="https://www.ipsa.fr/journees-portes-ouvertes" target="_blank">journées portes ouvertes</a>.
+                            </a>
+                            <br>
+                            <img src="../../ressources/imgs/base-de-donnees.png" alt="Base de données">
+                            <img src="../../ressources/imgs/matlab.png" width="24px" height="24px" alt="Matlab">
+                            <img src="../../ressources/imgs/elec.png" width="24px" height="24px" alt="Électronique">    
+                        </div>                        
+                        <button class="toggle-button" onclick="toggleRésumé(2)">Voir plus ▼</button>
+                    </div>
+                </div>
+
+                <!-- CS -->
+                <div class="experience">
+                    <div class="titre" id="CS">
+                        <a class="poste"  title="Détails sur le poste">Ingénieur d'études valideur - CDI</a>
+                        <a class="dates" title="Période du contrat">Avril 2022 - Septembre 2022</a>
+                    </div>
+                    <div class="more">
+                        <div class="entreprise">
+                            <div class="nom">
+                                <a class="lien" href="https://www.csgroup.eu/fr" target="_blank" title="Visiter le site officiel de CS Group">CS Group</a>
+                            </div>
+                            <div class="lieu">
+                                <span>Toulouse, Occitanie, France</span>
+                            </div>
+                            <div class="pic un">
+                                <a href="https://www.csgroup.eu/fr" target="_blank">
+                                    <img src="../../ressources/imgs/cs.png" alt="Logo CS Group" title="CS Group - Site officiel">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="resumé">
+                            <a class="text">
                                 Travail en R&D sur les fonctions GNC (Guidance, Navigation, and Control) embarquées et autonomes :
                                 <ul>
                                     <li>Études théoriques et pratiques des fonctions GNC pour la restitution d'orbites et le maintien à poste des satellites.</li>
-                                    <li>Développement d'une bibliothèque en C pour l'implémentation de filtres de Kalman adaptés aux besoins de restitution d'orbite.</li>
+                                    <li>Développement d'une bibliothèque en <a class="lien" href="https://en.wikipedia.org/wiki/C_(programming_language)" target="_blank" title="En saVoir plus ▼ sur le langage C">C</a> pour l'implémentation de filtres de Kalman adaptés aux besoins de restitution d'orbite.</li>
                                     <li>Analyse et validation des modèles de simulation pour ces fonctions dans un environnement spatial.</li>
                                 </ul>
-                            </p>
-                            <p>
-                                <img width="24px" height="24px" src="../../ressources/imgs/C.png" alt="C">
+                            </a>
+                            <div class="icons">
+                                <img width="24px" height="24px" src="../../ressources/imgs/C.png" alt="C - Langage de programmation">
                                 <img src="../../ressources/imgs/elec.png" width="24px" height="24px" alt="Électronique">
-                            </p>
+                            </div>
                         </div>
+                        <button class="toggle-button" onclick="toggleRésumé(3)">Voir plus ▼</button>
                     </div>
-                    <!-- Fin CS -->
+                </div>
+                
 
-                    <!-- Alten -->
-                    <div class="experience">
-                        <div class="titre">
-                            <a>Ingénieur d'études consultant - CDI</a>
-                            <a>Avril 2021 - Avril 2022</a>
-                        </div>
-                        <div class="entreprise">
-                            <a href="https://www.alten.fr/" target="_blank">ALTEN - Boulogne-Billancourt, France</a>
-                            <p>
-                                <a href="https://www.alten.fr/" target="_blank"><img src="../../ressources/imgs/alten.png" width="75px" height="30px" alt="Alten"></a>
-                                <a href="https://www.mbda-systems.com/" target="_blank"><img src="../../ressources/imgs/mbda.png" width="100px" height="25px" alt="MBDA"></a>
-                                
-                            </p>
-                        </div>
-                        <div class="info">
-                            <p>
-                                Mission chez MBDA en tant que consultant, responsable de la conception et du développement d'applicatifs pour les tests et la validation de systèmes complexes :
-                                <ul>
-                                    <li>Développement d'ensembles de programmes pour les tests de sous-systèmes.</li>
-                                    <li>Analyse des spécifications techniques et mise en place des environnements de test associés.</li>
-                                    <li>Rédaction de la documentation et gestion de la configuration des programmes de test.</li>
-                                </ul>
-                            </p>
-                            <p>
-                                <img width="24px" height="24px" src="../../ressources/imgs/C.png" alt="C">
-                                <img width="24px" height="24px" src="../../ressources/imgs/essai.png" alt="essai">
-                                <img src="../../ressources/imgs/elec.png" width="24px" height="24px" alt="Électronique">
-                            </p>
-                        </div>
+                
+                <!-- ALTEN -->
+                <div class="experience">
+                    <div class="titre" id="alten">
+                        <a class="poste">Ingénieur d'études consultant - CDI</a>
+                        <a class="dates">Avril 2021 - Avril 2022</a>
                     </div>
-                    <!-- Fin Alten -->
-
-                    <!-- OCA -->
-                    <div class="experience">
-                        <div class="titre">
-                            <a>Doctorant - CDD</a>
-                            <a>Septembre 2020 - Avril 2021</a>
-                        </div>
+                    <div class="more">
                         <div class="entreprise">
-                            <a href="https://www.oca.eu/fr/" target="_blank">Observatoire de la Côte d'Azur - Nice, France</a>
-                            <p>
-                                <a href="https://www.oca.eu/fr/" target="_blank"><img src="../../ressources/imgs/oca.png" width="150px" height="30px" alt="OCA"></a>
-                            </p>
+                            <div class="nom"><a class="lien" href="https://www.alten.fr/" target="_blank" title="Visiter le site d'Alten">ALTEN</a></div>
+                            <div class="lieu"><a>- Boulogne-Billancourt, Île-de-France, France</a></div>
+                            <div class="pic un">
+                                <a href="https://www.alten.fr/" target="_blank"><img src="../../ressources/imgs/alten.png" width="75px" height="30px" alt="Logo Alten"></a></div>
+                            <div class="pic deux"><a href="https://www.mbda-systems.com" target="_blank"><img src="../../ressources/imgs/mbda.png" alt="Logo mbda"></a></div>
                         </div>
-                        <div class="info">
-                            <p>
-                                Travail sur l'interférométrie à dérive de fréquence pour mesurer la lumière parasite sur l'instrument spatial MOSA du projet LISA :
+                        <div class="resumé">
+                            <a class="text">
+                                Mission de consultant chez <a class="lien" href="https://www.mbda-systems.com" target="_blank">MBDA</a>, un leader de l'industrie de la défense, où j'ai été responsable de la conception et du développement d'applicatifs pour les tests et la validation de systèmes complexes.
+                                <br><br>
+                                Les missions principales incluaient :
                                 <ul>
-                                    <li>Étude du bruit de fond et des sources de non-linéarité, et développement de méthodes pour limiter leur impact sur les mesures.</li>
-                                    <li>Conception et tests du système de pilotage du laser pour un balayage linéaire de la fréquence.</li>
-                                    <li>Développement de la séquence de tests pour la lumière parasite sur le banc d'essai MOSA.</li>
+                                    <li>Développement d'ensembles de programmes pour les tests des sous-systèmes, garantissant leur bon fonctionnement dans des environnements simulés réalistes.</li>
+                                    <li>Analyse des spécifications techniques, et mise en place des environnements de test associés, en étroite collaboration avec les équipes d'ingénierie.</li>
+                                    <li>Rédaction de la documentation détaillée sur les tests réalisés, ainsi que gestion de la configuration des programmes de test, pour assurer la traçabilité et la réutilisabilité des solutions.</li>
                                 </ul>
-                                (Thèse abandonnée pour raisons personnelles)
-                            </p>
-                            <p>
-                                <img width="24px" height="24px" src="../../ressources/imgs/laser.png" alt="essai">
-                                <img width="24px" height="24px" src="../../ressources/imgs/python.png" alt="python">
-                                <img width="24px" height="24px" src="../../ressources/imgs/matlab.png" alt="matlab">
-                                <img width="24px" height="24px" src="../../ressources/imgs/satellite.png" alt="satellite">
-                                <img width="24px" height="24px" src="../../ressources/imgs/observatoire.png" alt="satellite">
-                            </p>
+                                Cette expérience m'a permis de renforcer mes compétences en développement logiciel et en validation de systèmes embarqués, particulièrement dans un contexte militaire et industriel de haute exigence.
+                            </a>
+                            <br>
+                            <img width="24px" height="24px" src="../../ressources/imgs/C.png" alt="C">
+                            <img width="24px" height="24px" src="../../ressources/imgs/essai.png" alt="Essai">
+                            <img width="24px" height="24px" src="../../ressources/imgs/elec.png" alt="Électronique">
                         </div>
+                        <button class="toggle-button" onclick="toggleRésumé(4)">Voir plus ▼</button>
                     </div>
-                    <!-- Fin OCA -->
+                </div>
+                
 
-                    <!-- CPPM -->
-                    <div class="experience">
-                        <div class="titre">
-                            <a>Ingénieur en instrumentation stagiaire - CDD</a>
-                            <a>Février 2020 - Septembre 2020</a>
-                        </div>
+                <!-- OCA -->
+                <div class="experience">
+                    <div class="titre" id="oca">
+                        <a class="poste">Doctorant - CDD</a>
+                        <a class="dates">Septembre 2020 - Avril 2021</a>
+                    </div>
+                    <div class="more">
                         <div class="entreprise">
-                            <a href="https://www.cppm.in2p3.fr/web/fr/index.html" target="_blank">Centre de Physique de Particules de Marseille - Marseille, France</a>
-                            <p>
-                                <a href="https://www.cppm.in2p3.fr/web/fr/index.html" target="_blank"><img src="../../ressources/imgs/cppm.png" width="40px" height="50px" alt="CPPM"></a>
-                            </p>
+                            <div class="nom"><a class="lien" href="https://www.oca.eu/fr/" target="_blank" title="Visiter le site de l'Observatoire de la Côte d'Azur">Observatoire de la Côte d'Azur</a></div>
+                            <div class="lieu"><a>- Nice, Provence-Alpes-Côte d'Azur, France</a></div>
+                            <div class="pic un"><a href="https://www.oca.eu/fr/" target="_blank"><img src="../../ressources/imgs/oca.png" width="150px" height="30px" alt="Logo OCA"></a></div>
+                            <div class="pic deux"><a href="https://www.cnes.fr" target="_blank"><img src="../../ressources/imgs/cnes.png" alt="Logo CNES"></a></div>
                         </div>
-                        <div class="info">
-                            <p>
-                                Stage au sein du groupe RENOIR / LISA pour la mise en place d’un banc interférométrique de mesure des ondes gravitationnelles :
+                        <div class="resumé">
+                            <a class="text">
+                                Recherche en interférométrie à dérive de fréquence pour mesurer la lumière parasite sur l'instrument spatial MOSA, dans le cadre du projet <a class="lien" href="https://www.lisamission.org/" target="_blank">LISA</a>, un projet de la mission de l'ESA pour l'étude des ondes gravitationnelles.
+                                <br><br>
+                                Mes responsabilités principales comprenaient :
                                 <ul>
-                                    <li>Contrôle des composants du banc à distance via un réseau LAN au Gbit/s.</li>
-                                    <li>Développement d'une interface Python pour la surveillance des signaux électriques.</li>
-                                    <li>Traitement en temps réel des signaux issus des phasemètres pour l'analyse de la densité spectrale d'amplitude.</li>
+                                    <li>Étude du bruit de fond et des sources de non-linéarité, ainsi que le développement de méthodes visant à minimiser leur impact sur les mesures précises des ondes gravitationnelles.</li>
+                                    <li>Conception et tests du système de pilotage du laser pour un balayage linéaire de la fréquence, essentiel pour garantir la précision de l'instrument MOSA.</li>
+                                    <li>Développement d'une séquence de tests pour la lumière parasite sur le banc d'essai MOSA, afin d'optimiser les performances de l'instrument spatial.</li>
                                 </ul>
-                            </p>
-                            <p>
-                                <img width="24px" height="24px" src="../../ressources/imgs/laser.png" alt="essai">
-                                <img width="24px" height="24px" src="../../ressources/imgs/python.png" alt="python">
-                                <img width="24px" height="24px" src="../../ressources/imgs/C.png" alt="C">
-                                <img width="24px" height="24px" src="../../ressources/imgs/qt.png" alt="Qt">
-                                <img width="24px" height="24px" src="../../ressources/imgs/matlab.png" alt="matlab">
-                                <img width="24px" height="24px" src="../../ressources/imgs/base-de-donnees.png" alt="BDD">
-                                <img width="24px" height="24px" src="../../ressources/imgs/satellite.png" alt="satellite">
-                                <img width="24px" height="24px" src="../../ressources/imgs/serveur.png" alt="serveur">
-                            </p>
-			    <a href='../../ressources/pdf/rds.pdf' target="_blank" download>
+                                <br>
+                                Bien que la thèse ait été abandonnée pour des raisons personnelles, cette expérience a renforcé ma compréhension des défis liés à l'instrumentation spatiale et de l'importance des tests dans des environnements exigeants.
+                            </a>
+                            <br>
+                            <img width="24px" height="24px" src="../../ressources/imgs/laser.png" alt="Laser">
+                            <img width="24px" height="24px" src="../../ressources/imgs/python.png" alt="Python">
+                            <img width="24px" height="24px" src="../../ressources/imgs/matlab.png" alt="MATLAB">
+                            <img width="24px" height="24px" src="../../ressources/imgs/satellite.png" alt="Satellite">
+                            <img width="24px" height="24px" src="../../ressources/imgs/observatoire.png" alt="Observatoire">
+                        </div>
+                        <button class="toggle-button" onclick="toggleRésumé(5)">Voir plus ▼</button>
+                    </div>
+                </div>
+                
+
+                
+                <!-- CPPM -->
+                <div class="experience">
+                    <div class="titre" id="cppm">
+                        <a class="poste">Ingénieur en instrumentation stagiaire - CDD</a>
+                        <a class="dates">Février 2020 - Septembre 2020</a>
+                    </div>
+                    <div class="more">
+                        <div class="entreprise">
+                            <div class="nom"><a class="lien" href="https://www.cppm.in2p3.fr/web/fr/index.html" target="_blank" title="Visiter le site du CPPM">Centre de Physique de Particules de Marseille</a></div>
+                            <div class="lieu"><a>- Marseille, Provence-Alpes-Côte d'Azur, France</a></div>
+                            <div class="pic un"><a href="https://www.cppm.in2p3.fr/web/fr/index.html" target="_blank"><img src="../../ressources/imgs/cppm.png" width="40px" height="50px" alt="Logo CPPM"></a></div>
+                            <div class="pic deux"><a href="https://www.cnrs.fr" target="_blank"><img src="../../ressources/imgs/cnrs.png" alt="Logo CNRS"></a></div>
+                        </div>
+                        <div class="resumé">
+                            <a class="text">
+                                Stage au sein du groupe RENOIR / LISA du <a class="lien" href="https://www.cppm.in2p3.fr/web/fr/index.html" target="_blank">CPPM</a> pour la mise en place d’un banc interférométrique destiné à la mesure des ondes gravitationnelles.
+                                <br><br>
+                                Mes principales missions comprenaient :
+                                <ul>
+                                    <li>Contrôle à distance des composants du banc interférométrique via un réseau LAN à débit Gbit/s pour garantir la précision des mesures en temps réel.</li>
+                                    <li>Développement d'une interface en <a class="lien" href="https://www.python.org/" target="_blank">Python</a> pour la surveillance des signaux électriques, assurant une gestion optimale des données collectées.</li>
+                                    <li>Traitement des signaux en temps réel en utilisant des outils comme <a class="lien" href="https://www.mathworks.com/products/matlab.html" target="_blank">MATLAB</a> et <a class="lien" href="https://www.qt.io/" target="_blank">Qt</a> pour l’analyse de la densité spectrale d'amplitude, un aspect crucial pour l'étude des ondes gravitationnelles.</li>
+                                </ul>
+                                <br>
+                                Ce projet m'a permis de développer des compétences pratiques dans l'acquisition et le traitement de données scientifiques, avec un focus particulier sur la haute précision nécessaire pour l'observation des phénomènes astrophysiques.
+                            </a>
+                            <br>
+                            <img width="24px" height="24px" src="../../ressources/imgs/laser.png" alt="Laser">
+                            <img width="24px" height="24px" src="../../ressources/imgs/python.png" alt="Python">
+                            <img width="24px" height="24px" src="../../ressources/imgs/C.png" alt="C">
+                            <img width="24px" height="24px" src="../../ressources/imgs/qt.png" alt="Qt">
+                            <img width="24px" height="24px" src="../../ressources/imgs/matlab.png" alt="MATLAB">
+                            <img width="24px" height="24px" src="../../ressources/imgs/base-de-donnees.png" alt="Base de données">
+                            <img width="24px" height="24px" src="../../ressources/imgs/satellite.png" alt="Satellite">
+                            <img width="24px" height="24px" src="../../ressources/imgs/serveur.png" alt="Serveur">
+                            <br><br>
+                            <a href="../../ressources/pdf/rds.pdf" target="_blank" download>
                                 <button type="button">Télécharger mon rapport de stage...</button>
                             </a>
                         </div>
+                        <button class="toggle-button" onclick="toggleRésumé(6)">Voir plus ▼</button>
                     </div>
-                    <!-- Fin CPPM -->
-
-                    <!-- Veolia -->
-                    <div class="experience">
-                        <div class="titre">
-                            <a>Electrotechnicien stagiaire - CDD</a>
-                            <a>Juillet 2019 - Septembre 2019</a>
-                        </div>
-                        <div class="entreprise">
-                            <a href="https://www.service.eau.veolia.fr/home.html" target="_blank">Veolia Eau - Boulogne-sur-Mer, France</a>
-                            <p>
-                                <a href="https://www.service.eau.veolia.fr/home.html" target="_blank"><img src="../../ressources/imgs/veolia.png" width="100px" height="50px" alt="Veolia"></a>
-                            </p>
-                        </div>
-                        <div class="info">
-                            <p>
-                                Stage en électrotechnique, où j’ai effectué des missions de maintenance et d'inventaire :
-                                <ul>
-                                    <li>Contrôle de conformité des machines à vérifier (1 500 machines sur le territoire).</li>
-                                    <li>Réalisation de rapports et gestion de la maintenance des équipements.</li>
-                                </ul>
-                            </p>
-                            <p>
-                                <img width="24px" height="24px" src="../../ressources/imgs/moteur-electrique.png" alt="moteur">
-                                <img width="24px" height="24px" src="../../ressources/imgs/essai.png" alt="essai">
-                                <img width="24px" height="24px" src="../../ressources/imgs/eau.png" alt="essai">
-                            </p>
-                        </div>
-                    </div>
-                    <!-- Fin Veolia -->
-
-                    <!-- Rinxent -->
-                    <div class="experience">
-                        <div class="titre">
-                            <a>Employé communal stagiaire - CDD</a>
-                            <a>Juillet 2017 - Août 2017</a>
-                        </div>
-                        <div class="entreprise">
-                            <a href="https://www.ville-rinxent.fr/" target="_blank">Mairie de Rinxent - Rinxent, France</a>
-                            <p>
-                                <a href="https://www.ville-rinxent.fr/" target="_blank"><img src="../../ressources/imgs/rinxent.png" width="45px" height="50px" alt="Rinxent"></a>
-                            </p>
-                        </div>
-                        <div class="info">
-                            <p>
-                                Stage ouvrier à la mairie de Rinxent, où j’ai participé à diverses tâches d’entretien et d’aménagement :
-                                <ul>
-                                    <li>Maintenance des bâtiments communaux et réfection du stade de football communal.</li>
-                                    <li>Organisation et mise en œuvre d’un spectacle pyrotechnique pour la fête nationale du 14 juillet (titulaire du C4-T2 de niveau 1).</li>
-                                </ul>
-                            </p>
-
-                            <p>
-                                <img width="24px" height="24px" src="../../ressources/imgs/ouvrier.png" alt="ouvrier">
-                                <img width="24px" height="24px" src="../../ressources/imgs/feux-dartifice.png" alt="firework">
-                            </p>
-                        </div>
-                    </div>
-                    <!-- Fin Rinxent -->
-
                 </div>
-            </article>
+                
 
-            <!-- Fin du contenu -->
-        </section>
+                <!-- Veolia -->
+                <div class="experience">
+                    <div class="titre" id="veolia">
+                        <a class="poste">Electrotechnicien stagiaire - CDD</a>
+                        <a class="dates">Juillet 2019 - Septembre 2019</a>
+                    </div>
+                    <div class="more">
+                        <div class="entreprise">
+                            <div class="nom"><a class="lien" href="https://www.service.eau.veolia.fr/home.html" target="_blank" title="Visiter le site de Veolia Eau">Veolia Eau</a></div>
+                            <div class="lieu"><a>- Boulogne-sur-Mer, Hauts-de-France, France</a></div>
+                            <div class="pic un"><a href="https://www.service.eau.veolia.fr/home.html" target="_blank"><img src="../../ressources/imgs/veolia.png" width="100px" height="50px" alt="Logo Veolia"></a></div>
+                        </div>
+                        <div class="resumé">
+                            <a class="text">
+                                Stage en électrotechnique au sein de <a class="lien" href="https://www.service.eau.veolia.fr/home.html" target="_blank">Veolia Eau</a>, où j’ai contribué à la maintenance et à l'inventaire d'équipements essentiels pour le traitement de l'eau.
+                                <br><br>
+                                Mes principales missions étaient les suivantes :
+                                <ul>
+                                    <li>Contrôle de la conformité de plus de 1 500 machines réparties sur le territoire pour assurer leur bon fonctionnement dans les systèmes de distribution d'eau et d'assainissement.</li>
+                                    <li>Réalisation de rapports détaillant les dysfonctionnements et les interventions nécessaires, en vue de garantir la disponibilité continue des équipements pour les opérations.</li>
+                                    <li>Gestion et planification des opérations de maintenance préventive et corrective, pour maximiser l'efficacité et la sécurité des installations.</li>
+                                </ul>
+                            </a>
+                            <img width="24px" height="24px" src="../../ressources/imgs/moteur-electrique.png" alt="moteur">
+                            <img width="24px" height="24px" src="../../ressources/imgs/essai.png" alt="essai">
+                            <img width="24px" height="24px" src="../../ressources/imgs/eau.png" alt="eau">
+                        </div>
+                        <button class="toggle-button" onclick="toggleRésumé(7)">Voir plus ▼</button>
+                    </div>
+                </div>
+                
 
+                <!-- Rinxent -->
+                <div class="experience">
+                    <div class="titre" id="rinxent">
+                        <a class="poste">Employé communal stagiaire - CDD</a>
+                        <a class="dates">Juillet 2017 - Août 2017</a>
+                    </div>
+                    <div class="more">
+                        <div class="entreprise">
+                            <div class="nom"><a class="lien" href="https://www.ville-rinxent.fr/" target="_blank" title="Visiter le site de la Mairie de Rinxent">Mairie de Rinxent</a></div>
+                            <div class="lieu"><a>- Rinxent, Hauts-de-France, France</a></div>
+                            <div class="pic un"><a href="https://www.ville-rinxent.fr/" target="_blank"><img src="../../ressources/imgs/rinxent.png" width="45px" height="50px" alt="Logo Rinxent"></a></div>
+                        </div>
+                        <div class="resumé">
+                            <a class="text">
+                                Stage ouvrier effectué à la <a class="lien" href="https://www.ville-rinxent.fr/" target="_blank">Mairie de Rinxent</a>, où j'ai contribué à diverses activités d'entretien et d'aménagement au sein de la commune.
+                                <br><br>
+                                Mes responsabilités principales ont inclus :
+                                <ul>
+                                    <li>Maintenance des bâtiments communaux et rénovation du stade de football local, dans le cadre de la préservation du patrimoine communal.</li>
+                                    <li>Organisation et coordination d'un <a class="lien" href="https://fr.wikipedia.org/wiki/Spectacle_pyrotechnique" target="_blank">spectacle pyrotechnique</a> à l'occasion de la fête nationale du 14 juillet, pour lequel j'ai obtenu le certificat C4-T2 de niveau 1, nécessaire à la gestion des feux d'artifice.</li>
+                                </ul>
+                            </a>
+                            <img width="24px" height="24px" src="../../ressources/imgs/ouvrier.png" alt="ouvrier">
+                            <img width="24px" height="24px" src="../../ressources/imgs/feux-dartifice.png" alt="firework">
+                        </div>
+                        <button class="toggle-button" onclick="toggleRésumé(8)">Voir plus ▼</button>
+                    </div>
+                </div>
+                
+            </section>
+        </main>
+        
         <ins class="adsbygoogle"
-        style="display:flex"
-        data-ad-client="ca-pub-1271682525986890"
-        data-ad-slot="4423938118"
-        data-ad-format="auto"
-        data-full-width-responsive="true">
-    </ins>
-     <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-   </script>
-   
-        <!-- Pied de page-->
+            style="display:flex"
+            data-ad-client="ca-pub-1271682525986890"
+            data-ad-slot="4423938118"
+            data-ad-format="auto"
+            data-full-width-responsive="true">
+        </ins>
+        
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+
         <footer>
-            <h5>Des questions ? Contactez moi</h5>
-            <div class="colonnes">
-                <div class="colonne">
-                    <p><a href="./blog.html#dernier">Derniers articles</a></p>
-                    <p><a href="https://tml.celescope.fr/" target="_blank">Association Célescope</a></p>
-                </div>
-                <div class="colonne">
-                    <p><a href="https://www.ipsa.fr/" target="_blank">IPSA</a></p>
-                    <p><a href="https://www.hs-bremen.de/" target="_blank">HSB</a></p>
-                </div>
-                <div class="colonne">
-                    <p><a href="./contact.html">Me contacter</a></p>
-                    <p><a href="https://fr.tipeee.com/alexinthecosmos/" target="_blank">Me soutenir</a></p>
-                    <p>
-                        <a href="../../index.html"><img src=../../ressources/imgs/france.png></a>
-                        <a href="../../index_en.html"><img src=../../ressources/imgs/royaume-uni.png></a>
-                        <a href="../../index_de.html"><img src=../../ressources/imgs/allemagne.png></a>
-                    </p>
-                </div>
-            </div>
-            <p>©Alexandre Condette, 2024</p>
-            <p>
-                <a href="https://www.linkedin.com/in/alexandre-condette/" target="_blank"><img src=../../ressources/imgs/linkedin.png></a>
-                <a href="https://github.com/A-Cndt" target="_blank"><img src=../../ressources/imgs/github.png></a>
-                <a href="https://www.instagram.com/alexinthecosmos/?hl=fr" target="_blank"><img src="../../ressources/imgs/instagram.png"></a>
-				<a href="https://www.facebook.com/profile.php?id=61572622681978" target="_blank"><img src="../../ressources/imgs/facebook.png"></a>
-            </p>
-            <div id="sfc7yqaeqs1f6ag8zn8lr686z5uzceqsl7n"></div><script type="text/javascript" src="https://counter6.optistats.ovh/private/counter.js?c=7yqaeqs1f6ag8zn8lr686z5uzceqsl7n&down=async" async></script><br><a href="https://www.compteurdevisite.com"></a><noscript><a href="https://www.compteurdevisite.com" title="compteur de visite"><img src="https://counter6.optistats.ovh/private/compteurdevisite.php?c=7yqaeqs1f6ag8zn8lr686z5uzceqsl7n" border="0" title="compteur de visite" alt="compteur de visite"></a></noscript>
+            <div id="footer"></div>
         </footer>
-        <!-- Fin du pied de page-->
+        
+        <!-- Chargement dynamique de la barre de navigation et du pied de page -->
+        <script>
+            loadHTMLIntoElement('navbar.html', 'navbar');
+        </script>
+        <script>
+            loadHTMLIntoElement('footer.html', 'footer');
+        </script>
     </body>
 </html>

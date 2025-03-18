@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Spectral:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Spectral', serif;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+
+.footer {
+    color: #fff;
+    background-color: #141414;
+    position: relative;
+    top: 100vh;
+    flex: 1;
+    padding: 10px 25px;
+    color: #828282;
+}
+
+.colonnes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 50px 50px 50px;
+}
+
+h5 {
+    padding-left: 50px;
+    font-size: 16px;
+}
+
+.colonne a.lien {
+    text-decoration: none;
+    color: inherit;
+    transition: text-shadow 0.1s ease;
+}
+
+.colonne a.lien:hover{
+    text-shadow: 
+    0 0 5px #9b4dca, 
+    0 0 10px #9b4dca,
+    0 0 15px #9b4dca;
+    color: #fff;
+}
+
+.end {
+    padding-left: 50px;
+}
+
+a.lien_img {
+    text-decoration: none;
+    color: inherit;
+    transition: box-shadow 0.1s ease;
+}
+
+a.lien_img img {
+    border-radius: 50px;
+    width: 24px;
+}
+a.lien_img :hover{
+    background: none;
+    box-shadow: 
+    0 0 5px #fff, 
+    0 0 10px #fff,
+    0 0 15px #9b4dca;
+    color: #fff;
+}
+
+.disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+
+/* Responsive Styles for Small Screens (Smartphones) */
+@media screen and (max-width: 640px) {
+    /* Reduce the padding in the footer */
+    .footer {
+        padding: 10px 15px;
+    }
+
+    .colonnes {
+        flex-direction: column; /* Stack the columns vertically */
+        padding: 0 20px;
+    }
+
+    h5 {
+        font-size: 14px;  /* Adjust the font size */
+        padding-left: 0;  /* Remove left padding */
+    }
+
+    .colonne a.lien {
+        font-size: 14px;  /* Adjust the font size */
+    }
+
+    /* Adjust the icons' size in the footer */
+    a.lien_img img {
+        width: 30px;  /* Slightly larger for better visibility on small screens */
+    }
+
+    .end {
+        padding-left: 0; /* Remove padding for better space distribution */
+    }
+}

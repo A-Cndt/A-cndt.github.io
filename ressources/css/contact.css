@@ -1,0 +1,143 @@
+body { 
+    background: url('https://wallpapercat.com/w/full/7/0/6/26427-3840x2160-desktop-4k-black-hole-wallpaper-image.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    color: #fff;
+}
+
+.page {
+    height: 100vh;
+    margin: 25px;
+}
+
+.lien {
+    text-decoration: none;
+    color:#cbaedd;
+}
+
+.lien:hover {
+    text-shadow: 0 0 5px #9b4dca, 
+    0 0 10px #9b4dca,
+    0 0 15px #9b4dca;
+    color: #fff;
+}
+
+.formulaire {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgba(12, 12, 12, 0.5);
+    padding: 10px 25px;
+    margin: 0 auto;
+    width: 400px;
+    border-radius: 1em;
+    border: 1px solid #cbaedd;
+    justify-content: space-evenly;
+}
+
+.formulaire h1 {
+    justify-content: center;
+}
+
+.formulaire ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.formulaire li + li {
+    margin-top: 1em;
+}
+
+.formulaire label {
+    display: inline-block;
+    width: 90px;
+    text-align: justify;
+}
+
+.formulaire input,
+.formulaire textarea {
+    width: 300px;
+    box-sizing: border-box;
+    border: 1px solid #000;
+}
+
+.formulaire textarea {
+    vertical-align: top;
+    height: 5em;
+    resize: vertical;
+}
+
+.formulaire button {
+    font-family: "Playwrite IT Moderna", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    padding: 13px 20px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    margin-top: 10px;
+}
+
+.message_info {
+    margin: 50px auto;
+    width: fit-content;
+    align-self: center;
+    justify-content: center;
+    text-align: justify;
+    background-color: rgba(14, 14, 14, 0.9);
+    font-weight: 400;
+    padding: 5px 20px;
+    border-radius: 25px;
+    color: #fff;
+}
+
+/* Styles pour les écrans de petite largeur (smartphones) */
+@media screen and (max-width: 640px) {
+    body {
+        background-size: cover;
+        height: auto;
+        margin: 0;
+        padding: 0;
+    }
+
+    .formulaire {
+        width: 90%; /* Utilise presque toute la largeur de l'écran */
+        padding: 15px;
+        margin: 20px auto;
+    }
+
+    .formulaire h1 {
+        font-size: 24px;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .formulaire label {
+        width: 100%; /* Fait en sorte que le label occupe toute la largeur */
+        text-align: left;
+        margin-bottom: 5px;
+    }
+
+    .formulaire input,
+    .formulaire textarea {
+        width: 100%; /* Utilise toute la largeur disponible */
+        margin-bottom: 10px;
+    }
+
+    .formulaire button {
+        width: 100%; /* Le bouton prend toute la largeur */
+        margin-top: 20px;
+    }
+
+    .message_info {
+        display: block;
+        width: 100%; /* Le message prend toute la largeur de l'écran */
+        font-size: 14px; /* Ajuste la taille de la police pour les petits écrans */
+        align-self: center;
+        justify-content: center;
+    }
+}

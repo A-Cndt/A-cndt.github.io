@@ -1,0 +1,101 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Spectral', serif;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: #cbaedd;
+}
+
+a:hover {
+    text-shadow: 0 0 5px #9b4dca, 
+    0 0 10px #9b4dca,
+    0 0 15px #9b4dca;
+    color: #fff;
+}
+.page {
+    margin-top: 25px;
+    color: #fff;
+    text-align: justify;
+}
+
+.page h1, h2 {
+    text-align: center;
+    font-size: 60px;
+    padding: auto 0px;
+}
+
+.page p  {
+    padding: 5px 25px;
+    margin: 10px 50px;
+    font-size: 16px;
+    background-color: rgba(20, 20, 20, 0.7);
+    border-radius: 50px;
+}
+
+embed {
+    display: block;
+    margin: 25px auto;
+    width: 400px;
+    height: 400px;
+}
+
+h3 {
+    color: #fff;
+    text-shadow: 
+    0 0 5px #9b4dca, 
+    0 0 10px #fff;
+    margin-left: 25px;
+}
+
+@media screen and (max-width: 768px) {
+    .page h1, .page h2 {
+        font-size: 40px; /* Réduit la taille du titre */
+    }
+
+    .page p {
+        font-size: 14px; /* Réduit la taille du texte pour les petits écrans */
+        margin: 10px 30px;
+        padding: 5px 15px;
+    }
+
+    embed {
+        width: 300px; /* Ajuste la taille de l'embed */
+        height: 300px;
+    }
+
+    h3 {
+        font-size: 18px; /* Réduit la taille des sous-titres */
+        margin-left: 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .page h1, .page h2 {
+        font-size: 30px; /* Réduit encore la taille du titre */
+    }
+
+    .page p {
+        font-size: 12px; /* Réduit encore la taille du texte */
+        margin: 5px 15px;
+        padding: 5px 10px;
+    }
+
+    embed {
+        width: 250px; /* Ajuste encore la taille de l'embed pour les petits écrans */
+        height: 250px;
+    }
+
+    h3 {
+        font-size: 16px; /* Réduit encore la taille des sous-titres */
+        margin-left: 10px;
+    }
+}
+

@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Spectral:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Spectral', serif;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+.navbar {
+    margin: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;   
+    background-color: rgba(20, 20, 20, 0.7);
+    color: #fff;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 25px;
+}
+
+.logo img {
+    width: 75px;
+    border-radius: 50px;
+    transition: box-shadow 0.1s ease;
+    box-shadow: 
+    0 0 5px #9b4dca, 
+    0 0 10px #9b4dca,
+    0 0 15px #9b4dca;
+}
+
+.logo img:hover{
+    box-shadow: 
+    0 0 5px #fff, 
+    0 0 10px #fff,
+    0 0 15px #9b4dca;
+}
+
+.onglets {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 5px;
+    font-size: 20px;
+}
+
+.onglets a.onglet {
+    text-decoration: none;
+    color: #fff;
+    margin-top: 25px;
+    margin-left: 30px;
+    transition: text-shadow 0.1s;
+}
+
+.onglets a.onglet:hover{
+    text-shadow: 
+    0 0 5px #9b4dca, 
+    0 0 10px #9b4dca,
+    0 0 15px #9b4dca;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.buttons .button {
+    margin-left: 30px;
+    margin-top: 25px;
+}
+
+button {
+    font-family: inherit;
+    font-size: inherit;
+    background-color: #fff;
+    border-radius: 5px;
+    border-style: none;
+    transition: box-shadow 0.1s ease;
+    box-shadow: 
+    0 0 5px #9b4dca, 
+    0 0 10px #9b4dca;
+}
+
+button:hover {
+    background-color: #141414;
+    color: #fff;
+    box-shadow: 
+    0 0 5px #fff, 
+    0 0 10px #fff,
+    0 0 15px #9b4dca;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        margin: 10px;
+        padding: 5px;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .logo img {
+        width: 50px;
+    }
+
+    .onglets {
+        flex-direction: column;
+        font-size: 18px;
+        align-items: center;
+    }
+
+    .onglets a.onglet {
+        margin-top: 15px;
+        margin-left: 0;
+    }
+
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .buttons .button {
+        margin-left: 0;
+        margin-top: 15px;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .navbar {
+        margin: 5px;
+        padding: 5px;
+    }
+
+    .logo img {
+        width: 40px;
+    }
+
+    .onglets {
+        font-size: 16px;
+    }
+
+    .onglets a.onglet {
+        margin-top: 10px;
+    }
+
+    .buttons .button {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    button {
+        padding: 8px;
+    }
+}
