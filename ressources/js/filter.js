@@ -21,7 +21,7 @@ function filterArticles() {
         const isVisible = selectedTags.every(tag => articleTags.includes(tag));
 
         if (isVisible || selectedTags.length === 0) {
-            article.style.display = 'grid'; // Afficher l'article
+            article.style.display = 'block'; // Afficher l'article
             visibleArticles.push(article); // Ajouter l'article visible
         } else {
             article.style.display = 'none'; // Masquer l'article
