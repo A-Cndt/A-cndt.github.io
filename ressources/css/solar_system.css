@@ -240,3 +240,78 @@ a {
         transform: rotate(360deg);
     }
 }
+
+@media screen and (max-width: 1024px) {
+    .container {
+        width: 30em;
+        height: 30em;
+    }
+    
+    .sun {
+        width: 8em;
+        height: 8em;
+        top: 13em;
+        left: 13em;
+    }
+    
+    .mercure, .venus, .earth, .moon, .mars, .jupiter, .saturn, .uranus, .neptune, .pluto {
+        width: 12em;
+        height: 12em;
+    }
+
+    .mercury::before, .venus::before, .earth::before, .moon::before, .mars::before, 
+    .jupiter::before, .saturn::before, .uranus::before, .neptune::before, .pluto::before {
+        width: 2em;
+        height: 2em;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 25em;
+        height: 25em;
+    }
+    
+    .sun {
+        width: 6em;
+        height: 6em;
+        top: 12em;
+        left: 12em;
+    }
+    
+    .mercure, .venus, .earth, .moon, .mars, .jupiter, .saturn, .uranus, .neptune, .pluto {
+        width: 10em;
+        height: 10em;
+    }
+
+    .mercury::before, .venus::before, .earth::before, .moon::before, .mars::before, 
+    .jupiter::before, .saturn::before, .uranus::before, .neptune::before, .pluto::before {
+        width: 1.5em;
+        height: 1.5em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        width: 20em;
+        height: 20em;
+    }
+    
+    .sun {
+        width: 5em;
+        height: 5em;
+        top: 10em;
+        left: 10em;
+    }
+    
+    .mercure, .venus, .earth, .moon, .mars, .jupiter, .saturn, .uranus, .neptune, .pluto {
+        width: 8em;
+        height: 8em;
+    }
+
+    .mercury::before, .venus::before, .earth::before, .moon::before, .mars::before, 
+    .jupiter::before, .saturn::before, .uranus::before, .neptune::before, .pluto::before {
+        width: 1.2em;
+        height: 1.2em;
+    }
+}

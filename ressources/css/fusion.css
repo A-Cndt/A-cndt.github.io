@@ -114,3 +114,39 @@ body {
         transform: scale(3);
     }
 }
+
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .fusion-container {
+        width: 300px;
+        height: 300px;
+    }
+
+    .noyau, .noyau2, .helium {
+        width: 50px;
+        height: 50px;
+    }
+
+    .lumiere {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .fusion-container {
+        width: 250px;
+        height: 250px;
+    }
+
+    .noyau, .noyau2, .helium {
+        width: 40px;
+        height: 40px;
+    }
+
+    .lumiere {
+        width: 150px;
+        height: 150px;
+    }
+}

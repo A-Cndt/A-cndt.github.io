@@ -1,0 +1,187 @@
+body { 
+    background: url('https://wallpapercat.com/w/full/7/0/6/26427-3840x2160-desktop-4k-black-hole-wallpaper-image.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+.page {
+    margin: 50px;
+    text-align: justify;
+    color: #fff;
+}
+
+.formations {
+    padding: 15px;
+}
+
+.formation .more {
+    width: 100%;
+    border-radius: 0px 0px 10px 10px;
+    background-color: rgba(20, 20, 20, 0.9);
+    padding: 10px 15px;
+    color: #fff;
+}
+
+.formation a {
+    color: #fff;
+}
+
+.ecole {
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 5px #9b4dca, 
+    0 0 10px #fff; ;
+    display: grid;
+    grid-template-columns: auto auto 1fr auto auto;
+    gap: 0;
+    align-items:center;
+}
+
+.formation .titre {
+    padding: 5px 15px ;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #cbaedd;
+    border-radius: 10px 10px 0px 0px;
+    color: #141414;
+}
+
+.diplome {
+    font-weight: bold;
+}
+
+
+.dates {
+    font-style: italic;
+}
+
+a {
+    text-decoration: none;
+}
+
+.ecole .nom {
+    grid-column: 1;
+    grid-row: 1;
+    margin-right: 5px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.lieu {
+    grid-column: 2;
+    grid-row: 1;
+    font-style: italic;
+}
+
+.pic img {
+    all:unset;
+    width: 75px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    transition: box-shadow 0.1s ease;
+    box-shadow: 
+    0 0 5px #9b4dca, 
+    0 0 10px #9b4dca,
+    0 0 15px #9b4dca;
+}
+
+.pic img:hover{
+    box-shadow: 
+    0 0 5px #fff, 
+    0 0 10px #fff,
+    0 0 15px #9b4dca;
+}
+.pic.un {
+    grid-row: 1;
+    grid-column: 4;
+    margin-right: 25px;
+}
+
+.pic.deux {
+    grid-row: 1;
+    grid-column: 5;
+}
+
+a.lien {
+    color: #cbaedd
+}
+
+a.lien:hover {
+    text-shadow: 
+    0 0 5px #9b4dca, 
+    0 0 10px #9b4dca,
+    0 0 15px #9b4dca;
+    color: #fff;
+}
+
+.formation {
+    margin-bottom: 50px;
+}
+
+.resumé {
+    display: none;
+    width: 100%;
+}
+
+.more {
+    position: relative;  /* Nécessaire pour positionner le bouton par rapport à ce conteneur */
+}
+
+.toggle-button {
+    display: block;
+    position: absolute;  /* Positionne le bouton de manière absolue */
+    right: 15px;            /* Colle le bouton à droite du conteneur */
+    bottom: -25px;           /* Colle le bouton en bas du conteneur */
+}
+
+/* Responsive Styles for Small Screens */
+@media screen and (max-width: 640px) {
+    .page {
+        margin: 20px;
+    }
+
+    /* Ajuster la mise en page de la grille pour les petites tailles d'écran */
+    .ecole {
+        grid-template-columns: 1fr; /* Empile les éléments dans une seule colonne */
+        padding: 10px;
+    }
+
+    /* Ajuster les tailles de texte et d'images */
+    .ecole .nom {
+        font-size: 18px; /* Réduire la taille du nom pour les petits écrans */
+    }
+
+    .pic img {
+        width: 50px; /* Réduire la taille des images pour les petits écrans */
+    }
+
+    .formation .titre {
+        font-size: 18px; /* Réduire la taille du titre */
+        padding: 5px 10px;
+    }
+
+    .diplome, .dates {
+        font-size: 14px; /* Réduire la taille des textes */
+    }
+
+    .more {
+        width: 100%;
+        padding: 10px 15px;
+    }
+
+    /* Ajuster la taille des boutons dans les formations */
+    .toggle-button {
+        bottom: -15px; /* Ajuster la position du bouton pour qu'il soit bien visible */
+    }
+
+    .formation {
+        margin-bottom: 30px; /* Réduire l'espace entre les formations */
+    }
+}

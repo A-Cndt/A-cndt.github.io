@@ -1,0 +1,259 @@
+body { 
+    background: url('https://wallpapercat.com/w/full/7/0/6/26427-3840x2160-desktop-4k-black-hole-wallpaper-image.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+.page {
+    margin: 50px;
+    text-align: justify;
+    color: #fff;
+}
+
+.intro {
+    background-color: rgba(20, 20, 20, 0.9);
+    border-radius: 50px;
+    padding: 15px;
+}
+
+.intro a {
+    text-decoration: none;
+    color: #cbaedd
+}
+
+.intro a:hover{
+    text-shadow: 
+    0 0 5px #9b4dca, 
+    0 0 10px #9b4dca,
+    0 0 15px #9b4dca;
+    color: #fff;
+}
+
+.cv {
+    padding: 15px;
+}
+
+h1 {
+    color: #fff;
+    text-shadow: 
+    0 0 5px #9b4dca, 
+    0 0 10px #fff;
+}
+
+.experience .more {
+    width: 100%;
+    border-radius: 0px 0px 10px 10px;
+    background-color: rgba(20, 20, 20, 0.9);
+    padding: 10px 15px;
+    color: #fff;
+}
+
+.more a {
+    color: #fff;
+}
+
+.entreprise {
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 5px #9b4dca, 
+    0 0 10px #fff; ;
+    display: grid;
+    grid-template-columns: auto auto 1fr auto auto;
+    gap: 0;
+    align-items:center;
+}
+
+.experience .titre {
+    padding: 5px 15px ;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #cbaedd;
+    border-radius: 10px 10px 0px 0px;
+    color: #141414;
+}
+
+.poste {
+    font-weight: bold;
+}
+
+
+.dates {
+    font-style: italic;
+}
+
+a {
+    text-decoration: none;
+}
+
+.entreprise .nom {
+    grid-column: 1;
+    grid-row: 1;
+    margin-right: 5px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.lieu {
+    grid-column: 2;
+    grid-row: 1;
+    font-style: italic;
+}
+
+.pic img {
+    all:unset;
+    width: 75px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    transition: box-shadow 0.1s ease;
+    box-shadow: 
+    0 0 5px #9b4dca, 
+    0 0 10px #9b4dca,
+    0 0 15px #9b4dca;
+}
+
+.pic img:hover{
+    box-shadow: 
+    0 0 5px #fff, 
+    0 0 10px #fff,
+    0 0 15px #9b4dca;
+}
+.pic.un {
+    grid-row: 1;
+    grid-column: 4;
+    margin-right: 25px;
+}
+
+.pic.deux {
+    grid-row: 1;
+    grid-column: 5;
+}
+
+a.lien {
+    color: #cbaedd
+}
+
+a.lien:hover {
+    text-shadow: 
+    0 0 5px #9b4dca, 
+    0 0 10px #9b4dca,
+    0 0 15px #9b4dca;
+    color: #fff;
+}
+
+.experience {
+    margin-bottom: 50px;
+}
+
+.resumé {
+    display: none;
+    width: 100%;
+}
+
+.more {
+    position: relative;  /* Nécessaire pour positionner le bouton par rapport à ce conteneur */
+}
+
+.toggle-button {
+    display: block;
+    position: absolute;  /* Positionne le bouton de manière absolue */
+    right: 15px;            /* Colle le bouton à droite du conteneur */
+    bottom: -25px;           /* Colle le bouton en bas du conteneur */
+}
+
+
+/* Responsive styles for smartphones */
+@media screen and (max-width: 640px) {
+    body {
+        background-size: cover;
+        height: auto;
+        margin: 0;
+        padding: 0;
+    }
+
+    .page {
+        margin: 20px;  /* Réduit les marges sur mobile */
+        text-align: justify;
+    }
+
+    .intro {
+        padding: 10px;
+        border-radius: 25px;
+        background-color: rgba(20, 20, 20, 0.9);
+    }
+
+    .intro a {
+        font-size: 16px; /* Taille de texte ajustée */
+    }
+
+    .cv {
+        padding: 10px; /* Réduit les espacements */
+    }
+
+    h1 {
+        font-size: 24px; /* Réduit la taille du titre */
+        text-shadow: 0 0 5px #9b4dca, 0 0 10px #fff;
+    }
+
+    .experience .more {
+        width: 100%;
+        padding: 10px 15px;
+        border-radius: 0px 0px 10px 10px;
+        background-color: rgba(20, 20, 20, 0.9);
+    }
+
+    .entreprise {
+        display: block;  /* Passe en affichage en bloc pour mobile */
+        margin-bottom: 20px;
+        box-shadow: 0 0 5px #9b4dca, 0 0 10px #fff;
+        gap: 20px;  /* Espacement entre les éléments */
+    }
+
+    .entreprise .nom {
+        font-size: 18px; /* Réduit la taille du nom pour l'adapter aux petits écrans */
+    }
+
+    .pic img {
+        width: 50px; /* Réduit la taille des images */
+        padding: 8px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 5px #9b4dca, 0 0 10px #9b4dca;
+    }
+
+    .pic.un,
+    .pic.deux {
+        grid-row: 1;
+        grid-column: auto;
+        margin: 10px 0; /* Réduit l'espace autour des images */
+    }
+
+    .lien {
+        font-size: 16px; /* Ajuste la taille des liens */
+    }
+
+    .experience {
+        margin-bottom: 30px; /* Réduit l'espacement entre les expériences */
+    }
+
+    .resumé {
+        display: block;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .toggle-button {
+        width: 100%;  /* Bouton occupe toute la largeur */
+        padding: 10px;
+        position: relative;
+        bottom: 0;  /* Ajuste le positionnement */
+        margin-top: 15px; /* Espacement au-dessus du bouton */
+    }
+}
+

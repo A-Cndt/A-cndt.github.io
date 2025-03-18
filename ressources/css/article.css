@@ -1,23 +1,41 @@
-body {
-    background: url('https://images3.alphacoders.com/135/thumb-1920-1354186.jpeg');
-    background-repeat: repeat;
-    height: 100%;
+body { 
+    background: url('https://wallpapercat.com/w/full/7/0/6/26427-3840x2160-desktop-4k-black-hole-wallpaper-image.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Spectral', serif;
     text-align: justify;
 }
+
 
 a {
     text-decoration: none;
     color: #fff;
 }
 
-.content .link:hover {
-    color: #f54266;
+.article {
+    color: #fff;
+    margin: 25px;
+}
+
+.article .link {
+    color:#cbaedd;
+}
+
+.article .link:hover {
+    text-shadow: 0 0 5px #9b4dca, 
+    0 0 10px #9b4dca,
+    0 0 15px #9b4dca;
+    color: #fff;
 }
 
 .article .resume {
     grid-row: 2;
     grid-column: 1;
-    background-color: #141414;
+    background-color: rgba(20, 20, 20, 0.9);
     border-radius: 25px;
     padding: 15px;
 }
@@ -28,7 +46,7 @@ a {
     margin-left: 10px;
     padding: 0px 10px;
     font-weight: bold;
-    background-color: #f54266;
+    background-color: #cbaedd;
     border-radius: 10px;
     width: fit-content;
 }
@@ -59,13 +77,13 @@ a {
     margin-top: 10px;
     grid-row: 2;
     grid-column: 1;
-    background-color: #141414;
+    background-color: rgba(20, 20, 20, 0.9);
     border-radius: 25px;
     padding: 15px;
 }
 
 .section h2 {
-    color: #f54266;
+    color: #cbaedd;
     background-color: #fff;
     border-radius: 25px;
     padding: 10px;
@@ -79,7 +97,7 @@ a {
     width: fit-content;
 }
 
-button {
+.article button {
     margin-top: 10px;
     grid-column: 3;
     grid-row: 3;
@@ -92,14 +110,14 @@ button {
     border: none;
     cursor: pointer;
     outline: none;
-    background-color: #f54266;
+    background-color: #cbaedd;
     border-radius: 10px;
 }
 
 /* Styling for sources */
 .source-container {
     margin-top: 20px;
-    background-color: #141414;
+    background-color: rgba(20, 20, 20, 0.9);
     border-radius: 25px;
     padding: 15px;
     color: #fff;
@@ -107,7 +125,7 @@ button {
 }
 
 .source-container h3 {
-    color: #f54266;
+    color: #cbaedd;
     font-size: 18px;
     margin-bottom: 10px;
     font-weight: bold;
@@ -119,17 +137,19 @@ button {
 }
 
 .source-container a {
-    color: #fff;
+    color: #cbaedd;
     font-size: 14px;
-    transition: color 0.3s ease;
 }
 
 .source-container a:hover {
-    color: #f54266;
+    text-shadow: 0 0 5px #9b4dca, 
+    0 0 10px #9b4dca,
+    0 0 15px #9b4dca;
+    color: #fff;
 }
 
 .source-container a:focus {
-    outline: 2px solid #f54266;
+    outline: 2px solid #cbaedd;
 }
 
 /* Responsive styles for smartphones */
@@ -172,7 +192,7 @@ button {
 
 .item {
     padding: 5px;
-    background-color: #f5426669;
+    background-color: #cbaedd69;
     border-radius: 5px;
 }
 
@@ -182,7 +202,7 @@ li {
 
 ul.item {
     background: local;
-    background-color: #141414;
+    background-color: rgba(20, 20, 20, 0.9);
 }
 
 .block_imgs {
@@ -195,4 +215,81 @@ ul.item {
 .block_img {
     max-width: 400px;
     max-height: 200px;
+}
+
+embed {
+    display: block;
+    width: 1fr;
+    align-self: center; /* Centrage vertical */
+    justify-self: center; /* Centrage horizontal */
+}
+
+/* Responsive styles for smartphones */
+@media screen and (max-width: 768px) {
+    body {
+        background-size: cover;
+        text-align: left;
+        padding: 10px; /* Ajoute des marges internes pour éviter que le contenu touche les bords */
+    }
+
+    .article .main_img, .imgdesc {
+        width: 100%;
+        max-width: 100%; /* S'assure qu'elles occupent toute la largeur */
+    }
+
+    .article .resume, .content div {
+        padding: 10px; /* Réduit les marges pour un meilleur affichage sur mobile */
+        font-size: 14px;
+    }
+
+    .article .titre {
+        font-size: 18px;
+        margin: 10px 0;
+    }
+
+    button {
+        width: 100%; /* Boutons s'étendent sur toute la largeur */
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .section h2 {
+        font-size: 20px;
+    }
+
+    .source-container {
+        font-size: 12px;
+    }
+
+    /* Ajustements pour la mise en page */
+    .block_imgs {
+        flex-direction: column; /* Affiche les images en colonne sur mobile */
+        align-items: center;
+        justify-content: center;
+    }
+
+    .block_img {
+        max-width: 100%; /* Assure que les images ne dépassent pas de l'écran */
+        max-height: auto;
+    }
+
+    .article .titre {
+        font-size: 16px;
+    }
+
+    /* Ajuste l'espacement dans les sections */
+    .item {
+        padding: 5px;
+        background-color: #cbaedd69;
+        border-radius: 5px;
+        font-size: 12px; /* Plus petit texte pour les items */
+    }
+
+    li {
+        margin-left: 10px;
+    }
+
+    ul.item {
+        background-color: rgba(20, 20, 20, 0.9);
+    }
 }
