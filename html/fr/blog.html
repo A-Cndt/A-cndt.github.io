@@ -1,183 +1,237 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alexandre Condette - Blog</title>
-    <link rel="stylesheet" href="../../ressources/css/main.css">
-    <link rel="stylesheet" href="../../ressources/css/blog.css">
-    <script src="../../ressources/js/pagination.js" async></script>
-    <script src="../../ressources/js/filter.js" async></script>
-	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1271682525986890"
-     crossorigin="anonymous"></script>
-</head>
-<body>
-    <section class="page">
-        <!-- Barre de navigation -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="google-adsense-account" content="ca-pub-1271682525986890">
+        <meta name="keywords" content="CV, ingénieur, aérospatial, développeur, astronomie, science, espace, exploration, spatiale, télescope, missions, planètes, mars, lune, technologies, astrophysique, blog">
+        <meta name="description" content="Découvrez le CV en ligne d'un ingénieur aérospatial passionné d'astronomie et d'innovations spatiales. Suivez mon blog sur les dernières avancées en ingénierie aérospatiale et les découvertes en astronomie.">
+        <meta name="author" content="Alexandre Condette">
+        <meta name="robots" content="index, follow">
+        <link rel="canonical" href="https://a-cndt.github.io">
+    
+        <!-- Open Graph meta tags for social media engagement -->
+        <meta property="og:title" content="CV et Blog d'Ingénieur Aérospatial Passionné d'Astronomie">
+        <meta property="og:description" content="Explorez mon CV en ligne et lisez mon blog sur l'astronomie et l'ingénierie aérospatiale. Découvrez mes projets professionnels et mes passions pour l'espace.">
+        <meta property="og:image" content="https://api.tipeee.com/cache/20250203101139/media/200/200/zoom/2484611/2025020367a0884bee3c7.jpeg">
+        <meta property="og:url" content="https://a-cndt.github.io">
+        <meta property="og:type" content="website">
+        <meta property="og:locale" content="fr_FR">
+    
+        <!-- Twitter Card meta tags -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="CV et Blog d'Ingénieur Aérospatial Passionné d'Astronomie">
+        <meta name="twitter:description" content="Explorez mon CV en ligne et lisez mon blog sur l'astronomie et l'ingénierie aérospatiale. Découvrez mes projets professionnels et mes passions pour l'espace.">
+        <meta name="twitter:image" content="https://api.tipeee.com/cache/20250203101139/media/200/200/zoom/2484611/2025020367a0884bee3c7.jpeg">
+    
+        <link rel="icon" href="favicon.ico" type="../../ressources/imgs/logo_alex.jpeg">
+        <link rel="icon" href="favicon.png" sizes="32x32">
+        <link rel="apple-touch-icon" href="apple-icon.png">
+        <link rel="preload" href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;700&display=swap" as="style">
+        <title>Blog</title>
+    
+        <link rel="stylesheet" href="../../ressources/css/blog.css">
+        <script src="../../ressources/js/load_html.js"></script>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1271682525986890" crossorigin="anonymous"></script>
+        <script src="../../ressources/js/pagination.js" async></script>
+        <script src="../../ressources/js/filter.js" async></script>
+    </head>
+    
+    <body>       
+        <!-- Barre de navigation --> 
         <nav>
-            <div class="onglets">
-                <a href="../../index.html">Accueil</a>
-                <a href="./exp_pro.html">Expériences professionnelles</a>
-                <a href="./formation.html">Formation</a>
-                <a href="./blog.html">Blog</a>
-            </div>
-            <div class="buttons">
-                <a href="https://fr.tipeee.com/alexinthecosmos/"><button class="tipee" target="_blank">Me soutenir</button></a>
-                <a href="./contact.html"><button class="contact">Me contacter</button></a>
-            </div>
+            <div id="navbar"></div>
         </nav>
-        <!-- Fin barre de navigation -->
 
-        <!-- Filtrage par tags -->
-        <article>
+        <!-- Contenu de la page -->
+        <section class="page">
+            <!-- Filtrage par tags -->
             <div class="tags-filter">
-                <h3 class="">Filtrer par série :</h3>
-                <label class=""><input type="checkbox" class="tag-filter" data-tag="Système Solaire"> Système Solaire</label>
-                <label class=""><input type="checkbox" class="tag-filter" data-tag="Cieldumois"> Ciel du Mois</label>
+                <fieldset>
+                    <legend>Filtrer par série :</legend>
+                    <label><input type="checkbox" class="tag-filter" data-tag="Cieldumois">Ciel du Mois</label>
+                    <label><input type="checkbox" class="tag-filter" data-tag="Métiers du Spatial">Métiers du Spatial</label>
+                    <label><input type="checkbox" class="tag-filter" data-tag="Système Solaire">Système Solaire</label>
+                </fieldset>
 
-                <h3>Filtrer par tags :</h3>
-                <label><input type="checkbox" class="tag-filter" data-tag="Astronomie Moderne"> Astronomie Moderne</label>
-                <label><input type="checkbox" class="tag-filter" data-tag="Astronomie Amateure"> Astronomie Amateure</label>
-                <label class=""><input type="checkbox" class="tag-filter" data-tag="Etoile"> Etoile</label>
-                <label><input type="checkbox" class="tag-filter" data-tag="Ondes Gravitationnelles"> Ondes Gravitationnelles</label>
-				<label><input type="checkbox" class="tag-filter" data-tag="Planète"> Planète</label>
-                <label><input type="checkbox" class="tag-filter" data-tag="Relativité"> Relativité</label>
-                <label class=""><input type="checkbox" class="tag-filter" data-tag="Système Solaire"> Système Solaire</label>
-                <label><input type="checkbox" class="tag-filter" data-tag="Trou Noir"> Trou Noir</label>
+                <fieldset>
+                    <legend>Filtrer par tags :</legend>
+                    <label><input type="checkbox" class="tag-filter" data-tag="Ariane">Ariane</label>
+                    <label><input type="checkbox" class="tag-filter" data-tag="Astronomie Moderne">Astronomie Moderne</label>
+                    <label><input type="checkbox" class="tag-filter" data-tag="Astronomie Amateure">Astronomie Amateure</label>
+                    <label><input type="checkbox" class="tag-filter" data-tag="Astrophysique">Astrophysique</label>
+                    <label><input type="checkbox" class="tag-filter" data-tag="Etoile">Etoile</label>
+                    <label><input type="checkbox" class="tag-filter" data-tag="Lanceurs">Lanceurs</label>
+                    <label><input type="checkbox" class="tag-filter" data-tag="Métier">Métier</label>
+                    <label><input type="checkbox" class="tag-filter" data-tag="Ondes Gravitationnelles">Ondes Gravitationnelles</label>
+                    <label><input type="checkbox" class="tag-filter" data-tag="Planète">Planète</label>
+                    <label><input type="checkbox" class="tag-filter" data-tag="Relativité">Relativité</label>
+                    <label><input type="checkbox" class="tag-filter" data-tag="Trou Noir">Trou Noir</label>
+                </fieldset>
             </div>
+
 
             <!-- Articles -->
                 
-            <div class="articles" id="dernier">
-                <a href="articles/ciel_mars.html" class="block">
-                    <div class="article" id="dernier" data-tags="Cieldumois, Etoile, Astronomie Amateure, Planète">
-                        <img src="../../ressources/imgs/articles/ciel/carte_ciel.jpg" width="200px" height="125px"/>
-                        <p class="titre">Ciel du Mois : Mars 2025</p>
-                        <p class="soustitre">Ciel du Mois # 2</p>
-                        <p class="date">28/02/2025 - ©Alexandre Condette</p>
-                        <p class="resume">
-                            2e Numéro de la série mensuelle sur le ciel du Mois, le mois de mars 2025 sera marqué par plusieurs phénomènes, dont 2 éclipses partielles (une de Soleil et une de Lune) !!
-                        </p>
-                        <button>Lire la suite de l'article...</button>
-                        <p class="tags">
-                            <span class="item">Ciel du Mois</span>
-                            <span class="item">Etoile</span>
-							<span class="item">Planète</span>
-                            <span class="item">Astronomie amateure</span>
-                        </p>
-                    </div>
-                </a>
+            <div class="articles">
+                <div class="article" id="dernier" data-tags="Métier, Lanceurs, Astrophysique, Ariane, Métiers du Spatial">
+                    <a href="articles/ddo.html" class="block">
+                        <div class="content">
+                            <img src="../../ressources/imgs/articles/ddo/ddo.jpeg" width="150px" height="125px"/>
+                            <p class="titre">Le métier de Directeur des Opérations (DDO) au CSG</p>
+                            <p class="soustitre">Métiers du Spatial # 1</p>
+                            <p class="date">20/03/2025 - ©Alexandre Condette</p>
+                        
+                            <p class="resume">
+                                "A tous de DDO, attention pour le décompte final", voici la phrase emblématique prononcée par le DDO (Directeur des Opérations) à chaque lancement d'un lanceur depuis le Centre Spatial Guyannais (CSG) de Kourou.
+                                <br>
+                                Le Centre Spatial Guyanais, situé à Kourou, est l’un des sites de lancement les plus stratégiques au monde. C’est depuis cette base que sont lancées les fusées Ariane et Vega. Au cœur de cette infrastructure opérationnelle se trouve un poste essentiel : celui de Directeur des Opérations. Ce rôle, souvent méconnu du grand public, est pourtant indispensable au bon déroulement des missions de lancement. 
+                                Avec l’arrivée d’Ariane 6, le rôle du DDO devient encore plus crucial.
+                            </p>
+                            
+                            <button>Lire la suite de l'article...</button>
+                            
+                            <p class="tags">
+                                <span class="item">Métiers du Spatial</span>
+                                <span class="item">Lanceurs</span>
+                                <span class="item">Ariane</span>
+                                <span class="item">Astrophysique</span>
+                            </p>
+                        </div>
+                    </a>
+                </div>
 
-                <a href="articles/ciel_fevrier.html" class="block">
-                    <div class="article" id="dernier" data-tags="Cieldumois, Etoile, Astronomie Amateure, Planète">
-                        <img src="../../ressources/imgs/articles/ciel/carte_ciel.jpg" width="200px" height="125px"/>
-                        <p class="titre">Ciel du Mois : Février 2025</p>
-                        <p class="soustitre">Ciel du Mois # 1</p>
-                        <p class="date">31/01/2025 - ©Alexandre Condette</p>
-                        <p class="resume">
-                            Cette série mensuelle aura pour but de vous offrir une vue d'ensemble des phénomènes célestes à venir, des constellations visibles, des planètes qui seront en particulier observables, et des événements astronomiques à ne pas manquer. Que vous soyez passionné d'astronomie ou simplement curieux de savoir ce qui se passe dans notre ciel, cette rubrique est faite pour vous. 
-                        </p>
-                        <button>Lire la suite de l'article...</button>
-                        <p class="tags">
-                            <span class="item">Ciel du Mois</span>
-                            <span class="item">Etoile</span>
-							<span class="item">Planète</span>
-                            <span class="item">Astronomie amateure</span>
-                        </p>
-                    </div>
-                </a>
+                <div class="article" id="dernier" data-tags="Cieldumois, Etoile, Astronomie Amateure, Planète">
+                    <a href="articles/ciel_mars.html" class="block">
+                        <div class="content">
+                            <img src="../../ressources/imgs/articles/ciel/carte_ciel.jpg" width="150px" height="125px"/>
+                            <p class="titre">Ciel du Mois : Mars 2025</p>
+                            <p class="soustitre">Ciel du Mois # 2</p>
+                            <p class="date">28/02/2025 - ©Alexandre Condette</p>
+                        
+                            <p class="resume">
+                                2e Numéro de la série mensuelle sur le ciel du Mois, le mois de mars 2025 sera marqué par plusieurs phénomènes, dont 2 éclipses partielles (une de Soleil et une de Lune) !!
+                            </p>
+                            
+                            <button>Lire la suite de l'article...</button>
+                            
+                            <p class="tags">
+                                <span class="item">Ciel du Mois</span>
+                                <span class="item">Etoile</span>
+                                <span class="item">Planète</span>
+                                <span class="item">Astronomie amateure</span>
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                
+                 <div class="article" data-tags="Cieldumois, Etoile, Astronomie Amateure, Planète">
+                    <a href="articles/ciel_fevrier.html" class="block">
+                        <div class="content" >
+                            <img src="../../ressources/imgs/articles/ciel/carte_ciel.jpg"  height="125px"/>
+                            <p class="titre">Ciel du Mois : Février 2025</p>
+                            <p class="soustitre">Ciel du Mois # 1</p>
+                            <p class="date">31/01/2025 - ©Alexandre Condette</p>
+                            <p class="resume">
+                                Cette série mensuelle aura pour but de vous offrir une vue d'ensemble des phénomènes célestes à venir, des constellations visibles, des planètes qui seront en particulier observables, et des événements astronomiques à ne pas manquer. Que vous soyez passionné d'astronomie ou simplement curieux de savoir ce qui se passe dans notre ciel, cette rubrique est faite pour vous. 
+                            </p>
+                            <button>Lire la suite de l'article...</button>
+                            <p class="tags">
+                                <span class="item">Ciel du Mois</span>
+                                <span class="item">Etoile</span>
+                                <span class="item">Planète</span>
+                                <span class="item">Astronomie amateure</span>
+                            </p>
+                        </div>
+                    </a>
+                </div>
 
-            <!-- Articles -->
-            <div class="articles" id="dernier">
-                <a href="articles/soleil.html" class="block">
-                    <div class="article" id="dernier" data-tags="Système Solaire, Etoile">
-                        <img src="../../ressources/imgs/articles/Soleil/sun.png" width="200px" height="125px"/>
-                        <p class="titre">A la lumière du Soleil : Exploration de ses mystères</p>
-                        <p class="soustitre">Le Système Solaire # 1</p>
-                        <p class="date">22/01/2025 - ©Alexandre Condette</p>
-                        <p class="resume">
-                            Premier article d'une série sur notre Système Solaire ! Et comment mieux débuter qu'avec notre étoile, le Soleil ? <br><br>
-                            Dans cet article, nous explorerons les mystères qui entourent notre source de lumière et de chaleur. Nous examinerons son rôle vital dans la formation de la vie sur Terre, ses caractéristiques fascinantes, et les découvertes récentes qui nous aident à mieux comprendre son fonctionnement. Un voyage au cœur de notre étoile, qui éclaire non seulement notre planète, mais aussi nos recherches scientifiques et notre perception de l'univers !
-                        </p>
-                        <button>Lire la suite de l'article...</button>
-                        <p class="tags">
-                            <span class="item">Système Solaire</span>
-                            <span class="item">Etoile</span>
-                        </p>
-                    </div>
-                </a>
+                <div class="article" data-tags="Système Solaire, Etoile">
+                    <a href="articles/soleil.html" class="block">
+                        <div class="content">
+                            <img src="../../ressources/imgs/articles/Soleil/sun.png" width="200px" height="125px"/>
+                            <p class="titre">A la lumière du Soleil : Exploration de ses mystères</p>
+                            <p class="soustitre">Le Système Solaire # 1</p>
+                            <p class="date">22/01/2025 - ©Alexandre Condette</p>
+                            <p class="resume">
+                                Premier article d'une série sur notre Système Solaire ! Et comment mieux débuter qu'avec notre étoile, le Soleil ? <br><br>
+                                Dans cet article, nous explorerons les mystères qui entourent notre source de lumière et de chaleur. Nous examinerons son rôle vital dans la formation de la vie sur Terre, ses caractéristiques fascinantes, et les découvertes récentes qui nous aident à mieux comprendre son fonctionnement. Un voyage au cœur de notre étoile, qui éclaire non seulement notre planète, mais aussi nos recherches scientifiques et notre perception de l'univers !
+                            </p>
+                            <button>Lire la suite de l'article...</button>
+                            <p class="tags">
+                                <span class="item">Système Solaire</span>
+                                <span class="item">Etoile</span>
+                            </p>
+                        </div>
+                    </a>
+                </div>
 
-                <a href="articles/ondes_gravitationnelles.html" class="block">
-                    <div class="article" id="article" data-tags="Ondes Gravitationnelles, Relativité, Astronomie Moderne, Trou Noir">
-                        <img src="../../ressources/imgs/articles/LISA/lisa.jpg" width="200px" height="125px"/>
-                        <p class="titre">Les ondes gravitationnelles, LISA le projet fou de l'ESA</p>
-                        <p class="date">14/01/2025 - ©Alexandre Condette</p>
-                        <p class="resume">
-                            Les ondes gravitationnelles, des vibrations dans l'espace-temps causées par des événements cosmiques extrêmes comme les fusions de trous noirs ou d'étoiles à neutrons, ont été prédictées par Albert Einstein en 1915 et confirmées par les scientifiques en 2015... <br>
-                            <br>
-                            LISA est une mission spatiale ambitieuse de l'Agence spatiale européenne (ESA), prévue pour 2037, qui vise à détecter ces ondes en envoyant trois satellites en formation dans l’espace...
-                        </p>
-                        <button>Lire la suite de l'article...</button>
-                        <p class="tags">
-                            <span class="item">Ondes Gravitationnelles</span>
-                            <span class="item">Relativité</span>
-                            <span class="item">Astronomie Moderne</span>
-                            <span class="item">Trou Noir</span>
-                        </p>
-                    </div>
-                </a>
+                <div class="article" data-tags="Ondes Gravitationnelles, Relativité, Astronomie Moderne, Trou Noir">
+                    <a href="articles/ondes_gravitationnelles.html" class="block">
+                        <div class="content">
+                            <img src="../../ressources/imgs/articles/LISA/lisa.jpg" width="200px" height="125px"/>
+                            <p class="titre">Les ondes gravitationnelles, LISA le projet fou de l'ESA</p>
+                            <p class="date">14/01/2025 - ©Alexandre Condette</p>
+                            <p class="resume">
+                                Les ondes gravitationnelles, des vibrations dans l'espace-temps causées par des événements cosmiques extrêmes comme les fusions de trous noirs ou d'étoiles à neutrons, ont été prédictées par Albert Einstein en 1915 et confirmées par les scientifiques en 2015... <br>
+                                <br>
+                                LISA est une mission spatiale ambitieuse de l'Agence spatiale européenne (ESA), prévue pour 2037, qui vise à détecter ces ondes en envoyant trois satellites en formation dans l’espace...
+                            </p>
+                            <button>Lire la suite de l'article...</button>
+                            <p class="tags">
+                                <span class="item">Ondes Gravitationnelles</span>
+                                <span class="item">Relativité</span>
+                                <span class="item">Astronomie Moderne</span>
+                                <span class="item">Trou Noir</span>
+                            </p>
+                        </div>
+                    </a>
+                </div>
             </div>
             
-            <!-- Pagination -->
+            <!--Pagination-->
             <div class="pagination">
-                <button id="prevPage" onclick="changePage(-1)" aria-label="Page précédente">&#8592;</button> <!-- Flèche gauche -->
-                <span id="pageNumber">Page 1 sur 1</span> <!-- Affichage page actuelle sur nombre total -->
-                <button id="nextPage" onclick="changePage(1)" aria-label="Page suivante">&#8594;</button> <!-- Flèche droite -->
+                <button id="prevPage" onclick="changePage(-1)" aria-label="Page précédente">&#8592;</button> 
+                <span id="pageNumber">Page 1 sur 1</span>
+                <button id="nextPage" onclick="changePage(1)" aria-label="Page suivante">&#8594;</button>
             </div>
-        </article>
-    </section>
-    <ins class="adsbygoogle"
-        style="display:flex"
-        data-ad-client="ca-pub-1271682525986890"
-        data-ad-slot="4423938118"
-        data-ad-format="auto"
-        data-full-width-responsive="true">
-    </ins>
-     <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-   </script>
-            <!-- Pied de page-->
-            <footer>
-                <h5>Des questions ? Contactez moi</h5>
-                <div class="colonnes">
-                    <div class="colonne">
-                        <p><a href="./blog.html#dernier">Derniers articles</a></p>
-                        <p><a href="https://tml.celescope.fr/" target="_blank">Association Célescope</a></p>
-                    </div>
-                    <div class="colonne">
-                        <p><a href="https://www.ipsa.fr/" target="_blank">IPSA</a></p>
-                        <p><a href="https://www.hs-bremen.de/" target="_blank">HSB</a></p>
-                    </div>
-                    <div class="colonne">
-                        <p><a href="./contact.html">Me contacter</a></p>
-                        <p><a href="https://fr.tipeee.com/alexinthecosmos/" target="_blank">Me soutenir</a></p>
-                        <p>
-                            <a href="../../index.html"><img src=../../ressources/imgs/france.png></a>
-                            <a href="../../index_en.html"><img src=../../ressources/imgs/royaume-uni.png></a>
-                            <a href="../../index_de.html"><img src=../../ressources/imgs/allemagne.png></a>
-                        </p>
-                    </div>
-                </div>
-                <p>©Alexandre Condette, 2024</p>
-                <p>
-                    <a href="https://www.linkedin.com/in/alexandre-condette/" target="_blank"><img src=../../ressources/imgs/linkedin.png></a>
-                    <a href="https://github.com/A-Cndt" target="_blank"><img src=../../ressources/imgs/github.png></a>
-                    <a href="https://www.instagram.com/alexinthecosmos/?hl=fr" target="_blank"><img src="../../ressources/imgs/instagram.png"></a>
-					<a href="https://www.facebook.com/profile.php?id=61572622681978" target="_blank"><img src="../../ressources/imgs/facebook.png"></a>
-                </p>
-                <div id="sfc7yqaeqs1f6ag8zn8lr686z5uzceqsl7n"></div><script type="text/javascript" src="https://counter6.optistats.ovh/private/counter.js?c=7yqaeqs1f6ag8zn8lr686z5uzceqsl7n&down=async" async></script><br><a href="https://www.compteurdevisite.com"></a><noscript><a href="https://www.compteurdevisite.com" title="compteur de visite"><img src="https://counter6.optistats.ovh/private/compteurdevisite.php?c=7yqaeqs1f6ag8zn8lr686z5uzceqsl7n" border="0" title="compteur de visite" alt="compteur de visite"></a></noscript>
-            </footer>    
-            <!-- Fin du pied de page-->
+        </section>
+        
+        <ins class="adsbygoogle"
+            style="display:flex"
+            data-ad-client="ca-pub-1271682525986890"
+            data-ad-slot="4423938118"
+            data-ad-format="auto"
+            data-full-width-responsive="true">
+        </ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
 
-</body>
+        <!-- Pied de page -->
+        <footer>
+            <div id="footer"></div>
+        </footer>
+        
+        <!-- Chargement dynamique de la barre de navigation et du pied de page -->
+        <script>
+            loadHTMLIntoElement('navbar.html', 'navbar');
+        </script>
+        <script>
+            loadHTMLIntoElement('footer.html', 'footer');
+        </script>
+
+        <!-- Compteur de visite -->
+        <div id="sfc7yqaeqs1f6ag8zn8lr686z5uzceqsl7n"></div>
+        <script type="text/javascript" src="https://counter6.optistats.ovh/private/counter.js?c=7yqaeqs1f6ag8zn8lr686z5uzceqsl7n&down=async" async>
+        </script>
+        <br>
+        <a href="https://www.compteurdevisite.com"></a>
+        <noscript>
+            <a href="https://www.compteurdevisite.com" title="compteur de visite">
+                <img src="https://counter6.optistats.ovh/private/compteurdevisite.php?c=7yqaeqs1f6ag8zn8lr686z5uzceqsl7n" border="0" title="compteur de visite" alt="compteur de visite">
+            </a>
+        </noscript>
+
+    </body>
 </html>
