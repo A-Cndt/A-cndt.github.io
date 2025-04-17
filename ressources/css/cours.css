@@ -1,0 +1,265 @@
+body { 
+    background: url('https://wallpapercat.com/w/full/7/0/6/26427-3840x2160-desktop-4k-black-hole-wallpaper-image.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Spectral', serif;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.item {
+    padding: 10px 15px;
+    margin: 25px;
+    border-radius: 25px;
+    display: block;
+    background-color: rgba(20, 20, 20, 0.9);
+}
+
+.item:hover {
+    box-shadow:     0 0 5px #9b4dca, 
+    0 0 10px #9b4dca,
+    0 0 15px #9b4dca;
+    
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 200px auto auto;
+    grid-auto-rows: 62.5px auto 50px;
+}
+
+.titre {
+    grid-column: 2;
+    grid-row: 1;
+    padding: 5px;
+    font-weight: bold;
+    background-color: #cbaedd;
+    border-radius: 10px;
+    width: fit-content;
+    font-size: 24px;
+    vertical-align: middle;
+    justify-self: left; /* Centrage horizontal */
+    align-self: center;   /* Centrage vertical */
+}
+
+.soustitre {
+    grid-column: 1; /* Le soustitre occupe maintenant la même colonne que le titre */
+    grid-row: 1;    /* Il est sur la même ligne que le titre */
+    display: block;
+    margin-left: 5px;
+    background-color: rgb(136, 59, 236);
+    border-radius: 50px;
+    padding: 10px;
+    font-size: 14px;
+    text-align: center;
+    justify-content: center;
+    margin-right: 10px;
+    align-self: center; /* Centrage vertical */
+    justify-self: center; /* Centrage horizontal */
+}
+
+.date {
+    grid-column: 3;
+    grid-row: 1;
+    align-self: center; /* Centrage vertical */
+    justify-self: right; /* Centrage horizontal */
+}
+
+.resume {
+    grid-column: 2;
+    grid-row: 2/3;
+    align-self: center; /* Centrage vertical */
+    justify-self: right; /* Centrage horizontal */
+    text-align: justify;
+    border-right: #fff 1px solid;
+    padding-right: 15px;
+    height: 90%;
+}
+
+.content button {
+    grid-column: 3;
+    grid-row: 3;
+    font-family: "Playwrite IT Moderna", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    padding: 13px 20px;
+    color: #141414;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    background-color: #fff;
+}
+
+.tags {
+    margin-left: 5px;
+    width: 250px;
+    display: flex;
+    flex-wrap: wrap;
+    grid-column: 3;
+    grid-row: 2;
+    justify-content: flex-start;
+    gap: 1px;
+    height: fit-content;
+}
+
+.content img {
+    grid-column: 1;
+    grid-row: 2 / 3;
+    border: none;
+    outline: none;
+    padding: 10px 10px;
+    border-radius: 10px;
+    height: auto;
+    align-self: center; /* Centrage vertical */
+    justify-self: center; /* Centrage horizontal */
+    width: 150px;
+}
+
+.pagination {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.pagination button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.pagination #pageNumber {
+    font-size: 16px;
+    margin: 0 10px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 50px;
+}
+
+.tags-filter {
+    display: block;
+    flex-wrap: nowrap;
+    text-align: justify;
+    justify-content: space-around;
+    background-color: rgba(46, 8, 97, 0.9);
+    color: #fff;
+    padding: 0px 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin: 25px;
+    padding: 10px;
+}
+
+.hide {
+    display: none;
+}
+
+
+/* Responsive styles for smartphones */
+@media screen and (max-width: 768px) {
+    body {
+        background-size: cover;
+        text-align: left;
+        padding: 10px; /* Ajoute des marges internes pour éviter que le contenu touche les bords */
+    }
+
+    .item {
+        margin: 15px;
+        padding: 10px;
+        background-color: rgba(20, 20, 20, 0.9);
+    }
+
+    .content {
+        display: block;
+        padding: 0 10px;
+    }
+
+    .titre {
+        font-size: 18px;
+        padding: 5px;
+        text-align: center; /* Centre le titre pour les petits écrans */
+        margin: 10px 0;
+    }
+
+    .soustitre {
+        font-size: 12px;
+        margin: 5px 0;
+        width: auto;
+        padding: 5px;
+        justify-self: center;
+    }
+
+    .date {
+        font-size: 12px;
+        margin-top: 10px;
+        text-align: center;
+        justify-self: center;
+    }
+
+    .resume {
+        grid-column: 1 / -1; /* Fais en sorte que le résumé prenne toute la largeur sur mobile */
+        text-align: left;
+        padding-right: 10px;
+        font-size: 14px;
+    }
+
+    .content button {
+        width: 100%; /* Boutons s'étendent sur toute la largeur */
+        padding: 10px;
+        font-size: 16px;
+        font-weight: 500;
+        color: #141414;
+        background-color: #fff;
+        border-radius: 10px;
+        margin-top: 10px;
+    }
+
+    .tags {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+        margin-top: 10px;
+    }
+
+    .content img {
+        width: 100%;
+        max-width: 150px;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .pagination {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .pagination button:disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+    }
+
+    .pagination #pageNumber {
+        font-size: 14px;
+        margin: 0 10px;
+        background-color: #fff;
+        padding: 10px;
+        border-radius: 50px;
+    }
+
+    .tags-filter {
+        padding: 10px;
+        background-color: rgba(46, 8, 97, 0.9);
+        color: #fff;
+        border-radius: 10px;
+        margin: 10px 0;
+        font-size: 14px;
+    }
+}
+
