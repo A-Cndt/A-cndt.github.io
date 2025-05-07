@@ -33,3 +33,5 @@ Disallow: /
 User-agent: *
 Disallow: 
 Disallow: /cgi-bin/
+
+Sitemap: https://a-cndt.github.io/sitemap.xml
