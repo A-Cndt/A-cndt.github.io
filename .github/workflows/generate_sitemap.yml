@@ -1,3 +1,10 @@
+name: Generate sitemap
+
+on:
+  push:
+    branches:
+      - main  # ou ta branche principale
+
 jobs:
   build:
     runs-on: ubuntu-latest
