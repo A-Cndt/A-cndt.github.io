@@ -1,41 +1,116 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Page d'accueil -->
   <url>
     <loc>https://a-cndt.github.io/</loc>
-    <lastmod>2025-03-20T15:00:00-00:00</lastmod>
-  </url>
-  <!-- Autres pages -->
-  <url>
-    <loc>https://a-cndt.github.io/html/fr/exp_pro.html/</loc>
-    <lastmod>2025-03-20T15:00:00-00:00</lastmod>
+    <lastmod>2025-06-18T11:16:38+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://a-cndt.github.io/html/fr/formation.html/</loc>
-    <lastmod>2025-03-20T15:00:00-00:00</lastmod>
+    <loc>https://a-cndt.github.io/html/fr/navbar.html</loc>
+    <lastmod>2025-06-18T11:16:38+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://a-cndt.github.io/html/fr/blog.html/</loc>
-    <lastmod>2025-03-20T15:00:00-00:00</lastmod>
+    <loc>https://a-cndt.github.io/html/fr/formation.html</loc>
+    <lastmod>2025-06-18T11:16:38+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://a-cndt.github.io/html/fr/articles/ondes_gravitationnelles.html/</loc>
-    <lastmod>2025-03-20T15:00:00-00:00</lastmod>
+    <loc>https://a-cndt.github.io/html/fr/contact.html</loc>
+    <lastmod>2025-06-18T11:16:38+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://a-cndt.github.io/html/fr/articles/soleil.html/</loc>
-    <lastmod>2025-03-20T15:00:00-00:00</lastmod>
+    <loc>https://a-cndt.github.io/html/fr/cours.html</loc>
+    <lastmod>2025-06-18T11:16:38+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://a-cndt.github.io/html/fr/articles/ciel_fevrier.html/</loc>
-    <lastmod>2025-03-20T15:00:00-00:00</lastmod>
+    <loc>https://a-cndt.github.io/html/fr/blog.html</loc>
+    <lastmod>2025-06-18T11:16:38+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://a-cndt.github.io/html/fr/articles/ciel_mars.html/</loc>
-    <lastmod>2025-03-20T15:00:00-00:00</lastmod>
+    <loc>https://a-cndt.github.io/html/fr/footer.html</loc>
+    <lastmod>2025-06-18T11:16:38+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://a-cndt.github.io/html/fr/articles/ddo.html/</loc>
-    <lastmod>2025-03-20T15:00:00-00:00</lastmod>
+    <loc>https://a-cndt.github.io/html/fr/exp_pro.html</loc>
+    <lastmod>2025-06-18T11:16:38+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://a-cndt.github.io/html/fr/cours/navbar.html</loc>
+    <lastmod>2025-06-18T11:16:38+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://a-cndt.github.io/html/fr/cours/bdd.html</loc>
+    <lastmod>2025-06-18T11:16:38+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://a-cndt.github.io/html/fr/cours/footer.html</loc>
+    <lastmod>2025-06-18T11:16:38+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://a-cndt.github.io/html/fr/articles/ddo.html</loc>
+    <lastmod>2025-06-18T11:16:38+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://a-cndt.github.io/html/fr/articles/soleil.html</loc>
+    <lastmod>2025-06-18T11:16:38+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://a-cndt.github.io/html/fr/articles/ciel_fevrier.html</loc>
+    <lastmod>2025-06-18T11:16:38+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://a-cndt.github.io/html/fr/articles/navbar.html</loc>
+    <lastmod>2025-06-18T11:16:38+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://a-cndt.github.io/html/fr/articles/mercure.html</loc>
+    <lastmod>2025-06-18T11:16:38+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://a-cndt.github.io/html/fr/articles/ciel_mars.html</loc>
+    <lastmod>2025-06-18T11:16:38+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://a-cndt.github.io/html/fr/articles/ondes_gravitationnelles.html</loc>
+    <lastmod>2025-06-18T11:16:38+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://a-cndt.github.io/html/fr/articles/footer.html</loc>
+    <lastmod>2025-06-18T11:16:38+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 </urlset>
