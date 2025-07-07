@@ -1,0 +1,1 @@
+[![pages-build-deployment](https://github.com/A-Cndt/A-cndt.github.io/actions/workflows/pages/pages-build-deployment/badge.svg?branch=main)](https://github.com/A-Cndt/A-cndt.github.io/actions/workflows/pages/pages-build-deployment)
