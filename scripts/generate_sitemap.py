@@ -31,7 +31,8 @@ def find_html_files(root):
     return html_files
 
 def generate_sitemap(urls):
-    lines = ['<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
+    lines = ['<?xml version="1.0" encoding="UTF-8"?>']
+    lines.append('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">')
 
     # Page d'accueil principale
     lines.append("  <url>")
