@@ -192,12 +192,6 @@ form.addEventListener("submit", async (e) => {
 
   e.preventDefault();
 
-  const data = {
-    name: formData.get("name"),
-    email: formData.get("email"),
-    status: formData.get("status"),
-    message: formData.get("message")
-  };
 
   result.textContent = "Transmission en cours...";
 
