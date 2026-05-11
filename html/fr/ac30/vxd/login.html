@@ -126,9 +126,6 @@ button {
 
 const API = "https://script.google.com/macros/s/AKfycbwmwvMBldzq_ta7g45wnfKZD16-1KVNWvDwp42iW8r8NIJj3O8jxYdm-yqgQxg70-YKug/exec";
 
-const params = new URLSearchParams(window.location.search);
-const token = params.get("token");
-
 const loading = document.getElementById("loading");
 const unauthorized = document.getElementById("unauthorized");
 const content = document.getElementById("content");
@@ -146,8 +143,6 @@ form.addEventListener("submit", async (e) => {
   error.textContent = "";
 
   const formData = new FormData(form);
-
-  formData.append("token", token);
 
   try {
 
