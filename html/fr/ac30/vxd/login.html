@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AX30 Boarding</title>
+
+<style>
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top right, #1b2a4a, #05070f);
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 700px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 20px;
+  padding: 30px;
+  backdrop-filter: blur(10px);
+}
+
+h1 {
+  color: #ff7a18;
+  margin-bottom: 10px;
+}
+
+p {
+  color: #bbb;
+  margin-bottom: 20px;
+}
+
+input, select, textarea, button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 10px;
+  border: none;
+}
+
+input, select, textarea {
+  background: rgba(255,255,255,0.08);
+  color: white;
+}
+
+button {
+  background: linear-gradient(135deg, #ff7a18, #ff9b52);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+#error {
+  color: #ff5c5c;
+  margin-top: 15px;
+}
+
+#success {
+  color: #4ade80;
+  margin-top: 15px;
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <div id="loading">
+    <h1>AX30</h1>
+    <p>Checking boarding authorization...</p>
+  </div>
+
+  <div id="unauthorized" class="hidden">
+    <h1>Access Denied</h1>
+    <p>Invalid invitation token.</p>
+  </div>
+
+  <div id="content" class="hidden">
+
+    <h1>✈ AX30 Boarding Registration</h1>
+
+    <p id="welcome"></p>
+
+    <form id="rsvpForm">
+
+      <select name="status" required>
+        <option value="">Participation</option>
+        <option>Présent</option>
+        <option>Présent + invité</option>
+        <option>Indisponible</option>
+      </select>
+
+      <textarea name="message" placeholder="Message"></textarea>
+
+      <button type="submit">Confirm Boarding</button>
+
+    </form>
+
+    <div id="success"></div>
+    <div id="error"></div>
+
+  </div>
+
+</div>
+
+<script>
+
+const API = "TON_URL_APPS_SCRIPT_ICI";
+
+const params = new URLSearchParams(window.location.search);
+const token = params.get("token");
+
+const loading = document.getElementById("loading");
+const unauthorized = document.getElementById("unauthorized");
+const content = document.getElementById("content");
+const welcome = document.getElementById("welcome");
+const form = document.getElementById("rsvpForm");
+const success = document.getElementById("success");
+const error = document.getElementById("error");
+
+async function init() {
+
+  if (!token) {
+    showUnauthorized();
+    return;
+  }
+
+  try {
+
+    const response = await fetch(API + "?token=" + token);
+
+    const data = await response.json();
+
+    if (!data.valid) {
+      showUnauthorized();
+      return;
+    }
+
+    loading.classList.add("hidden");
+    content.classList.remove("hidden");
+
+    welcome.textContent = "Welcome aboard, " + data.name;
+
+  } catch (err) {
+
+    console.error(err);
+    showUnauthorized();
+  }
+}
+
+function showUnauthorized() {
+
+  loading.classList.add("hidden");
+  unauthorized.classList.remove("hidden");
+}
+
+form.addEventListener("submit", async (e) => {
+
+  e.preventDefault();
+
+  success.textContent = "";
+  error.textContent = "";
+
+  const formData = new FormData(form);
+
+  formData.append("token", token);
+
+  try {
+
+    await fetch(API, {
+      method: "POST",
+      body: formData,
+      mode: "no-cors"
+    });
+
+    success.textContent = "✔ Boarding confirmed. Check your email.";
+
+    form.reset();
+
+  } catch (err) {
+
+    console.error(err);
+
+    error.textContent = "Transmission error";
+  }
+});
+
+init();
+
+</script>
+
+</body>
+</html>
