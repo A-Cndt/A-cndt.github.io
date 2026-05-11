@@ -137,41 +137,6 @@ const form = document.getElementById("rsvpForm");
 const success = document.getElementById("success");
 const error = document.getElementById("error");
 
-async function init() {
-
-  if (!token) {
-    showUnauthorized();
-    return;
-  }
-
-  try {
-
-    const response = await fetch(API + "?token=" + token);
-
-    const data = await response.json();
-
-    if (!data.valid) {
-      showUnauthorized();
-      return;
-    }
-
-    loading.classList.add("hidden");
-    content.classList.remove("hidden");
-
-    welcome.textContent = "Welcome aboard, " + data.name;
-
-  } catch (err) {
-
-    console.error(err);
-    showUnauthorized();
-  }
-}
-
-function showUnauthorized() {
-
-  loading.classList.add("hidden");
-  unauthorized.classList.remove("hidden");
-}
 
 form.addEventListener("submit", async (e) => {
 
