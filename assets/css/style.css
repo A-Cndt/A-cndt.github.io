@@ -96,7 +96,7 @@ body {
     background-size: cover;
 
     /* Safari iOS gère mal fixed */
-    background-attachment: scroll;
+    background-attachment: fixed;
 
     line-height: 1.6;
 
