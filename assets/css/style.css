@@ -28,29 +28,37 @@ body {
     color: var(--text-main);
     min-height: 100vh;
     overflow-x: hidden;
+    margin: 0;
     
-    /* Image desktop */
-    background: url('https://www.wallpaperalchemy.com/storage/wallpapers/129/galactic-wallpaper-4k.jpg') no-repeat center center fixed;
-    object-fit: cover;
+    /* Fond desktop */
+    background-color: #0b0d17;
+    background-image: url('https://www.wallpaperalchemy.com/storage/wallpapers/129/galactic-wallpaper-4k.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 /* ==========================================================================
-   RESPONSIVE SMARTPHONE
+   RESPONSIVE SMARTPHONE (Optimisation iOS)
    ========================================================================== */
 @media (max-width: 768px) {
     body {
-        /* On remplace par l'image verticale optimisée pour smartphone */
+        /* On remplace par l'image verticale */
         background-image: url('/assets/images/background.jpeg');
         
-        /* 'cover' assure que l'image remplit tout l'écran sans pixellisation */
-        object-fit: cover;
-
+        /* Pour iOS, il est crucial d'utiliser 'scroll' au lieu de 'fixed' 
+           pour empêcher Safari de dégrader la qualité de l'image */
+        background-attachment: scroll;
         background-position: center top;
+        background-size: cover;
         
         padding-left: 14px;
         padding-right: 14px;
-        image-rendering: -webkit-optimize-contrast;
-        image-rendering: high-quality;
+        
+        /* Accélération matérielle pour forcer un meilleur rendu */
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
     }
 
     section, article, .card {
@@ -66,8 +74,6 @@ body {
     body {
         padding-left: 10px;
         padding-right: 10px;
-        /* On maintient une taille de fond haute définition */
-        background-size: cover;
     }
 
     h1 { font-size: 1.7rem; }
@@ -79,6 +85,7 @@ body {
    ========================================================================== */
 .card, section, article {
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     background: var(--card-bg);
     border: 1px solid var(--border-glow);
     border-radius: 20px;
