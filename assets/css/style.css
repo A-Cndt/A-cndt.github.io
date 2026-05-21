@@ -141,6 +141,7 @@ article {
 @media (max-width: 768px) {
 
     body {
+        background: url('https://svs.gsfc.nasa.gov/vis/a010000/a014100/a014146/cena_chandra_ixpe_mobile.png');
         /* Très important sur mobile :
            évite les bugs de background-attachment: fixed */
         background-attachment: fixed;
@@ -149,7 +150,7 @@ article {
         background-position: center top;
 
         /* Ajustement pour écrans verticaux */
-        background-size: contain;
+        background-size: cover;
 
         padding-left: 14px;
         padding-right: 14px;
