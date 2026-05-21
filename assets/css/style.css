@@ -31,7 +31,7 @@ body {
     
     /* Image desktop */
     background: url('https://www.wallpaperalchemy.com/storage/wallpapers/129/galactic-wallpaper-4k.jpg') no-repeat center center fixed;
-    background-size: cover;
+    object-fit: cover;
 }
 
 /* ==========================================================================
@@ -43,7 +43,7 @@ body {
         background-image: url('/assets/images/background.jpeg');
         
         /* 'cover' assure que l'image remplit tout l'écran sans pixellisation */
-        background-size: cover;
+        object-fit: cover;
 
         background-position: center top;
         
