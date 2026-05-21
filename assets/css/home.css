@@ -114,6 +114,7 @@ main.page {
 
 .content-block {
     margin-bottom: 4rem;
+    padding: 10px;
 }
 
 .content-block h3 {
