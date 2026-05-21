@@ -56,9 +56,6 @@ body {
         padding-left: 14px;
         padding-right: 14px;
         
-        /* Accélération matérielle pour forcer un meilleur rendu */
-        -webkit-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0);
     }
 
     section, article, .card {
