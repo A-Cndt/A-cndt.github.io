@@ -40,7 +40,7 @@ body {
 @media (max-width: 768px) {
     body {
         /* On remplace par l'image verticale optimisée pour smartphone */
-        background-image: url('https://svs.gsfc.nasa.gov/vis/a010000/a014100/a014146/cena_chandra_ixpe_mobile.png');
+        background-image: url('/assets/images/background.jpeg');
         
         /* 'cover' assure que l'image remplit tout l'écran sans pixellisation */
         background-size: cover;
