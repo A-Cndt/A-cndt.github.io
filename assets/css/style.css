@@ -44,8 +44,7 @@ body {
         
         /* 'cover' assure que l'image remplit tout l'écran sans pixellisation */
         background-size: cover;
-        /* 'scroll' évite les bugs de rendu mobile sur les fonds fixes */
-        background-attachment: scroll;
+
         background-position: center top;
         
         padding-left: 14px;
