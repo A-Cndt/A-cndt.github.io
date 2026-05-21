@@ -1,75 +1,298 @@
-@import "/assets/css/header.css";
-@import "/assets/css/footer.css";
-@import "/assets/css/home.css";
-@import "/assets/css/resume.css";
-@import "/assets/css/formations.css";
-@import "/assets/css/contact.css";
-@import "/assets/css/blog.css";
-@import "/assets/css/article.css";
+/* ==========================================================================
+   IMPORTS
+   ========================================================================== */
+
+@import url("/assets/css/header.css");
+@import url("/assets/css/footer.css");
+@import url("/assets/css/home.css");
+@import url("/assets/css/resume.css");
+@import url("/assets/css/formations.css");
+@import url("/assets/css/contact.css");
+@import url("/assets/css/blog.css");
+@import url("/assets/css/article.css");
+
+/* Correction URL CDN */
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css");
+
+/* ==========================================================================
+   VARIABLES GLOBALES
+   ========================================================================== */
 
 :root {
     --bg-space: #0b0d17;
-    --card-bg: rgba(15, 23, 42, 0.72);
+    --bg-navbar: #16192b;
+
+    --text-main: #f4f4f6;
+    --text-muted: #94a3b8;
+
     --mauve-nebula: #a855f7;
     --mauve-glow: #c084fc;
-    --text-main: #f4f4f6;
-    --border-glow: rgba(192, 132, 252, 0.18);
+
+    --font-family:
+        "Segoe UI",
+        -apple-system,
+        BlinkMacSystemFont,
+        "Helvetica Neue",
+        Helvetica,
+        Arial,
+        sans-serif;
+
+    --max-width: 1400px;
+
+    --transition-fast: 0.25s ease;
 }
 
 /* ==========================================================================
-   FOND UNIVERSEL (Net sur tout support)
+   RESET GLOBAL
+   Compatible Chrome / Firefox / Safari / Opera / Edge / Mobile
    ========================================================================== */
-body {
+
+*,
+*::before,
+*::after {
     margin: 0;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    color: var(--text-main);
+    padding: 0;
+
+    box-sizing: border-box;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    min-height: 100%;
+
+    font-size: 16px;
+
+    scroll-behavior: smooth;
+
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+body {
+    width: 100%;
     min-height: 100vh;
+    min-height: 100dvh;
+
     overflow-x: hidden;
-    
-    /* Propriétés de rendu haute qualité */
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-    
-    /* Configuration de l'image de fond */
+
+    font-family: var(--font-family);
+    color: var(--text-main);
+
     background-color: var(--bg-space);
-    background-image: url('https://www.wallpaperalchemy.com/storage/wallpapers/129/galactic-wallpaper-4k.jpg');
-    background-repeat: no-repeat;
+
+    /* Fallback couleur si image KO */
+    background-image:
+        linear-gradient(
+            rgba(11, 13, 23, 0.72),
+            rgba(11, 13, 23, 0.88)
+        ),
+        url("https://www.wallpaperalchemy.com/storage/wallpapers/129/galactic-wallpaper-4k.jpg");
+
     background-position: center center;
+    background-repeat: no-repeat;
     background-size: cover;
-    
-    /* Évite la pixellisation liée à 'fixed' sur Safari/iPhone */
-    background-attachment: scroll; 
+
+    /* Safari iOS gère mal fixed */
+    background-attachment: scroll;
+
+    line-height: 1.6;
+
+    text-rendering: optimizeLegibility;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 /* ==========================================================================
-   RESPONSIVE & OPTIMISATION ECRANS HAUTE DENSITÉ
+   FIX SAFARI / IOS
    ========================================================================== */
-@media (max-width: 768px) {
+
+@supports (-webkit-touch-callout: none) {
     body {
-        background-image: url('/assets/images/background.jpeg');
-        background-position: center top;
-        
-        /* Force l'accélération matérielle */
-        -webkit-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0);
-        
-        padding-left: 14px;
-        padding-right: 14px;
+        background-attachment: scroll;
     }
 }
 
 /* ==========================================================================
-   COMPOSANTS
+   IMAGES / MEDIAS RESPONSIVE
    ========================================================================== */
-.card, section, article {
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px); /* Indispensable pour Safari */
-    background: var(--card-bg);
-    border: 1px solid var(--border-glow);
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+
+    max-width: 100%;
+    height: auto;
 }
 
-a { color: var(--text-main); text-decoration: none; transition: 0.25s; }
-a:hover { color: var(--mauve-glow); }
+/* ==========================================================================
+   FORMULAIRES
+   ========================================================================== */
+
+input,
+textarea,
+button,
+select {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+
+    border: none;
+    outline: none;
+
+    transition:
+        background-color var(--transition-fast),
+        transform var(--transition-fast),
+        opacity var(--transition-fast);
+}
+
+/* ==========================================================================
+   LIENS
+   ========================================================================== */
+
+a {
+    color: inherit;
+    text-decoration: none;
+
+    transition:
+        color var(--transition-fast),
+        opacity var(--transition-fast);
+}
+
+a:hover {
+    color: var(--mauve-glow);
+}
+
+/* ==========================================================================
+   CONTAINER GLOBAL
+   ========================================================================== */
+
+.container {
+    width: 100%;
+    max-width: var(--max-width);
+
+    margin: 0 auto;
+
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN
+   ========================================================================== */
+
+/* Très grands écrans */
+@media screen and (min-width: 1600px) {
+    html {
+        font-size: 18px;
+    }
+
+    .container {
+        max-width: 1600px;
+    }
+}
+
+/* Laptop */
+@media screen and (max-width: 1200px) {
+    html {
+        font-size: 15px;
+    }
+}
+
+/* Tablette */
+@media screen and (max-width: 992px) {
+    html {
+        font-size: 15px;
+    }
+
+    body {
+        background-position: center top;
+    }
+
+    .container {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 14px;
+    }
+
+    body {
+        background-size: cover;
+        background-position: center center;
+    }
+
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+/* Petit mobile */
+@media screen and (max-width: 480px) {
+    html {
+        font-size: 13px;
+    }
+
+    body {
+        line-height: 1.5;
+    }
+
+    .container {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+    }
+}
+
+/* ==========================================================================
+   MODE PAYSAGE MOBILE
+   ========================================================================== */
+
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    body {
+        background-position: center;
+    }
+}
+
+/* ==========================================================================
+   ACCESSIBILITÉ
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+
+        transition-duration: 0.01ms !important;
+
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ==========================================================================
+   SÉLECTION TEXTE
+   ========================================================================== */
+
+::selection {
+    background: var(--mauve-nebula);
+    color: #ffffff;
+}
+
+::-moz-selection {
+    background: var(--mauve-nebula);
+    color: #ffffff;
+}
