@@ -120,6 +120,7 @@ a:hover {
 .card,
 section,
 article {
+    padding: 5px;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 
@@ -142,13 +143,13 @@ article {
     body {
         /* Très important sur mobile :
            évite les bugs de background-attachment: fixed */
-        background-attachment: scroll;
+        background-attachment: fixed;
 
         /* Recentrage du wallpaper */
         background-position: center top;
 
         /* Ajustement pour écrans verticaux */
-        background-size: cover;
+        background-size: contain;
 
         padding-left: 14px;
         padding-right: 14px;
