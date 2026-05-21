@@ -231,7 +231,7 @@ a:hover {
 
     body {
         background-size: contain;
-        background-position: center center;
+        background-position: center top;
     }
 
     .container {
