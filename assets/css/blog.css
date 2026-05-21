@@ -1,0 +1,225 @@
+/* ==========================================================================
+   STYLE BLOG - SYSTÈME MAUVE NEBULA & GLASSMOPHISM
+   ========================================================================== */
+
+.blog-container { 
+    padding-top: 2rem; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 20px; 
+}
+
+.blog-header { 
+    text-align: center; 
+    margin-bottom: 3rem; 
+}
+
+.glitch-title { 
+    font-size: 2.5rem; 
+    font-weight: 800; 
+    color: #ffffff; 
+    text-transform: uppercase; 
+    letter-spacing: 0.1em; 
+    text-shadow: 0 0 15px rgba(168, 85, 247, 0.3);
+}
+
+.subtitle { 
+    color: var(--mauve-nebula); 
+    margin-top: 0.5rem; 
+}
+
+/* --- Filtres --- */
+.filter-bar { 
+    display: flex; 
+    justify-content: center; 
+    gap: 10px; 
+    margin-bottom: 3rem; 
+    flex-wrap: wrap; 
+}
+
+.filter-btn {
+    background: rgba(18, 18, 24, 0.85);
+    border: 1px solid rgba(168, 85, 247, 0.2);
+    color: #94a3b8;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover, .filter-btn.active { 
+    background: var(--mauve-nebula); 
+    color: white; 
+    border-color: var(--mauve-nebula); 
+}
+
+/* --- Grille et Cartes --- */
+.blog-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); 
+    gap: 2rem; 
+}
+
+.post-card {
+    background: rgba(18, 18, 24, 0.85);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+}
+
+.post-card:hover { 
+    border-color: rgba(168, 85, 247, 0.4); 
+    transform: translateY(-5px); 
+}
+
+/* --- Images --- */
+.post-image { height: 180px; width: 100%; overflow: hidden; position: relative; }
+.post-image img { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    transition: transform 0.5s ease; 
+}
+.post-card:hover .post-image img { transform: scale(1.05); }
+
+.post-category-badge {
+    position: absolute; top: 1rem; left: 1rem;
+    background: rgba(168, 85, 247, 0.9); 
+    color: white;
+    padding: 4px 10px; 
+    border-radius: 4px; 
+    font-size: 0.7rem; 
+    font-weight: bold; 
+    text-transform: uppercase;
+}
+
+/* --- Contenu & Tags --- */
+.post-content { padding: 1.5rem; flex-grow: 1; }
+.post-date { color: #64748b; font-size: 0.8rem; margin-bottom: 0.5rem; display: block; }
+.post-content h3 { font-size: 1.2rem; margin-bottom: 1rem; line-height: 1.4; color: #ffffff; }
+
+.post-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 1rem; }
+.tag {
+    cursor: pointer; 
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(168, 85, 247, 0.2);
+    padding: 3px 8px; 
+    border-radius: 4px;
+    font-size: 0.75rem; 
+    color: var(--mauve-glow); 
+    transition: all 0.2s;
+}
+.tag:hover { background: var(--mauve-nebula); color: white; }
+
+/* --- Liens améliorés --- */
+.read-more-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--mauve-glow);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    position: relative;
+    transition: color 0.3s ease;
+    margin-top: auto;
+    padding-top: 10px;
+}
+
+.read-more-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--mauve-nebula);
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.read-more-link:hover { color: #ffffff; }
+.read-more-link:hover::after { width: 100%; }
+
+.post-content p a {
+    color: var(--mauve-nebula);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(168, 85, 247, 0.3);
+    transition: all 0.2s ease;
+}
+.post-content p a:hover {
+    color: #ffffff;
+    border-bottom-color: var(--mauve-nebula);
+    background: rgba(168, 85, 247, 0.1);
+}
+
+/* Animation de la flèche */
+.arrow-icon {
+    display: inline-block;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.read-more-link:hover .arrow-icon {
+    transform: translateX(6px); /* La flèche se déplace vers la droite */
+}
+
+/* Ajustement du lien pour accueillir l'icône */
+.read-more-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--mauve-glow);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    position: relative;
+    transition: color 0.3s ease;
+    margin-top: auto;
+    padding-top: 10px;
+}
+
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 3rem;
+}
+
+.page-btn {
+    background: rgba(18, 18, 24, 0.85);
+    border: 1px solid rgba(168, 85, 247, 0.2);
+    color: #94a3b8;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.page-btn:disabled { opacity: 0.3; cursor: not-allowed; }
+.page-btn:hover:not(:disabled) { background: var(--mauve-nebula); color: white; }
+
+.page-number {
+    padding: 8px 12px;
+    color: #94a3b8;
+    cursor: pointer;
+}
+.page-number.active { color: var(--mauve-glow); font-weight: bold; }
+
+.page-btn.active {
+    background: var(--mauve-nebula);
+    border-color: var(--mauve-glow);
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* Exemple dans blog.css */
+.filter-btn.active {
+    background-color: rgba(168, 85, 247, 0.9); /* Couleur de ton choix */
+    color: white;
+    border-color: rgba(168, 85, 247, 0.9);
+}

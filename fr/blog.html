@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journal de Bord - Blog</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/blog.css">
+</head>
+
+<body>       
+    <div id="global-header"></div>
+
+    <main class="page-content">
+        <section class="blog-container">
+            
+            <div class="blog-header" id="dernier">
+                <h1 class="glitch-title">Journal de Bord</h1>
+                <h2 class="subtitle">Chroniques d'astronomie &amp; notes d'ingénierie</h2>
+            </div>
+
+            <!-- Barre de filtrage -->
+            <div class="filter-bar">
+                <button class="filter-btn active" data-filter="all">Tous les modules</button>
+                <button class="filter-btn" data-filter="astronomie">Astronomie</button>
+                <button class="filter-btn" data-filter="aérospatial">Aérospatial</button>
+                <button class="filter-btn" data-filter="technologie">Technologie</button>
+            </div>
+
+            <!-- Grille des articles -->
+            <div class="blog-grid" id="blog-grid">
+                
+                <!-- Article 1 -->
+                <article class="post-card" data-category="astronomie">
+                    <div class="post-image">
+                        <img src="/assets/images/blog/Mercury-Planet-Facts.png" alt="Mercure">
+                        <span class="post-category-badge">Astronomie</span>
+                    </div>
+                    <div class="post-content">
+                        <span class="post-date">03 Mai 2025</span>
+                        <h3>Mercure la sentinelle du Soleil</h3>
+                        <div class="post-tags">
+                            <span class="tag" data-tag="mercure">#Mercure</span>
+                            <span class="tag" data-tag="systemesolaire">#SystèmeSolaire</span>
+                            <span class="tag" data-tag="systemesolaire">#Planète</span>
+                        </div>
+                        <p>Deuxième étape de notre voyage à travers le Système Solaire...</p>
+                        <a href="blog/mercure.html" class="read-more-link">Lire la mission <span class="arrow-icon">→</span></a>
+                    </div>
+                </article>
+
+                <!-- Article 2 -->
+                <article class="post-card" data-category="aérospatial">
+                    <div class="post-image">
+                        <img src="/assets/images/blog/ddo.jpeg" alt="DDO">
+                        <span class="post-category-badge">Aérospatial</span>
+                    </div>
+                    <div class="post-content">
+                        <span class="post-date">18 Mars 2025</span>
+                        <h3>Le métier de Directeur des Opérations</h3>
+                        <div class="post-tags">
+                            <span class="tag" data-tag="ariane6">#Ariane6</span>
+                            <span class="tag" data-tag="kourou">#Kourou</span>
+                            <span class="tag" data-tag="ariane6">#MétiersDuSpatial</span>
+                            <span class="tag" data-tag="ariane6">#Lanceurs</span>
+                        </div>
+                        <p>Voici la phrase emblématique prononcée à chaque lancement...</p>
+                        <a href="blog/ddo.html" class="read-more-link">Lire la mission <span class="arrow-icon">→</span></a>
+                    </div>
+                </article>
+
+                <!-- Article 3 -->
+                <article class="post-card" data-category="astronomie">
+                    <div class="post-image">
+                        <img src="/assets/images/blog/carte_ciel.jpg" alt="Ciel Mars">
+                        <span class="post-category-badge">Astronomie</span>
+                    </div>
+                    <div class="post-content">
+                        <span class="post-date">28 Février 2025</span>
+                        <h3>Ciel du Mois : Mars 2025</h3>
+                        <div class="post-tags">
+                            <span class="tag" data-tag="eclipse">#CielDuMois</span>
+                            <span class="tag" data-tag="astronomie">#AstronomieAmateure</span>
+                            <span class="tag" data-tag="astronomie">#Étoile</span>
+                            <span class="tag" data-tag="systemesolaire">#Planète</span>
+                        </div>
+                        <p>Le mois de mars 2025 sera marqué par plusieurs phénomènes...</p>
+                        <a href="blog/ciel-03.html" class="read-more-link">Lire la mission <span class="arrow-icon">→</span></a>
+                    </div>
+                </article>
+
+                <!-- Article 4 -->
+                <article class="post-card" data-category="astronomie">
+                    <div class="post-image">
+                        <img src="/assets/images/blog/carte_ciel.jpg" alt="Ciel Février">
+                        <span class="post-category-badge">Astronomie</span>
+                    </div>
+                    <div class="post-content">
+                        <span class="post-date">31 Janvier 2025</span>
+                        <h3>Ciel du Mois : Février 2025</h3>
+                        <div class="post-tags">
+                            <span class="tag" data-tag="eclipse">#CielDuMois</span>
+                            <span class="tag" data-tag="astronomie">#AstronomieAmateure</span>
+                            <span class="tag" data-tag="astronomie">#Étoile</span>
+                            <span class="tag" data-tag="systemesolaire">#Planète</span>
+                        </div>
+                        <p>Cette série mensuelle a pour but de vous offrir une vue d'ensemble...</p>
+                        <a href="blog/ciel-02.html" class="read-more-link">Lire la mission <span class="arrow-icon">→</span></a>
+                    </div>
+                </article>
+
+                <!-- Article 5 -->
+                <article class="post-card" data-category="astronomie">
+                    <div class="post-image">
+                        <img src="/assets/images/blog/sun.png" alt="Soleil">
+                        <span class="post-category-badge">Astronomie</span>
+                    </div>
+                    <div class="post-content">
+                        <span class="post-date">22 Janvier 2025</span>
+                        <h3>A la lumière du Soleil</h3>
+                        <div class="post-tags">
+                            <span class="tag" data-tag="etoile">#SystèmeSolaire</span>
+                            <span class="tag" data-tag="etoile">#Étoile</span>
+                        </div>
+                        <p>Premier article d'une série sur notre Système Solaire...</p>
+                        <a href="blog/soleil.html" class="read-more-link">Lire la mission <span class="arrow-icon">→</span></a>
+                    </div>
+                </article>
+
+                <!-- Article 6 -->
+                <article class="post-card" data-category="technologie">
+                    <div class="post-image">
+                        <img src="/assets/images/blog/lisa.jpg" alt="LISA">
+                        <span class="post-category-badge">Technologie</span>
+                    </div>
+                    <div class="post-content">
+                        <span class="post-date">14 Janvier 2025</span>
+                        <h3>Les ondes gravitationnelles, LISA</h3>
+                        <div class="post-tags">
+                            <span class="tag" data-tag="esa">#AstronomieModerne</span>
+                            <span class="tag" data-tag="ondes">#OndesGravitationnelles</span>
+                            <span class="tag" data-tag="esa">#TrouNoir</span>
+                            <span class="tag" data-tag="esa">#Relativité</span>
+                        </div>
+                        <p>LISA est une mission spatiale ultra-ambitieuse...</p>
+                        <a href="blog/lisa.html" class="read-more-link">Lire la mission <span class="arrow-icon">→</span></a>
+                    </div>
+                </article>
+
+            </div>
+            <!-- Pagination -->
+            <div class="pagination-container" id="pagination-container">
+    <button class="page-btn" id="prev-page" disabled>Précédent</button>
+    
+    <!-- C'est ici que les numéros seront insérés dynamiquement -->
+    <div id="page-numbers" style="display: flex; gap: 5px;"></div>
+    
+    <button class="page-btn" id="next-page">Suivant</button>
+</div>
+        </section>
+    </main>
+
+    <div id="global-footer"></div>
+
+    <script src="/assets/js/blog-filter.js" defer></script>
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>

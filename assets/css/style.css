@@ -1,0 +1,40 @@
+@import "/assets/css/header.css";
+@import "/assets/css/footer.css";
+@import "/assets/css/home.css";
+@import "/assets/css/resume.css";
+@import "/assets/css/formations.css";
+@import "/assets/css/contact.css";
+@import "/assets/css/blog.css";
+@import "/assets/css/article.css";
+@import url("https:/cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css");
+
+/* ==========================================================================
+   VARIABLES DE COULEURS (Ambiance Espace Profond)
+   ========================================================================== */
+:root {
+    --bg-space: #0b0d17;       /* Fond espace très sombre */
+    --bg-navbar: #16192b;      /* Gris bleuté sombre pour la navbar */
+    --text-main: #f4f4f6;      /* Blanc cassé brillant pour le texte */
+    --text-muted: #94a3b8;     /* Gris poussière d'étoile pour les éléments secondaires */
+    --mauve-nebula: #a855f7;   /* Mauve néon principal */
+    --mauve-glow: #c084fc;     /* Mauve clair pour l'effet de brillance au survol */
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Reset de base pour que tout s'aligne bien */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    color: var(--text-main);
+    background: url('https://www.wallpaperalchemy.com/storage/wallpapers/129/galactic-wallpaper-4k.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    background-attachment: fixed;
+}

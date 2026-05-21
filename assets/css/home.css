@@ -1,0 +1,301 @@
+/* ==========================================================================
+   PAGE D'ACCUEIL : STRUCTURE GLOBALE & BIO
+   ========================================================================== */
+main.page {
+    max-width: 1200px; /* Aligné sur les standards des autres pages pour éviter l'étirement */
+    margin: 0 auto;
+    padding: 4rem 1.5rem;
+    box-sizing: border-box;
+}
+
+.hero-intro {
+    margin-bottom: 3.5rem;
+}
+
+.glitch-title {
+    font-size: 2.8rem;
+    color: var(--text-main);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.5px;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: var(--mauve-nebula);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    margin-bottom: 2.5rem;
+}
+
+/* NOUVEAU : Encadré de verre pour la Biographie */
+.bio-text {
+    background: rgba(15, 15, 22, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 16px;
+    padding: 2.5rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    margin-bottom: 4rem;
+}
+
+.bio-text p {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.bio-text p:last-child {
+    margin-bottom: 0; /* Évite un espace vide inutile en bas */
+}
+
+.bio-text a {
+    color: var(--text-main);
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 1px dashed var(--mauve-glow);
+    transition: all 0.2s ease;
+}
+
+.bio-text a:hover {
+    color: var(--mauve-glow);
+    border-bottom-style: solid;
+}
+
+/* Blocs généraux de contenu */
+.content-block {
+    margin-bottom: 4rem;
+}
+
+.content-block h3 {
+    color: var(--text-main);
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 1.5rem;
+    font-family: system-ui, -apple-system, sans-serif;
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   GRILLES DE COMPÉTENCES & LOISIRS (STYLE COCKPIT / CARTES)
+   ========================================================================== */
+.grid-skills, .grid-hobbies {
+    display: grid;
+    /* Ajustement de 80px à 90px pour éviter que les icônes et tooltips étouffent */
+    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+    gap: 1.25rem;
+}
+
+.skill-card, .hobby-card {
+    background: rgba(15, 15, 22, 0.6);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(168, 85, 247, 0.2);
+    border-radius: 10px;
+    padding: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.skill-card img, .hobby-card img {
+    width: 34px;
+    height: 34px;
+    object-fit: contain;
+    transition: transform 0.25s ease;
+}
+
+/* Effet au survol des cartes */
+.skill-card:hover, .hobby-card:hover {
+    background: rgba(168, 85, 247, 0.12);
+    border-color: var(--mauve-glow);
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.25);
+    transform: translateY(-4px);
+}
+
+.skill-card:hover img, .hobby-card:hover img {
+    transform: scale(1.1);
+}
+
+/* Tooltip natif amélioré */
+.skill-card::after, .hobby-card::after {
+    content: attr(data-title);
+    position: absolute;
+    bottom: -30px;
+    background: #0b0b10;
+    border: 1px solid rgba(168, 85, 247, 0.4);
+    color: var(--text-main);
+    padding: 4px 10px;
+    font-size: 0.75rem;
+    font-family: system-ui, sans-serif;
+    border-radius: 6px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease, bottom 0.2s ease;
+    z-index: 10;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.skill-card:hover::after, .hobby-card:hover::after {
+    opacity: 1;
+    bottom: -22px; /* Ajusté pour ne pas chevaucher le bord de la carte */
+}
+
+/* ==========================================================================
+   CARTES DE LANGUES
+   ========================================================================== */
+.languages-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 550px;
+}
+
+.lang-card {
+    display: flex;
+    align-items: center;
+    /* Harmonisation avec le fond sombre texturé */
+    background: rgba(15, 15, 22, 0.75);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-left: 4px solid var(--mauve-nebula);
+    border-right: 1px solid rgba(255, 255, 255, 0.06);
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 1rem 1.5rem;
+    border-radius: 0 12px 12px 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.lang-flag {
+    width: 24px;
+    height: auto;
+    margin-right: 1.5rem;
+    border-radius: 3px;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+}
+
+.lang-details {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.lang-name {
+    color: var(--text-main);
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.lang-level {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin-top: 0.2rem;
+}
+
+.lang-stars {
+    display: flex;
+    gap: 4px;
+}
+
+.lang-stars img {
+    width: 14px;
+    height: 14px;
+}
+
+/* ==========================================================================
+   BLOC QUALIFICATIONS / AUTRES INFOS
+   ========================================================================== */
+.credentials-container {
+    /* Harmonisation avec le fond sombre texturé */
+    background: rgba(15, 15, 22, 0.75);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 16px;
+    padding: 2rem;
+    max-width: 600px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.credentials-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Utilisation de flex gap plutôt que margin-bottom individuel */
+}
+
+.credentials-list li {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    display: flex;
+    align-items: flex-start; /* Aligne l'icône en haut si le texte passe sur 2 lignes */
+}
+
+.credentials-list a {
+    color: var(--mauve-glow);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.credentials-list a:hover {
+    color: var(--text-main);
+}
+
+.icon-bullet {
+    color: var(--mauve-nebula);
+    font-size: 0.7rem;
+    margin-right: 12px;
+    margin-top: 5px; /* Centre la puce avec la première ligne de texte */
+}
+
+/* ==========================================================================
+   EMBED SYSTEME SOLAIRE
+   ========================================================================== */
+.animation-container {
+    width: 100%;
+    margin-top: 4rem;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(168, 85, 247, 0.15);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    background: rgba(15, 15, 22, 0.4);
+}
+
+.animation-container embed {
+    width: 100%;
+    height: 480px;
+    border: none;
+    display: block;
+}
+
+/* ==========================================================================
+   RESPONSIVE (Ajustements mobiles)
+   ========================================================================== */
+@media (max-width: 650px) {
+    main.page {
+        padding: 2rem 1.25rem;
+    }
+    .glitch-title {
+        font-size: 2.2rem;
+    }
+    .bio-text {
+        padding: 1.5rem;
+    }
+    .credentials-container {
+        padding: 1.5rem;
+    }
+}

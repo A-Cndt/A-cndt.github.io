@@ -1,0 +1,263 @@
+/* ==========================================================================
+   SECTION EXPÉRIENCES ET FORMATIONS (Design Spatial & Harmonisé)
+   ========================================================================== */
+
+/* Conteneur principal Formations */
+.formations {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    max-width: 850px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+}
+
+/* Carte de formation (Style calqué sur la Timeline) */
+.formation {
+    position: relative;
+    background: rgba(18, 18, 24, 0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 12px;
+    padding: 2rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Effet de survol sur la carte */
+.formation:hover {
+    background: rgba(22, 22, 32, 0.95);
+    border-color: rgba(168, 85, 247, 0.4);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    transform: translateY(-2px);
+}
+
+/* En-tête du bloc (Titre du diplôme + dates) */
+.formation .titre {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-bottom: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.formation .diplome {
+    font-size: 1.35rem;
+    color: #ffffff;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.formation .dates {
+    font-size: 0.9rem;
+    color: #94a3b8;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 4px 12px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+}
+
+/* Bloc Ecole (Nom, Lieu et Logo) */
+.formation .ecole {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.formation .ecole .nom {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #e2e8f0;
+}
+
+.formation .ecole .nom .lien {
+    color: #c084fc;
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.2s;
+}
+
+.formation .ecole .nom .lien:hover {
+    color: #a855f7;
+}
+
+.formation .ecole .lieu {
+    font-size: 0.9rem;
+    color: #64748b;
+}
+
+/* Style des logos d'écoles (Calqué sur les logos partenaires du résumé) */
+.formation .ecole .pic img {
+    height: 42px;
+    width: auto;
+    object-fit: contain;
+    background: #ffffff;
+    border-radius: 6px;
+    padding: 4px 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    filter: grayscale(15%) opacity(0.95);
+    transition: all 0.2s ease-in-out;
+}
+
+.formation:hover .ecole .pic img {
+    filter: grayscale(0%) opacity(1);
+    transform: scale(1.03);
+    box-shadow: 0 4px 12px rgba(168, 85, 247, 0.25);
+}
+
+/* Zone dynamique masquée (Accordéon fluide) */
+.formation .resumé {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+}
+
+/* Classe active injectée via JS */
+.formation.active .resumé {
+    opacity: 1;
+    margin-top: 1rem;
+    border-top: 1px dashed rgba(255, 255, 255, 0.1);
+    padding-top: 1.5rem;
+}
+
+/* Style des descriptions internes */
+.formation .resumé .text {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #e2e8f0;
+}
+
+.formation .resumé .text strong {
+    color: #ffffff;
+}
+
+.formation .resumé .text .lien {
+    color: #ffffff;
+    text-decoration: none;
+    border-bottom: 1px dashed #a855f7;
+}
+
+/* Listes à puces avec flèches mauves */
+.formation .resumé ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.formation .resumé ul li {
+    position: relative;
+    padding-left: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: #94a3b8;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.formation .resumé ul li::before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: #c084fc;
+}
+
+/* Intégration iFrames Google Maps */
+.formation .resumé iframe {
+    width: 100%;
+    max-width: 450px;
+    height: 200px;
+    border-radius: 8px;
+    margin-top: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Bouton d'accordéon (Toggle) */
+.formation .toggle-button {
+    background: none;
+    border: none;
+    color: #c084fc;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 0;
+    margin-top: 1.5rem;
+    transition: color 0.2s ease;
+    display: inline-block;
+}
+
+.formation .toggle-button:hover {
+    color: #a855f7;
+}
+
+/* ==========================================================================
+   TAGS DE TECHNOLOGIES (Partagé : Expériences & Formations)
+   ========================================================================== */
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.tech-tags .tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    color: #94a3b8;
+    font-family: system-ui, -apple-system, sans-serif;
+    transition: all 0.2s ease;
+}
+
+.tech-tags .tag img {
+    width: 14px;
+    height: 14px;
+    object-fit: contain;
+    /* Reset des filtres appliqués aux logos d'écoles */
+    background: none !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    filter: none !important;
+}
+
+/* Effet au survol d'un badge de compétence */
+.tech-tags .tag:hover {
+    background: rgba(168, 85, 247, 0.1);
+    border-color: rgba(168, 85, 247, 0.3);
+    color: #ffffff;
+    transform: scale(1.02);
+}
+
+/* Responsivité Mobile */
+@media (max-width: 600px) {
+    .formation {
+        padding: 1.5rem;
+    }
+    .formation .titre {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+    }
+    .formation .dates {
+        align-self: flex-start;
+    }
+    .formation .ecole {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+    }
+}

@@ -1,0 +1,212 @@
+/* ==========================================================================
+   STYLE DU FOOTER COMPLET (Ambiance Station Spatiale)
+   ========================================================================== */
+.site-footer {
+    background-color: var(--bg-navbar); /* Même couleur de fond que le header */
+    padding: 4rem 2rem 2rem 2rem;
+    margin-top: 6rem;
+    
+    /* Effet miroir/vitre identique au header */
+    border-top: 1px solid rgba(168, 85, 247, 0.2); 
+    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Titre d'accroche modernisé */
+.footer-header h5 {
+    color: var(--text-main);
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 3rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(168, 85, 247, 0.3);
+}
+
+/* Alignement des colonnes */
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 220px;
+}
+
+/* Alignement vertical pour la colonne de droite */
+.footer-col-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+/* Titres des colonnes */
+.footer-col-title {
+    color: var(--text-main);
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1.2rem;
+    position: relative;
+    display: inline-block;
+}
+
+/* Petit point laser mauve sous les titres de colonnes */
+.footer-col-title::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 15px;
+    height: 2px;
+    background-color: var(--mauve-nebula);
+    box-shadow: 0 0 6px var(--mauve-nebula);
+}
+
+/* Texte descriptif */
+.footer-desc {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* Supprime les puces des listes */
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 1rem;
+}
+
+/* ==========================================================================
+   ANIMATION DES LIENS DU FOOTER (Même ligne laser que le header)
+   ========================================================================== */
+.footer-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    position: relative;
+    padding: 0.3rem 0;
+    transition: color 0.3s ease;
+    display: inline-block;
+}
+
+/* Création de la ligne progressive */
+.footer-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0; /* Caché au départ */
+    height: 2px;
+    background: linear-gradient(90deg, var(--mauve-nebula), var(--mauve-glow));
+    box-shadow: 0 0 8px var(--mauve-nebula);
+    transition: width 0.3s ease;
+}
+
+/* Au survol du lien */
+.footer-links a:hover {
+    color: var(--text-main);
+}
+
+.footer-links a:hover::after {
+    width: 100%; /* La ligne se déploie */
+}
+
+/* ==========================================================================
+   SÉLECTEUR DE LANGUES ET DRAPEAUX (DÉFLOUTÉS)
+   ========================================================================== */
+.lang-selector {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.lang-flag img {
+    width: 26px;
+    height: auto;
+    border-radius: 4px;
+    border: 1px solid rgba(244, 244, 246, 0.1);
+    
+    /* Force le navigateur à garder les pixels nets (anti-flou) */
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    transform: translateZ(0); 
+    
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.lang-flag:hover img {
+    transform: scale(1.15) translateY(-2px);
+    border-color: var(--mauve-glow);
+    box-shadow: 0 0 10px rgba(168, 85, 247, 0.4);
+}
+
+/* Langues désactivées */
+.lang-flag.disabled {
+    pointer-events: none;
+}
+
+.lang-flag.disabled img {
+    filter: grayscale(100%) opacity(25%);
+    border: none;
+}
+
+/* ==========================================================================
+   LIGNE DU BAS : COPYRIGHT & RÉSEAUX (CORRIGÉES)
+   ========================================================================== */
+.footer-bottom {
+    max-width: 1200px;
+    margin: 4rem auto 0 auto;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(168, 85, 247, 0.15);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.copyright {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+}
+
+/* Icônes réseaux sociaux */
+.social-icons {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.social-icons a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+.social-icons a img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+    display: block;
+    
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Effet au survol (Halo lumineux mauve propre) */
+.social-icons a:hover img {
+    opacity: 1;
+    transform: scale(1.2) translateY(-3px);
+    filter: brightness(0) invert(1) drop-shadow(0 0 6px var(--mauve-nebula));
+}

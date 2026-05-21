@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logbook - Blog</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/blog.css">
+</head>
+
+<body>        
+    <div id="global-header"></div>
+
+    <main class="page-content">
+        <section class="blog-container">
+            
+            <div class="blog-header" id="latest">
+                <h1 class="glitch-title">Logbook</h1>
+                <h2 class="subtitle">Astronomy chronicles &amp; engineering notes</h2>
+            </div>
+
+            <!-- Filter Bar -->
+            <div class="filter-bar">
+                <button class="filter-btn active" data-filter="all">All Modules</button>
+                <button class="filter-btn" data-filter="astronomy">Astronomy</button>
+                <button class="filter-btn" data-filter="aerospace">Aerospace</button>
+                <button class="filter-btn" data-filter="technology">Technology</button>
+            </div>
+
+            <!-- Articles Grid -->
+            <div class="blog-grid" id="blog-grid">
+                
+                <!-- Article 1 -->
+                <article class="post-card" data-category="astronomy">
+                    <div class="post-image">
+                        <img src="/assets/images/blog/Mercury-Planet-Facts.png" alt="Mercury">
+                        <span class="post-category-badge">Astronomy</span>
+                    </div>
+                    <div class="post-content">
+                        <span class="post-date">May 03, 2025</span>
+                        <h3>Mercury, the Sun's Sentinel</h3>
+                        <div class="post-tags">
+                            <span class="tag" data-tag="mercury">#Mercury</span>
+                            <span class="tag" data-tag="solarsystem">#SolarSystem</span>
+                            <span class="tag" data-tag="planet">#Planet</span>
+                        </div>
+                        <p>Second step of our journey through the Solar System...</p>
+                        <a href="blog/mercure.html" class="read-more-link">Read mission <span class="arrow-icon">→</span></a>
+                    </div>
+                </article>
+
+                <!-- Article 2 -->
+                <article class="post-card" data-category="aerospace">
+                    <div class="post-image">
+                        <img src="/assets/images/blog/ddo.jpeg" alt="DDO">
+                        <span class="post-category-badge">Aerospace</span>
+                    </div>
+                    <div class="post-content">
+                        <span class="post-date">March 18, 2025</span>
+                        <h3>The Role of Flight Director</h3>
+                        <div class="post-tags">
+                            <span class="tag" data-tag="ariane6">#Ariane6</span>
+                            <span class="tag" data-tag="kourou">#Kourou</span>
+                            <span class="tag" data-tag="spacecareers">#SpaceCareers</span>
+                            <span class="tag" data-tag="launchers">#Launchers</span>
+                        </div>
+                        <p>Here is the iconic phrase spoken at every launch...</p>
+                        <a href="blog/ddo.html" class="read-more-link">Read mission <span class="arrow-icon">→</span></a>
+                    </div>
+                </article>
+
+                <!-- Article 3 -->
+                <article class="post-card" data-category="astronomy">
+                    <div class="post-image">
+                        <img src="/assets/images/blog/carte_ciel.jpg" alt="Sky March">
+                        <span class="post-category-badge">Astronomy</span>
+                    </div>
+                    <div class="post-content">
+                        <span class="post-date">February 28, 2025</span>
+                        <h3>Sky of the Month: March 2025</h3>
+                        <div class="post-tags">
+                            <span class="tag" data-tag="skymonth">#SkyOfTheMonth</span>
+                            <span class="tag" data-tag="amateurastro">#AmateurAstronomy</span>
+                            <span class="tag" data-tag="star">#Star</span>
+                            <span class="tag" data-tag="planet">#Planet</span>
+                        </div>
+                        <p>March 2025 will be marked by several phenomena...</p>
+                        <a href="blog/ciel-03.html" class="read-more-link">Read mission <span class="arrow-icon">→</span></a>
+                    </div>
+                </article>
+
+                <!-- Article 4 -->
+                <article class="post-card" data-category="astronomy">
+                    <div class="post-image">
+                        <img src="/assets/images/blog/carte_ciel.jpg" alt="Sky February">
+                        <span class="post-category-badge">Astronomy</span>
+                    </div>
+                    <div class="post-content">
+                        <span class="post-date">January 31, 2025</span>
+                        <h3>Sky of the Month: February 2025</h3>
+                        <div class="post-tags">
+                            <span class="tag" data-tag="skymonth">#SkyOfTheMonth</span>
+                            <span class="tag" data-tag="amateurastro">#AmateurAstronomy</span>
+                            <span class="tag" data-tag="star">#Star</span>
+                            <span class="tag" data-tag="planet">#Planet</span>
+                        </div>
+                        <p>This monthly series aims to provide an overview...</p>
+                        <a href="blog/ciel-03.html" class="read-more-link">Read mission <span class="arrow-icon">→</span></a>
+                    </div>
+                </article>
+
+                <!-- Article 5 -->
+                <article class="post-card" data-category="astronomy">
+                    <div class="post-image">
+                        <img src="/assets/images/blog/sun.png" alt="Sun">
+                        <span class="post-category-badge">Astronomy</span>
+                    </div>
+                    <div class="post-content">
+                        <span class="post-date">January 22, 2025</span>
+                        <h3>In the Light of the Sun</h3>
+                        <div class="post-tags">
+                            <span class="tag" data-tag="solarsystem">#SolarSystem</span>
+                            <span class="tag" data-tag="star">#Star</span>
+                        </div>
+                        <p>First article of a series on our Solar System...</p>
+                        <a href="blog/soleil.html" class="read-more-link">Read mission <span class="arrow-icon">→</span></a>
+                    </div>
+                </article>
+
+                <!-- Article 6 -->
+                <article class="post-card" data-category="technology">
+                    <div class="post-image">
+                        <img src="/assets/images/blog/lisa.jpg" alt="LISA">
+                        <span class="post-category-badge">Technology</span>
+                    </div>
+                    <div class="post-content">
+                        <span class="post-date">January 14, 2025</span>
+                        <h3>Gravitational Waves, LISA</h3>
+                        <div class="post-tags">
+                            <span class="tag" data-tag="modernastro">#ModernAstronomy</span>
+                            <span class="tag" data-tag="waves">#GravitationalWaves</span>
+                            <span class="tag" data-tag="blackhole">#BlackHole</span>
+                            <span class="tag" data-tag="relativity">#Relativity</span>
+                        </div>
+                        <p>LISA is an ultra-ambitious space mission...</p>
+                        <a href="blog/lisa.html" class="read-more-link">Read mission <span class="arrow-icon">→</span></a>
+                    </div>
+                </article>
+
+            </div>
+            
+            <!-- Pagination -->
+            <div class="pagination-container" id="pagination-container">
+                <button class="page-btn" id="prev-page" disabled>Previous</button>
+                <div id="page-numbers" style="display: flex; gap: 5px;"></div>
+                <button class="page-btn" id="next-page">Next</button>
+            </div>
+        </section>
+    </main>
+
+    <div id="global-footer"></div>
+
+    <script src="/assets/js/blog-filter.js" defer></script>
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>

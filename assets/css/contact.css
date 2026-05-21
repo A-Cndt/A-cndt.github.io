@@ -1,0 +1,145 @@
+/* ==========================================================================
+   PAGE CONTACT - STYLE SPATIAL AVANCÉ (OPTIMISÉ)
+   ========================================================================== */
+
+.page {
+    display: flex;
+    flex-direction: column;
+    min-height: 85vh;
+    justify-content: center;
+    padding: 2rem 0;
+}
+
+.contact-container {
+    max-width: 650px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.contact-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contact-header h1 {
+    font-size: 2.25rem;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.contact-header .message_info {
+    font-size: 1.05rem;
+    color: #94a3b8;
+    line-height: 1.6;
+}
+
+/* Formulaire : Plus aéré, moins "lourd" */
+.contact-form {
+    background: rgba(15, 15, 22, 0.6);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    transition: border-color 0.4s ease;
+}
+
+.contact-form:hover {
+    border-color: rgba(168, 85, 247, 0.3);
+}
+
+.form-group-row {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex: 1;
+}
+
+.form-group label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.contact-form input,
+.contact-form textarea {
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 1rem;
+    color: #ffffff;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    background: rgba(168, 85, 247, 0.05);
+    border-color: rgba(168, 85, 247, 0.5);
+    box-shadow: 0 0 0 2px rgba(168, 85, 247, 0.2);
+}
+
+.contact-form textarea {
+    min-height: 150px;
+}
+
+/* Bouton : Plus sobre */
+.submit-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: rgba(168, 85, 247, 0.1);
+    border: 1px solid rgba(168, 85, 247, 0.4);
+    color: #d8b4fe;
+    padding: 0.85rem 2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: rgba(168, 85, 247, 0.25);
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.submit-btn:hover svg {
+    transform: translate(2px, -2px);
+}
+
+/* Tipeee : Discrétion élégante */
+.tipeee-box {
+    margin-top: 3rem;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 2rem;
+}
+
+.tipeee-box .lien {
+    color: #64748b;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.tipeee-box .lien:hover {
+    color: #c084fc;
+}
+
+@media (max-width: 650px) {
+    .form-group-row { flex-direction: column; gap: 1.5rem; }
+}
