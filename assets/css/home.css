@@ -1,187 +1,320 @@
 /* ==========================================================================
    PAGE D'ACCUEIL : STRUCTURE GLOBALE & BIO
    ========================================================================== */
+
 main.page {
-    max-width: 1200px; /* Aligné sur les standards des autres pages pour éviter l'étirement */
+    max-width: 1200px;
     margin: 0 auto;
     padding: 4rem 1.5rem;
     box-sizing: border-box;
+    position: relative;
+    z-index: 1;
 }
 
 .hero-intro {
     margin-bottom: 3.5rem;
 }
 
+/* ==========================================================================
+   TITRES HERO
+   ========================================================================== */
+
 .glitch-title {
-    font-size: 2.8rem;
+    font-size: clamp(2.4rem, 5vw, 4.2rem);
+    line-height: 1.05;
     color: var(--text-main);
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-    letter-spacing: -0.5px;
+    font-weight: 800;
+    margin-bottom: 0.7rem;
+    letter-spacing: -1px;
+
+    text-shadow:
+        0 0 10px rgba(168, 85, 247, 0.25),
+        0 0 30px rgba(168, 85, 247, 0.12);
 }
 
 .subtitle {
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: var(--mauve-nebula);
     text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: 600;
+    letter-spacing: 3px;
+    font-weight: 700;
     margin-bottom: 2.5rem;
 }
 
-/* NOUVEAU : Encadré de verre pour la Biographie */
+/* ==========================================================================
+   BIO GLASSMORPHISM
+   ========================================================================== */
+
 .bio-text {
-    background: rgba(15, 15, 22, 0.75);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    background: rgba(15, 15, 22, 0.72);
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
     border: 1px solid rgba(255, 255, 255, 0.06);
-    border-radius: 16px;
-    padding: 2.5rem;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+
+    border-radius: 22px;
+
+    padding: 2.8rem;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.45),
+        0 0 30px rgba(168, 85, 247, 0.05);
+
     margin-bottom: 4rem;
+
+    position: relative;
+    overflow: hidden;
+}
+
+/* Glow subtil */
+.bio-text::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+
+    background:
+        radial-gradient(circle at top right,
+            rgba(168, 85, 247, 0.12),
+            transparent 28%);
 }
 
 .bio-text p {
     color: var(--text-muted);
     font-size: 1.05rem;
-    line-height: 1.8;
+    line-height: 1.9;
     margin-bottom: 1.5rem;
 }
 
 .bio-text p:last-child {
-    margin-bottom: 0; /* Évite un espace vide inutile en bas */
+    margin-bottom: 0;
 }
 
 .bio-text a {
     color: var(--text-main);
     text-decoration: none;
     font-weight: 600;
+
     border-bottom: 1px dashed var(--mauve-glow);
-    transition: all 0.2s ease;
+
+    transition:
+        color 0.2s ease,
+        border-color 0.2s ease;
 }
 
 .bio-text a:hover {
     color: var(--mauve-glow);
-    border-bottom-style: solid;
+    border-bottom-color: var(--mauve-glow);
 }
 
-/* Blocs généraux de contenu */
+/* ==========================================================================
+   BLOCS GÉNÉRAUX
+   ========================================================================== */
+
 .content-block {
     margin-bottom: 4rem;
 }
 
 .content-block h3 {
     color: var(--text-main);
-    font-size: 1.1rem;
+
+    font-size: 1rem;
+
     text-transform: uppercase;
-    letter-spacing: 1.5px;
+    letter-spacing: 2px;
+
     margin-bottom: 1.5rem;
+
     font-family: system-ui, -apple-system, sans-serif;
-    font-weight: 600;
+    font-weight: 700;
+
+    position: relative;
+    padding-left: 14px;
+}
+
+.content-block h3::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 4px;
+
+    width: 4px;
+    height: 18px;
+
+    border-radius: 999px;
+
+    background: linear-gradient(
+        180deg,
+        var(--mauve-nebula),
+        var(--mauve-glow)
+    );
 }
 
 /* ==========================================================================
-   GRILLES DE COMPÉTENCES & LOISIRS (STYLE COCKPIT / CARTES)
+   SKILLS & HOBBIES GRID
    ========================================================================== */
-.grid-skills, .grid-hobbies {
+
+.grid-skills,
+.grid-hobbies {
     display: grid;
-    /* Ajustement de 80px à 90px pour éviter que les icônes et tooltips étouffent */
-    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
-    gap: 1.25rem;
+
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+
+    gap: 1.2rem;
 }
 
-.skill-card, .hobby-card {
-    background: rgba(15, 15, 22, 0.6);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border: 1px solid rgba(168, 85, 247, 0.2);
-    border-radius: 10px;
-    padding: 1.2rem;
+.skill-card,
+.hobby-card {
+    background: rgba(15, 15, 22, 0.65);
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    border: 1px solid rgba(168, 85, 247, 0.16);
+
+    border-radius: 18px;
+
+    min-height: 100px;
+
+    padding: 1.4rem;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     position: relative;
+
     cursor: pointer;
-    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease,
+        background 0.25s ease;
 }
 
-.skill-card img, .hobby-card img {
-    width: 34px;
-    height: 34px;
+.skill-card img,
+.hobby-card img {
+    width: 38px;
+    height: 38px;
     object-fit: contain;
+
     transition: transform 0.25s ease;
 }
 
-/* Effet au survol des cartes */
-.skill-card:hover, .hobby-card:hover {
+/* Hover desktop */
+.skill-card:hover,
+.hobby-card:hover {
     background: rgba(168, 85, 247, 0.12);
-    border-color: var(--mauve-glow);
-    box-shadow: 0 0 20px rgba(168, 85, 247, 0.25);
-    transform: translateY(-4px);
+
+    border-color: rgba(192, 132, 252, 0.45);
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 15px 30px rgba(0, 0, 0, 0.35),
+        0 0 25px rgba(168, 85, 247, 0.18);
 }
 
-.skill-card:hover img, .hobby-card:hover img {
-    transform: scale(1.1);
+.skill-card:hover img,
+.hobby-card:hover img {
+    transform: scale(1.12);
 }
 
-/* Tooltip natif amélioré */
-.skill-card::after, .hobby-card::after {
+/* Tooltip */
+.skill-card::after,
+.hobby-card::after {
     content: attr(data-title);
+
     position: absolute;
-    bottom: -30px;
-    background: #0b0b10;
-    border: 1px solid rgba(168, 85, 247, 0.4);
+
+    bottom: -34px;
+
+    background: rgba(10, 10, 16, 0.95);
+
+    border: 1px solid rgba(168, 85, 247, 0.35);
+
     color: var(--text-main);
-    padding: 4px 10px;
-    font-size: 0.75rem;
+
+    padding: 6px 10px;
+
+    font-size: 0.74rem;
+
     font-family: system-ui, sans-serif;
-    border-radius: 6px;
+
+    border-radius: 8px;
+
     white-space: nowrap;
+
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.2s ease, bottom 0.2s ease;
+
+    transition:
+        opacity 0.2s ease,
+        bottom 0.2s ease;
+
     z-index: 10;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.5);
 }
 
-.skill-card:hover::after, .hobby-card:hover::after {
+.skill-card:hover::after,
+.hobby-card:hover::after {
     opacity: 1;
-    bottom: -22px; /* Ajusté pour ne pas chevaucher le bord de la carte */
+    bottom: -24px;
 }
 
 /* ==========================================================================
-   CARTES DE LANGUES
+   LANGUES
    ========================================================================== */
+
 .languages-grid {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    max-width: 550px;
+
+    max-width: 650px;
 }
 
 .lang-card {
     display: flex;
     align-items: center;
-    /* Harmonisation avec le fond sombre texturé */
-    background: rgba(15, 15, 22, 0.75);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+
+    background: rgba(15, 15, 22, 0.72);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(255, 255, 255, 0.06);
+
     border-left: 4px solid var(--mauve-nebula);
-    border-right: 1px solid rgba(255, 255, 255, 0.06);
-    border-top: 1px solid rgba(255, 255, 255, 0.06);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-    padding: 1rem 1.5rem;
-    border-radius: 0 12px 12px 0;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+
+    padding: 1rem 1.4rem;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.25);
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.lang-card:hover {
+    transform: translateX(4px);
+    border-left-color: var(--mauve-glow);
 }
 
 .lang-flag {
-    width: 24px;
+    width: 26px;
     height: auto;
-    margin-right: 1.5rem;
-    border-radius: 3px;
-    image-rendering: -webkit-optimize-contrast;
-    image-rendering: crisp-edges;
+
+    margin-right: 1.2rem;
+
+    border-radius: 4px;
 }
 
 .lang-details {
@@ -192,13 +325,16 @@ main.page {
 
 .lang-name {
     color: var(--text-main);
-    font-weight: 600;
-    font-size: 0.95rem;
+
+    font-weight: 700;
+    font-size: 0.96rem;
 }
 
 .lang-level {
     color: var(--text-muted);
-    font-size: 0.85rem;
+
+    font-size: 0.84rem;
+
     margin-top: 0.2rem;
 }
 
@@ -213,41 +349,49 @@ main.page {
 }
 
 /* ==========================================================================
-   BLOC QUALIFICATIONS / AUTRES INFOS
+   QUALIFICATIONS
    ========================================================================== */
+
 .credentials-container {
-    /* Harmonisation avec le fond sombre texturé */
-    background: rgba(15, 15, 22, 0.75);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    background: rgba(15, 15, 22, 0.72);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
     border: 1px solid rgba(255, 255, 255, 0.06);
-    border-radius: 16px;
+
+    border-radius: 22px;
+
     padding: 2rem;
-    max-width: 600px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+
+    max-width: 700px;
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.32);
 }
 
 .credentials-list {
     list-style: none;
-    padding: 0;
-    margin: 0;
+
     display: flex;
     flex-direction: column;
-    gap: 1rem; /* Utilisation de flex gap plutôt que margin-bottom individuel */
+    gap: 1rem;
 }
 
 .credentials-list li {
     color: var(--text-muted);
-    font-size: 0.95rem;
-    line-height: 1.5;
+
+    font-size: 0.96rem;
+    line-height: 1.6;
+
     display: flex;
-    align-items: flex-start; /* Aligne l'icône en haut si le texte passe sur 2 lignes */
+    align-items: flex-start;
 }
 
 .credentials-list a {
     color: var(--mauve-glow);
     text-decoration: none;
-    font-weight: 500;
+
     transition: color 0.2s ease;
 }
 
@@ -257,45 +401,185 @@ main.page {
 
 .icon-bullet {
     color: var(--mauve-nebula);
-    font-size: 0.7rem;
+
+    font-size: 0.72rem;
+
     margin-right: 12px;
-    margin-top: 5px; /* Centre la puce avec la première ligne de texte */
+    margin-top: 6px;
 }
 
 /* ==========================================================================
-   EMBED SYSTEME SOLAIRE
+   SYSTEME SOLAIRE / EMBED
    ========================================================================== */
+
 .animation-container {
     width: 100%;
+
     margin-top: 4rem;
-    border-radius: 16px;
+
+    border-radius: 24px;
+
     overflow: hidden;
+
     border: 1px solid rgba(168, 85, 247, 0.15);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-    background: rgba(15, 15, 22, 0.4);
+
+    background: rgba(15, 15, 22, 0.5);
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.5);
 }
 
 .animation-container embed {
     width: 100%;
-    height: 480px;
+    height: 520px;
+
     border: none;
     display: block;
 }
 
 /* ==========================================================================
-   RESPONSIVE (Ajustements mobiles)
+   TABLETTE
    ========================================================================== */
-@media (max-width: 650px) {
-    main.page {
-        padding: 2rem 1.25rem;
+
+@media (max-width: 900px) {
+
+    .grid-skills,
+    .grid-hobbies {
+        grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
     }
+
+    .animation-container embed {
+        height: 420px;
+    }
+}
+
+/* ==========================================================================
+   MOBILE
+   ========================================================================== */
+
+@media (max-width: 650px) {
+
+    main.page {
+        padding: 2rem 1rem;
+    }
+
+    .hero-intro {
+        margin-bottom: 2.5rem;
+    }
+
     .glitch-title {
         font-size: 2.2rem;
+        line-height: 1.1;
     }
+
+    .subtitle {
+        font-size: 0.82rem;
+        letter-spacing: 2px;
+        margin-bottom: 1.8rem;
+    }
+
     .bio-text {
-        padding: 1.5rem;
+        padding: 1.4rem;
+        border-radius: 18px;
     }
+
+    .bio-text p {
+        font-size: 0.96rem;
+        line-height: 1.75;
+    }
+
+    .content-block {
+        margin-bottom: 3rem;
+    }
+
+    .grid-skills,
+    .grid-hobbies {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.9rem;
+    }
+
+    .skill-card,
+    .hobby-card {
+        min-height: 88px;
+        padding: 1rem;
+        border-radius: 16px;
+    }
+
+    .skill-card img,
+    .hobby-card img {
+        width: 32px;
+        height: 32px;
+    }
+
+    /* Sur mobile :
+       pas de tooltip hover cassé */
+    .skill-card::after,
+    .hobby-card::after {
+        display: none;
+    }
+
+    .languages-grid {
+        gap: 0.8rem;
+    }
+
+    .lang-card {
+        padding: 0.9rem 1rem;
+        border-radius: 16px;
+    }
+
+    .lang-name {
+        font-size: 0.92rem;
+    }
+
+    .lang-level {
+        font-size: 0.78rem;
+    }
+
     .credentials-container {
-        padding: 1.5rem;
+        padding: 1.4rem;
+        border-radius: 18px;
+    }
+
+    .credentials-list li {
+        font-size: 0.9rem;
+    }
+
+    .animation-container {
+        border-radius: 18px;
+    }
+
+    .animation-container embed {
+        height: 260px;
+    }
+}
+
+/* ==========================================================================
+   PETITS SMARTPHONES
+   ========================================================================== */
+
+@media (max-width: 420px) {
+
+    .glitch-title {
+        font-size: 1.9rem;
+    }
+
+    .grid-skills,
+    .grid-hobbies {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .skill-card,
+    .hobby-card {
+        min-height: 82px;
+    }
+
+    .bio-text,
+    .credentials-container,
+    .lang-card {
+        border-radius: 14px;
+    }
+
+    .animation-container embed {
+        height: 220px;
     }
 }

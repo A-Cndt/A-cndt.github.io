@@ -1,86 +1,172 @@
 /* ==========================================================================
-   STYLE DU FOOTER COMPLET (Ambiance Station Spatiale)
+   FOOTER — DESIGN STATION SPATIALE MODERNE
    ========================================================================== */
+
 .site-footer {
-    background-color: var(--bg-navbar); /* Même couleur de fond que le header */
-    padding: 4rem 2rem 2rem 2rem;
+    position: relative;
+
+    background: rgba(15, 15, 24, 0.82);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    padding: 4.5rem 2rem 2rem;
+
     margin-top: 6rem;
-    
-    /* Effet miroir/vitre identique au header */
-    border-top: 1px solid rgba(168, 85, 247, 0.2); 
-    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.4);
+
+    overflow: hidden;
+
+    border-top: 1px solid rgba(168, 85, 247, 0.14);
+
+    box-shadow:
+        0 -12px 40px rgba(0, 0, 0, 0.35);
 }
 
-/* Titre d'accroche modernisé */
+/* Glow subtil */
+.site-footer::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    pointer-events: none;
+
+    background:
+        radial-gradient(circle at top center,
+            rgba(168, 85, 247, 0.08),
+            transparent 38%);
+}
+
+/* ==========================================================================
+   TITRE HEADER FOOTER
+   ========================================================================== */
+
 .footer-header h5 {
     color: var(--text-main);
-    font-size: 1.3rem;
-    font-weight: 600;
+
+    font-size: clamp(1.2rem, 2vw, 1.6rem);
+
+    font-weight: 800;
+
     text-align: center;
-    margin-bottom: 3rem;
-    letter-spacing: 1px;
+
+    margin-bottom: 3.2rem;
+
+    letter-spacing: 2px;
+
     text-transform: uppercase;
-    text-shadow: 0 0 10px rgba(168, 85, 247, 0.3);
+
+    text-shadow:
+        0 0 12px rgba(168, 85, 247, 0.25);
 }
 
-/* Alignement des colonnes */
+/* ==========================================================================
+   CONTAINER PRINCIPAL
+   ========================================================================== */
+
 .footer-container {
     max-width: 1200px;
+
     margin: 0 auto;
+
     display: flex;
+
     flex-wrap: wrap;
+
     justify-content: space-between;
+
     gap: 3rem;
 }
 
 .footer-col {
     flex: 1;
+
     min-width: 220px;
 }
 
-/* Alignement vertical pour la colonne de droite */
+/* ==========================================================================
+   COLONNE DROITE
+   ========================================================================== */
+
 .footer-col-right {
     display: flex;
+
     flex-direction: column;
+
     align-items: flex-start;
+
     gap: 1.5rem;
 }
 
-/* Titres des colonnes */
+/* ==========================================================================
+   TITRES COLONNES
+   ========================================================================== */
+
 .footer-col-title {
-    color: var(--text-main);
-    font-size: 1rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 1.2rem;
     position: relative;
+
     display: inline-block;
+
+    color: var(--text-main);
+
+    font-size: 0.96rem;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1.2px;
+
+    margin-bottom: 1.3rem;
+
+    padding-bottom: 0.4rem;
 }
 
-/* Petit point laser mauve sous les titres de colonnes */
+/* Ligne glow */
 .footer-col-title::after {
-    content: '';
+    content: "";
+
     position: absolute;
-    bottom: -4px;
+
     left: 0;
-    width: 15px;
+    bottom: 0;
+
+    width: 20px;
     height: 2px;
-    background-color: var(--mauve-nebula);
-    box-shadow: 0 0 6px var(--mauve-nebula);
+
+    border-radius: 999px;
+
+    background: linear-gradient(
+        90deg,
+        var(--mauve-nebula),
+        var(--mauve-glow)
+    );
+
+    box-shadow:
+        0 0 10px rgba(168, 85, 247, 0.45);
 }
 
-/* Texte descriptif */
+/* ==========================================================================
+   DESCRIPTION
+   ========================================================================== */
+
 .footer-desc {
     color: var(--text-muted);
-    font-size: 0.9rem;
-    line-height: 1.6;
+
+    font-size: 0.92rem;
+
+    line-height: 1.75;
 }
 
-/* Supprime les puces des listes */
+/* ==========================================================================
+   LISTES
+   ========================================================================== */
+
 .footer-links {
     list-style: none;
+
     padding: 0;
+    margin: 0;
 }
 
 .footer-links li {
@@ -88,125 +174,363 @@
 }
 
 /* ==========================================================================
-   ANIMATION DES LIENS DU FOOTER (Même ligne laser que le header)
+   LIENS FOOTER
    ========================================================================== */
+
 .footer-links a {
-    color: var(--text-muted);
-    text-decoration: none;
-    font-size: 0.95rem;
-    font-weight: 500;
-    letter-spacing: 0.5px;
     position: relative;
-    padding: 0.3rem 0;
-    transition: color 0.3s ease;
+
     display: inline-block;
+
+    color: var(--text-muted);
+
+    text-decoration: none;
+
+    font-size: 0.92rem;
+
+    font-weight: 600;
+
+    letter-spacing: 0.4px;
+
+    padding: 0.25rem 0;
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
 }
 
-/* Création de la ligne progressive */
+/* Ligne progressive */
 .footer-links a::after {
-    content: '';
+    content: "";
+
     position: absolute;
-    bottom: 0;
+
     left: 0;
-    width: 0; /* Caché au départ */
+    bottom: 0;
+
+    width: 0;
     height: 2px;
-    background: linear-gradient(90deg, var(--mauve-nebula), var(--mauve-glow));
-    box-shadow: 0 0 8px var(--mauve-nebula);
-    transition: width 0.3s ease;
+
+    border-radius: 999px;
+
+    background: linear-gradient(
+        90deg,
+        var(--mauve-nebula),
+        var(--mauve-glow)
+    );
+
+    box-shadow:
+        0 0 8px rgba(168, 85, 247, 0.45);
+
+    transition: width 0.28s ease;
 }
 
-/* Au survol du lien */
 .footer-links a:hover {
     color: var(--text-main);
+
+    transform: translateX(2px);
 }
 
 .footer-links a:hover::after {
-    width: 100%; /* La ligne se déploie */
+    width: 100%;
 }
 
 /* ==========================================================================
-   SÉLECTEUR DE LANGUES ET DRAPEAUX (DÉFLOUTÉS)
+   SELECTEUR LANGUES
    ========================================================================== */
+
 .lang-selector {
     display: flex;
+
     gap: 1rem;
+
     align-items: center;
+
+    flex-wrap: wrap;
+}
+
+.lang-flag {
+    display: inline-flex;
 }
 
 .lang-flag img {
-    width: 26px;
+    width: 28px;
+
     height: auto;
-    border-radius: 4px;
-    border: 1px solid rgba(244, 244, 246, 0.1);
-    
-    /* Force le navigateur à garder les pixels nets (anti-flou) */
+
+    border-radius: 6px;
+
+    border: 1px solid rgba(244, 244, 246, 0.08);
+
     image-rendering: -webkit-optimize-contrast;
     image-rendering: crisp-edges;
-    transform: translateZ(0); 
-    
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    transform: translateZ(0);
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        filter 0.25s ease;
 }
 
 .lang-flag:hover img {
-    transform: scale(1.15) translateY(-2px);
+    transform: scale(1.12) translateY(-2px);
+
     border-color: var(--mauve-glow);
-    box-shadow: 0 0 10px rgba(168, 85, 247, 0.4);
+
+    box-shadow:
+        0 0 14px rgba(168, 85, 247, 0.35);
 }
 
-/* Langues désactivées */
+/* Désactivé */
 .lang-flag.disabled {
     pointer-events: none;
 }
 
 .lang-flag.disabled img {
-    filter: grayscale(100%) opacity(25%);
+    filter: grayscale(100%) opacity(22%);
+
     border: none;
 }
 
 /* ==========================================================================
-   LIGNE DU BAS : COPYRIGHT & RÉSEAUX (CORRIGÉES)
+   BAS DU FOOTER
    ========================================================================== */
+
 .footer-bottom {
     max-width: 1200px;
-    margin: 4rem auto 0 auto;
+
+    margin: 4rem auto 0;
+
     padding-top: 2rem;
-    border-top: 1px solid rgba(168, 85, 247, 0.15);
+
+    border-top: 1px solid rgba(168, 85, 247, 0.12);
+
     display: flex;
+
     flex-wrap: wrap;
+
     justify-content: space-between;
+
     align-items: center;
+
     gap: 2rem;
 }
 
+/* ==========================================================================
+   COPYRIGHT
+   ========================================================================== */
+
 .copyright {
     color: var(--text-muted);
-    font-size: 0.85rem;
-    letter-spacing: 0.5px;
+
+    font-size: 0.84rem;
+
+    letter-spacing: 0.4px;
+
+    line-height: 1.6;
 }
 
-/* Icônes réseaux sociaux */
+/* ==========================================================================
+   SOCIAL ICONS
+   ========================================================================== */
+
 .social-icons {
     display: flex;
-    gap: 1.5rem;
+
+    align-items: center;
+
+    gap: 1.4rem;
 }
 
 .social-icons a {
     text-decoration: none;
-    display: inline-block;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.03);
+
+    border: 1px solid rgba(255, 255, 255, 0.05);
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
 }
 
 .social-icons a img {
-    width: 22px;
-    height: 22px;
+    width: 20px;
+    height: 20px;
+
     object-fit: contain;
+
     display: block;
-    
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    transition:
+        transform 0.25s ease,
+        filter 0.25s ease;
 }
 
-/* Effet au survol (Halo lumineux mauve propre) */
+/* Hover */
+.social-icons a:hover {
+    background: rgba(168, 85, 247, 0.08);
+
+    border-color: rgba(168, 85, 247, 0.18);
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 18px rgba(168, 85, 247, 0.15);
+}
+
 .social-icons a:hover img {
-    opacity: 1;
-    transform: scale(1.2) translateY(-3px);
-    filter: brightness(0) invert(1) drop-shadow(0 0 6px var(--mauve-nebula));
+    transform: scale(1.12);
+
+    filter:
+        brightness(0)
+        invert(1)
+        drop-shadow(0 0 6px var(--mauve-nebula));
+}
+
+/* ==========================================================================
+   TABLETTE
+   ========================================================================== */
+
+@media (max-width: 900px) {
+
+    .site-footer {
+        padding: 4rem 1.5rem 2rem;
+    }
+
+    .footer-container {
+        gap: 2.5rem;
+    }
+}
+
+/* ==========================================================================
+   MOBILE
+   ========================================================================== */
+
+@media (max-width: 700px) {
+
+    .site-footer {
+        padding: 3rem 1rem 1.6rem;
+
+        margin-top: 4rem;
+    }
+
+    .footer-header h5 {
+        margin-bottom: 2.5rem;
+
+        font-size: 1.1rem;
+
+        letter-spacing: 1px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+
+        gap: 2rem;
+    }
+
+    .footer-col {
+        min-width: unset;
+
+        width: 100%;
+    }
+
+    .footer-col-right {
+        align-items: flex-start;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 1.5rem;
+
+        margin-top: 3rem;
+    }
+
+    .social-icons {
+        gap: 1rem;
+    }
+
+    .social-icons a {
+        width: 40px;
+        height: 40px;
+    }
+
+    .social-icons a img {
+        width: 18px;
+        height: 18px;
+    }
+
+    .footer-links a {
+        font-size: 0.9rem;
+    }
+
+    .footer-desc {
+        font-size: 0.88rem;
+    }
+}
+
+/* ==========================================================================
+   PETITS SMARTPHONES
+   ========================================================================== */
+
+@media (max-width: 420px) {
+
+    .site-footer {
+        padding: 2.5rem 0.9rem 1.4rem;
+    }
+
+    .footer-header h5 {
+        font-size: 1rem;
+    }
+
+    .footer-col-title {
+        font-size: 0.88rem;
+    }
+
+    .footer-links a {
+        font-size: 0.86rem;
+    }
+
+    .footer-desc {
+        font-size: 0.84rem;
+
+        line-height: 1.7;
+    }
+
+    .copyright {
+        font-size: 0.78rem;
+    }
+
+    .lang-selector {
+        gap: 0.7rem;
+    }
+
+    .lang-flag img {
+        width: 24px;
+    }
+
+    .social-icons {
+        width: 100%;
+
+        justify-content: flex-start;
+
+        flex-wrap: wrap;
+    }
 }

@@ -6,35 +6,222 @@
 @import "/assets/css/contact.css";
 @import "/assets/css/blog.css";
 @import "/assets/css/article.css";
-@import url("https:/cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css");
 
 /* ==========================================================================
    VARIABLES DE COULEURS (Ambiance Espace Profond)
    ========================================================================== */
 :root {
-    --bg-space: #0b0d17;       /* Fond espace très sombre */
-    --bg-navbar: #16192b;      /* Gris bleuté sombre pour la navbar */
-    --text-main: #f4f4f6;      /* Blanc cassé brillant pour le texte */
-    --text-muted: #94a3b8;     /* Gris poussière d'étoile pour les éléments secondaires */
-    --mauve-nebula: #a855f7;   /* Mauve néon principal */
-    --mauve-glow: #c084fc;     /* Mauve clair pour l'effet de brillance au survol */
-    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --bg-space: #0b0d17;
+    --bg-navbar: rgba(22, 25, 43, 0.85);
+
+    --text-main: #f4f4f6;
+    --text-muted: #94a3b8;
+
+    --mauve-nebula: #a855f7;
+    --mauve-glow: #c084fc;
+
+    --card-bg: rgba(15, 23, 42, 0.72);
+    --border-glow: rgba(192, 132, 252, 0.18);
+
+    --font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Reset de base pour que tout s'aligne bien */
+/* ==========================================================================
+   RESET
+   ========================================================================== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+/* ==========================================================================
+   BODY / FOND GLOBAL
+   ========================================================================== */
 body {
     font-family: var(--font-family);
     color: var(--text-main);
-    background: url('https://www.wallpaperalchemy.com/storage/wallpapers/129/galactic-wallpaper-4k.jpg');
-    background-position: center;
+
+    min-height: 100vh;
+    overflow-x: hidden;
+
+    /* Dégradé sombre + image */
+    background:
+        linear-gradient(
+            180deg,
+            rgba(11, 13, 23, 0.82) 0%,
+            rgba(11, 13, 23, 0.88) 45%,
+            rgba(11, 13, 23, 0.95) 100%
+        ),
+        url("https://www.wallpaperalchemy.com/storage/wallpapers/129/galactic-wallpaper-4k.jpg");
+
+    background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
     background-attachment: fixed;
+
+    line-height: 1.6;
+
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+/* Effet léger de glow global */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background:
+        radial-gradient(circle at top left,
+            rgba(168, 85, 247, 0.14),
+            transparent 30%),
+        radial-gradient(circle at bottom right,
+            rgba(192, 132, 252, 0.10),
+            transparent 35%);
+    z-index: -1;
+}
+
+/* ==========================================================================
+   SELECTION TEXTE
+   ========================================================================== */
+::selection {
+    background: var(--mauve-nebula);
+    color: white;
+}
+
+/* ==========================================================================
+   SCROLLBAR MODERNE
+   ========================================================================== */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #111827;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(
+        180deg,
+        var(--mauve-nebula),
+        var(--mauve-glow)
+    );
+    border-radius: 999px;
+}
+
+/* ==========================================================================
+   LIENS
+   ========================================================================== */
+a {
+    color: var(--text-main);
+    text-decoration: none;
+    transition: 0.25s ease;
+}
+
+a:hover {
+    color: var(--mauve-glow);
+}
+
+/* ==========================================================================
+   BLOCS TYPE CARDS
+   ========================================================================== */
+.card,
+section,
+article {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    background: var(--card-bg);
+
+    border: 1px solid var(--border-glow);
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.35),
+        0 0 20px rgba(168, 85, 247, 0.05);
+}
+
+/* ==========================================================================
+   RESPONSIVE SMARTPHONE
+   ========================================================================== */
+@media (max-width: 768px) {
+
+    body {
+        /* Très important sur mobile :
+           évite les bugs de background-attachment: fixed */
+        background-attachment: scroll;
+
+        /* Recentrage du wallpaper */
+        background-position: center top;
+
+        /* Ajustement pour écrans verticaux */
+        background-size: cover;
+
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    body::before {
+        background:
+            radial-gradient(circle at top,
+                rgba(168, 85, 247, 0.18),
+                transparent 40%);
+    }
+
+    section,
+    article,
+    .card {
+        border-radius: 16px;
+        padding: 18px;
+    }
+
+    h1 {
+        font-size: 2rem;
+        line-height: 1.15;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 0.98rem;
+    }
+}
+
+/* ==========================================================================
+   PETITS SMARTPHONES
+   ========================================================================== */
+@media (max-width: 480px) {
+
+    body {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    h1 {
+        font-size: 1.7rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    p {
+        font-size: 0.95rem;
+    }
+
+    section,
+    article,
+    .card {
+        padding: 14px;
+        border-radius: 14px;
+    }
 }

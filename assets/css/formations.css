@@ -1,138 +1,252 @@
 /* ==========================================================================
-   SECTION EXPÉRIENCES ET FORMATIONS (Design Spatial & Harmonisé)
+   SECTION FORMATIONS — DESIGN SPATIAL MODERNE
    ========================================================================== */
 
-/* Conteneur principal Formations */
 .formations {
     display: flex;
     flex-direction: column;
+
     gap: 3rem;
-    max-width: 850px;
+
+    max-width: 920px;
+
     margin: 3rem auto;
+
     padding: 0 1rem;
 }
 
-/* Carte de formation (Style calqué sur la Timeline) */
+/* ==========================================================================
+   CARTE FORMATION
+   ========================================================================== */
+
 .formation {
     position: relative;
-    background: rgba(18, 18, 24, 0.85);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.07);
-    border-radius: 12px;
+
+    background: rgba(18, 18, 24, 0.82);
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    border: 1px solid rgba(255, 255, 255, 0.06);
+
+    border-radius: 24px;
+
     padding: 2rem;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.28s ease,
+        border-color 0.28s ease,
+        box-shadow 0.28s ease,
+        background 0.28s ease;
 }
 
-/* Effet de survol sur la carte */
+/* Glow subtil */
+.formation::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    pointer-events: none;
+
+    background:
+        radial-gradient(circle at top right,
+            rgba(168, 85, 247, 0.08),
+            transparent 30%);
+}
+
+/* Hover */
 .formation:hover {
-    background: rgba(22, 22, 32, 0.95);
-    border-color: rgba(168, 85, 247, 0.4);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
-    transform: translateY(-2px);
+    background: rgba(22, 22, 32, 0.94);
+
+    border-color: rgba(168, 85, 247, 0.32);
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.42),
+        0 0 35px rgba(168, 85, 247, 0.06);
 }
 
-/* En-tête du bloc (Titre du diplôme + dates) */
+/* ==========================================================================
+   HEADER
+   ========================================================================== */
+
 .formation .titre {
     display: flex;
+
     justify-content: space-between;
     align-items: flex-start;
+
     flex-wrap: wrap;
+
     gap: 1rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+
     padding-bottom: 1.2rem;
+
     margin-bottom: 1.5rem;
 }
 
 .formation .diplome {
-    font-size: 1.35rem;
+    font-size: 1.42rem;
+
     color: #ffffff;
-    font-weight: 700;
-    line-height: 1.4;
+
+    font-weight: 800;
+
+    line-height: 1.35;
+
+    letter-spacing: -0.2px;
 }
 
 .formation .dates {
-    font-size: 0.9rem;
-    color: #94a3b8;
+    display: inline-flex;
+
+    align-items: center;
+
+    font-size: 0.84rem;
+
+    color: var(--text-main);
+
     background: rgba(255, 255, 255, 0.05);
-    padding: 4px 12px;
-    border-radius: 20px;
+
+    padding: 6px 14px;
+
+    border-radius: 999px;
+
     border: 1px solid rgba(255, 255, 255, 0.08);
+
     white-space: nowrap;
+
     font-variant-numeric: tabular-nums;
+
+    backdrop-filter: blur(6px);
 }
 
-/* Bloc Ecole (Nom, Lieu et Logo) */
+/* ==========================================================================
+   ECOLE / UNIVERSITE
+   ========================================================================== */
+
 .formation .ecole {
     display: flex;
+
     align-items: center;
+
     gap: 1rem;
-    margin-bottom: 1.5rem;
+
+    margin-bottom: 1.6rem;
+
     flex-wrap: wrap;
 }
 
 .formation .ecole .nom {
-    font-size: 1.1rem;
-    font-weight: 600;
+    font-size: 1.05rem;
+
+    font-weight: 700;
+
     color: #e2e8f0;
+
+    line-height: 1.4;
 }
 
 .formation .ecole .nom .lien {
-    color: #c084fc;
+    color: var(--mauve-glow);
+
     text-decoration: none;
-    font-weight: 700;
-    transition: color 0.2s;
+
+    transition: color 0.2s ease;
 }
 
 .formation .ecole .nom .lien:hover {
-    color: #a855f7;
+    color: var(--mauve-nebula);
 }
 
 .formation .ecole .lieu {
-    font-size: 0.9rem;
+    font-size: 0.88rem;
+
     color: #64748b;
+
+    margin-top: 0.2rem;
 }
 
-/* Style des logos d'écoles (Calqué sur les logos partenaires du résumé) */
+/* ==========================================================================
+   LOGOS ECOLES
+   ========================================================================== */
+
 .formation .ecole .pic img {
-    height: 42px;
+    height: 46px;
+
     width: auto;
+
     object-fit: contain;
+
     background: #ffffff;
-    border-radius: 6px;
-    padding: 4px 12px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-    filter: grayscale(15%) opacity(0.95);
-    transition: all 0.2s ease-in-out;
+
+    border-radius: 10px;
+
+    padding: 6px 14px;
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.18);
+
+    filter: grayscale(10%) opacity(0.96);
+
+    transition:
+        transform 0.22s ease,
+        filter 0.22s ease,
+        box-shadow 0.22s ease;
 }
 
 .formation:hover .ecole .pic img {
     filter: grayscale(0%) opacity(1);
+
     transform: scale(1.03);
-    box-shadow: 0 4px 12px rgba(168, 85, 247, 0.25);
+
+    box-shadow:
+        0 8px 18px rgba(168, 85, 247, 0.18);
 }
 
-/* Zone dynamique masquée (Accordéon fluide) */
+/* ==========================================================================
+   ACCORDEON
+   ========================================================================== */
+
 .formation .resumé {
     max-height: 0;
+
     overflow: hidden;
+
     opacity: 0;
-    transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+
+    transition:
+        max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+        opacity 0.3s ease;
 }
 
-/* Classe active injectée via JS */
+/* Etat actif */
 .formation.active .resumé {
     opacity: 1;
+
     margin-top: 1rem;
-    border-top: 1px dashed rgba(255, 255, 255, 0.1);
+
+    border-top: 1px dashed rgba(255, 255, 255, 0.08);
+
     padding-top: 1.5rem;
 }
 
-/* Style des descriptions internes */
+/* ==========================================================================
+   TEXTE / DESCRIPTION
+   ========================================================================== */
+
 .formation .resumé .text {
-    font-size: 1.05rem;
-    line-height: 1.6;
-    color: #e2e8f0;
+    font-size: 1rem;
+
+    line-height: 1.8;
+
+    color: #dbe4f0;
 }
 
 .formation .resumé .text strong {
@@ -141,123 +255,325 @@
 
 .formation .resumé .text .lien {
     color: #ffffff;
+
     text-decoration: none;
-    border-bottom: 1px dashed #a855f7;
+
+    border-bottom: 1px dashed var(--mauve-nebula);
+
+    transition: color 0.2s ease;
 }
 
-/* Listes à puces avec flèches mauves */
+.formation .resumé .text .lien:hover {
+    color: var(--mauve-glow);
+}
+
+/* ==========================================================================
+   LISTES
+   ========================================================================== */
+
 .formation .resumé ul {
     list-style: none;
+
     padding: 0;
+
     margin: 1rem 0;
 }
 
 .formation .resumé ul li {
     position: relative;
-    padding-left: 1.25rem;
-    margin-bottom: 0.75rem;
-    color: #94a3b8;
-    line-height: 1.6;
+
+    padding-left: 1.35rem;
+
+    margin-bottom: 0.8rem;
+
+    color: var(--text-muted);
+
+    line-height: 1.7;
+
     font-size: 0.95rem;
 }
 
 .formation .resumé ul li::before {
     content: "▹";
+
     position: absolute;
+
     left: 0;
-    color: #c084fc;
-}
 
-/* Intégration iFrames Google Maps */
-.formation .resumé iframe {
-    width: 100%;
-    max-width: 450px;
-    height: 200px;
-    border-radius: 8px;
-    margin-top: 1.5rem;
-    border: 1px solid rgba(255, 255, 255, 0.08) !important;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-}
+    color: var(--mauve-glow);
 
-/* Bouton d'accordéon (Toggle) */
-.formation .toggle-button {
-    background: none;
-    border: none;
-    color: #c084fc;
-    cursor: pointer;
-    font-size: 0.85rem;
-    font-weight: 600;
-    padding: 0;
-    margin-top: 1.5rem;
-    transition: color 0.2s ease;
-    display: inline-block;
-}
-
-.formation .toggle-button:hover {
-    color: #a855f7;
+    font-weight: bold;
 }
 
 /* ==========================================================================
-   TAGS DE TECHNOLOGIES (Partagé : Expériences & Formations)
+   IFRAME / MAPS
    ========================================================================== */
+
+.formation .resumé iframe {
+    width: 100%;
+
+    max-width: 100%;
+
+    height: 240px;
+
+    border-radius: 16px;
+
+    margin-top: 1.6rem;
+
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.28);
+}
+
+/* ==========================================================================
+   BOUTON TOGGLE
+   ========================================================================== */
+
+.formation .toggle-button {
+    background: none;
+
+    border: none;
+
+    color: var(--mauve-glow);
+
+    cursor: pointer;
+
+    font-size: 0.84rem;
+
+    font-weight: 700;
+
+    padding: 0;
+
+    margin-top: 1.5rem;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.formation .toggle-button:hover {
+    color: var(--mauve-nebula);
+
+    transform: translateX(2px);
+}
+
+/* ==========================================================================
+   TECH TAGS
+   ========================================================================== */
+
 .tech-tags {
     display: flex;
+
     flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-top: 1.5rem;
+
+    gap: 0.55rem;
+
+    margin-top: 1.6rem;
+
     padding-top: 1.2rem;
+
     border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .tech-tags .tag {
     display: inline-flex;
+
     align-items: center;
+
     gap: 6px;
+
     background: rgba(255, 255, 255, 0.04);
+
     border: 1px solid rgba(255, 255, 255, 0.08);
-    padding: 4px 10px;
-    border-radius: 6px;
-    font-size: 0.8rem;
-    color: #94a3b8;
+
+    padding: 6px 11px;
+
+    border-radius: 999px;
+
+    font-size: 0.78rem;
+
+    color: var(--text-muted);
+
     font-family: system-ui, -apple-system, sans-serif;
-    transition: all 0.2s ease;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
 }
 
 .tech-tags .tag img {
     width: 14px;
     height: 14px;
+
     object-fit: contain;
-    /* Reset des filtres appliqués aux logos d'écoles */
+
     background: none !important;
+
     padding: 0 !important;
+
     box-shadow: none !important;
+
     filter: none !important;
 }
 
-/* Effet au survol d'un badge de compétence */
 .tech-tags .tag:hover {
     background: rgba(168, 85, 247, 0.1);
+
     border-color: rgba(168, 85, 247, 0.3);
+
     color: #ffffff;
-    transform: scale(1.02);
+
+    transform: translateY(-1px);
 }
 
-/* Responsivité Mobile */
-@media (max-width: 600px) {
-    .formation {
-        padding: 1.5rem;
+/* ==========================================================================
+   TABLETTE
+   ========================================================================== */
+
+@media (max-width: 900px) {
+
+    .formations {
+        gap: 2.4rem;
     }
+
+    .formation {
+        padding: 1.7rem;
+    }
+
+    .formation .diplome {
+        font-size: 1.25rem;
+    }
+}
+
+/* ==========================================================================
+   MOBILE
+   ========================================================================== */
+
+@media (max-width: 600px) {
+
+    .formations {
+        margin: 2rem auto;
+
+        padding: 0 0.6rem;
+    }
+
+    .formation {
+        padding: 1.3rem;
+
+        border-radius: 18px;
+    }
+
     .formation .titre {
         flex-direction: column;
+
         align-items: flex-start;
-        gap: 0.75rem;
+
+        gap: 0.8rem;
     }
+
     .formation .dates {
         align-self: flex-start;
+
+        font-size: 0.76rem;
+
+        padding: 5px 10px;
     }
+
+    .formation .diplome {
+        font-size: 1.08rem;
+
+        line-height: 1.45;
+    }
+
     .formation .ecole {
         flex-direction: column;
+
         align-items: flex-start;
-        gap: 0.75rem;
+
+        gap: 0.8rem;
+    }
+
+    .formation .ecole .pic img {
+        height: 40px;
+
+        border-radius: 8px;
+
+        padding: 5px 10px;
+    }
+
+    .formation .ecole .nom {
+        font-size: 0.95rem;
+    }
+
+    .formation .ecole .lieu {
+        font-size: 0.8rem;
+    }
+
+    .formation .resumé .text {
+        font-size: 0.94rem;
+
+        line-height: 1.7;
+    }
+
+    .formation .resumé ul li {
+        font-size: 0.9rem;
+
+        line-height: 1.65;
+    }
+
+    .formation .resumé iframe {
+        height: 220px;
+
+        border-radius: 14px;
+    }
+
+    .tech-tags {
+        gap: 0.45rem;
+    }
+
+    .tech-tags .tag {
+        font-size: 0.72rem;
+
+        padding: 5px 9px;
+    }
+}
+
+/* ==========================================================================
+   PETITS SMARTPHONES
+   ========================================================================== */
+
+@media (max-width: 420px) {
+
+    .formation {
+        padding: 1rem;
+
+        border-radius: 16px;
+    }
+
+    .formation .diplome {
+        font-size: 0.98rem;
+    }
+
+    .formation .ecole .pic img {
+        height: 34px;
+
+        max-width: 120px;
+    }
+
+    .formation .resumé iframe {
+        height: 180px;
+    }
+
+    .tech-tags .tag {
+        width: 100%;
+
+        justify-content: center;
     }
 }

@@ -1,276 +1,677 @@
 /* ==========================================================================
    TIMELINE DES EXPÉRIENCES PROFESSIONNELLES
    ========================================================================== */
+
 .timeline-container {
     position: relative;
-    max-width: 850px;
+
+    max-width: 900px;
+
     margin: 0 auto;
-    padding-left: 2rem;
-    border-left: 2px solid rgba(168, 85, 247, 0.2);
+
+    padding-left: 2.4rem;
+
+    border-left: 2px solid rgba(168, 85, 247, 0.16);
 }
+
+/* Glow subtil de la ligne */
+.timeline-container::before {
+    content: "";
+    position: absolute;
+    left: -1px;
+    top: 0;
+    bottom: 0;
+
+    width: 2px;
+
+    background: linear-gradient(
+        180deg,
+        rgba(168, 85, 247, 0.55),
+        rgba(168, 85, 247, 0.05)
+    );
+
+    filter: blur(1px);
+}
+
+/* ==========================================================================
+   CARTES TIMELINE
+   ========================================================================== */
 
 .timeline-item {
     position: relative;
-    /* Fond assombri et rendu opaque pour détacher la carte des étoiles en arrière-plan */
-    background: rgba(18, 18, 24, 0.85);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.07);
-    border-radius: 12px;
+
+    background: rgba(18, 18, 24, 0.82);
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    border: 1px solid rgba(255, 255, 255, 0.06);
+
+    border-radius: 22px;
+
     padding: 2rem;
+
     margin-bottom: 3rem;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.28s ease,
+        border-color 0.28s ease,
+        box-shadow 0.28s ease,
+        background 0.28s ease;
 }
 
-/* Le point lumineux sur la ligne temporelle */
-.timeline-item::before {
-    content: '';
+/* Glow intérieur */
+.timeline-item::after {
+    content: "";
+
     position: absolute;
-    left: calc(-2rem - 6px);
-    top: 2.3rem;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: #0d0d12;
-    border: 2px solid #a855f7;
-    box-shadow: 0 0 8px rgba(168, 85, 247, 0.6);
-    transition: all 0.3s ease;
-    z-index: 2;
+    inset: 0;
+
+    pointer-events: none;
+
+    background:
+        radial-gradient(circle at top right,
+            rgba(168, 85, 247, 0.10),
+            transparent 28%);
 }
 
+/* Point lumineux */
+.timeline-item::before {
+    content: "";
+
+    position: absolute;
+
+    left: calc(-2.4rem - 7px);
+    top: 2.2rem;
+
+    width: 12px;
+    height: 12px;
+
+    border-radius: 50%;
+
+    background: #0b0d17;
+
+    border: 2px solid var(--mauve-nebula);
+
+    box-shadow:
+        0 0 10px rgba(168, 85, 247, 0.65);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+
+    z-index: 5;
+}
+
+/* Hover desktop */
 .timeline-item:hover {
-    background: rgba(22, 22, 32, 0.95);
-    border-color: rgba(168, 85, 247, 0.4);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
-    transform: translateY(-2px);
+    background: rgba(22, 22, 32, 0.94);
+
+    border-color: rgba(168, 85, 247, 0.35);
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.45),
+        0 0 35px rgba(168, 85, 247, 0.08);
 }
 
 .timeline-item:hover::before {
-    background: #a855f7;
-    box-shadow: 0 0 12px #a855f7;
-    transform: scale(1.2);
+    background: var(--mauve-nebula);
+
+    transform: scale(1.15);
+
+    box-shadow:
+        0 0 16px rgba(168, 85, 247, 0.9),
+        0 0 32px rgba(168, 85, 247, 0.35);
 }
 
-/* En-tête des blocs d'expérience */
+/* ==========================================================================
+   HEADER EXPERIENCE
+   ========================================================================== */
+
 .timeline-header {
     display: flex;
+
     justify-content: space-between;
     align-items: flex-start;
+
     flex-wrap: wrap;
+
     gap: 1rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+
     padding-bottom: 1.2rem;
-    margin-bottom: 1.5rem;
+
+    margin-bottom: 1.6rem;
 }
 
 .title-block h3 {
-    font-size: 1.35rem;
+    font-size: 1.45rem;
+
     color: #ffffff;
-    margin: 0.5rem 0 0.25rem 0;
-    font-weight: 700;
+
+    margin: 0.45rem 0 0.3rem 0;
+
+    font-weight: 800;
+
+    line-height: 1.25;
 }
 
 .company {
-    font-size: 0.95rem;
-    color: #94a3b8;
-    font-weight: 400;
+    font-size: 0.96rem;
+
+    color: var(--text-muted);
+
     margin: 0;
 }
 
 .company a {
-    color: #c084fc;
+    color: var(--mauve-glow);
+
     text-decoration: none;
-    font-weight: 600;
-    transition: color 0.2s;
+
+    font-weight: 700;
+
+    transition: color 0.2s ease;
 }
 
 .company a:hover {
-    color: #a855f7;
+    color: var(--mauve-nebula);
 }
 
 .location {
-    font-size: 0.85rem;
+    font-size: 0.84rem;
+
     color: #64748b;
+
+    margin-top: 0.25rem;
 }
 
 .date-block {
-    font-size: 0.9rem;
-    color: #94a3b8;
+    font-size: 0.84rem;
+
+    color: var(--text-main);
+
     background: rgba(255, 255, 255, 0.05);
-    padding: 4px 12px;
-    border-radius: 20px;
+
+    padding: 6px 14px;
+
+    border-radius: 999px;
+
     border: 1px solid rgba(255, 255, 255, 0.08);
+
     font-variant-numeric: tabular-nums;
+
+    backdrop-filter: blur(6px);
+
+    white-space: nowrap;
 }
 
-/* Badges de types de contrats */
+/* ==========================================================================
+   BADGES CONTRATS
+   ========================================================================== */
+
 .badge {
-    display: inline-block;
-    font-size: 0.7rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    padding: 2px 8px;
-    border-radius: 4px;
-}
-.badge-cdi { background: rgba(52, 211, 153, 0.1); color: #34d399; border: 1px solid rgba(52, 211, 153, 0.2); }
-.badge-cdd { background: rgba(96, 165, 250, 0.1); color: #60a5fa; border: 1px solid rgba(96, 165, 250, 0.2); }
+    display: inline-flex;
+    align-items: center;
 
-/* Zone logos et détails */
+    font-size: 0.68rem;
+
+    font-weight: 800;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.8px;
+
+    padding: 4px 10px;
+
+    border-radius: 999px;
+}
+
+.badge-cdi {
+    background: rgba(52, 211, 153, 0.12);
+
+    color: #34d399;
+
+    border: 1px solid rgba(52, 211, 153, 0.2);
+}
+
+.badge-cdd {
+    background: rgba(96, 165, 250, 0.12);
+
+    color: #60a5fa;
+
+    border: 1px solid rgba(96, 165, 250, 0.2);
+}
+
+/* ==========================================================================
+   BODY EXPERIENCE
+   ========================================================================== */
+
 .timeline-body {
     position: relative;
 }
 
+/* ==========================================================================
+   LOGOS PARTENAIRES
+   ========================================================================== */
+
 .partner-logos {
     display: flex;
+
     gap: 1rem;
+
     align-items: center;
+
     margin-bottom: 1.5rem;
-    flex-wrap: wrap; /* Évite que ça déborde sur petit écran si tu ajoutes d'autres logos */
+
+    flex-wrap: wrap;
 }
 
 .logo-partner {
-    height: 42px;            /* Hauteur fixe pour que tout soit aligné sur la même ligne */
-    min-width: 60px;         /* Largeur minimale pour les logos carrés/ronds */
-    max-width: 160px;        /* Largeur maximale étendue pour laisser respirer Alten/Thales */
-    width: auto;             /* L'image prend sa largeur naturelle selon ses proportions */
-    object-fit: contain;     /* Garde le logo intact sans aucune déformation */
-    background: #ffffff;     /* Fond blanc */
-    border-radius: 6px;      /* Bordures arrondies */
-    padding: 6px 14px;       /* Ajustement du padding pour les logos étirés */
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-    
-    filter: grayscale(15%) opacity(0.95);
-    transition: all 0.2s ease-in-out;
+    height: 44px;
+
+    min-width: 64px;
+
+    max-width: 170px;
+
+    width: auto;
+
+    object-fit: contain;
+
+    background: #ffffff;
+
+    border-radius: 10px;
+
+    padding: 7px 14px;
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.18);
+
+    filter: grayscale(10%) opacity(0.96);
+
+    transition:
+        transform 0.22s ease,
+        filter 0.22s ease,
+        box-shadow 0.22s ease;
 }
 
-/* Effet au survol de la carte */
 .timeline-item:hover .logo-partner {
     filter: grayscale(0%) opacity(1);
+
     transform: scale(1.03);
-    box-shadow: 0 4px 12px rgba(168, 85, 247, 0.25);
+
+    box-shadow:
+        0 8px 18px rgba(168, 85, 247, 0.18);
 }
 
+/* ==========================================================================
+   INTRO MISSION
+   ========================================================================== */
+
 .mission-intro {
-    font-size: 1.05rem;
-    line-height: 1.6;
+    font-size: 1.03rem;
+
+    line-height: 1.75;
+
     color: #e2e8f0;
+
     margin-bottom: 1rem;
 }
 
-/* Structure de l'accordéon masqué */
+/* ==========================================================================
+   ACCORDEON
+   ========================================================================== */
+
 .collapsible-content {
     max-height: 0;
+
     overflow: hidden;
+
     opacity: 0;
-    transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+
+    transition:
+        max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+        opacity 0.3s ease;
 }
 
 .experience-details ul {
     list-style: none;
+
     padding: 0;
+
     margin: 1rem 0;
 }
 
 .experience-details ul li {
     position: relative;
-    padding-left: 1.25rem;
-    margin-bottom: 0.75rem;
-    color: #94a3b8;
-    line-height: 1.6;
+
+    padding-left: 1.4rem;
+
+    margin-bottom: 0.85rem;
+
+    color: var(--text-muted);
+
+    line-height: 1.75;
+
     font-size: 0.95rem;
 }
 
 .experience-details ul li::before {
     content: "▹";
+
     position: absolute;
+
     left: 0;
-    color: #c084fc;
+
+    color: var(--mauve-glow);
+
+    font-weight: bold;
 }
 
 .experience-details a {
     color: #ffffff;
+
     text-decoration: none;
-    border-bottom: 1px dashed #a855f7;
+
+    border-bottom: 1px dashed var(--mauve-nebula);
+
+    transition: color 0.2s ease;
 }
 
-/* Conteneur de téléchargement */
+.experience-details a:hover {
+    color: var(--mauve-glow);
+}
+
+/* ==========================================================================
+   DOWNLOAD
+   ========================================================================== */
+
 .download-container {
-    margin: 1.5rem 0 0.5rem 0;
+    margin: 1.6rem 0 0.5rem 0;
 }
 
 .btn-download {
     display: inline-flex;
+
     align-items: center;
+    gap: 0.5rem;
+
     background: rgba(168, 85, 247, 0.1);
-    border: 1px solid rgba(168, 85, 247, 0.25);
+
+    border: 1px solid rgba(168, 85, 247, 0.22);
+
     color: #ffffff !important;
-    padding: 8px 16px;
+
+    padding: 10px 18px;
+
     font-size: 0.9rem;
-    border-radius: 6px;
+
+    border-radius: 12px;
+
     text-decoration: none !important;
-    transition: all 0.2s ease;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
 }
 
 .btn-download:hover {
-    background: rgba(168, 85, 247, 0.2);
-    border-color: #c084fc;
+    background: rgba(168, 85, 247, 0.18);
+
+    border-color: var(--mauve-glow);
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 18px rgba(168, 85, 247, 0.18);
 }
 
-/* Tags de technologies en bas de carte */
+/* ==========================================================================
+   TECH TAGS
+   ========================================================================== */
+
 .tech-tags {
     display: flex;
+
     flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-top: 1.5rem;
+
+    gap: 0.6rem;
+
+    margin-top: 1.6rem;
 }
 
 .tech-tags .tag {
     display: inline-flex;
+
     align-items: center;
     gap: 6px;
+
     background: rgba(255, 255, 255, 0.04);
+
     border: 1px solid rgba(255, 255, 255, 0.08);
-    padding: 4px 10px;
-    border-radius: 6px;
-    font-size: 0.8rem;
-    color: #94a3b8;
+
+    padding: 6px 11px;
+
+    border-radius: 999px;
+
+    font-size: 0.78rem;
+
+    color: var(--text-muted);
+
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease;
+}
+
+.tech-tags .tag:hover {
+    border-color: rgba(168, 85, 247, 0.35);
+
+    background: rgba(168, 85, 247, 0.08);
 }
 
 .tech-tags .tag img {
     width: 14px;
     height: 14px;
+
     object-fit: contain;
 }
 
-/* Boutons d'accordéon (Toggle) */
+/* ==========================================================================
+   TOGGLE BUTTON
+   ========================================================================== */
+
 .toggle-button {
     background: none;
+
     border: none;
-    color: #c084fc;
+
+    color: var(--mauve-glow);
+
     cursor: pointer;
+
     font-size: 0.85rem;
-    font-weight: 600;
+
+    font-weight: 700;
+
     padding: 0;
+
     margin-top: 1rem;
-    transition: color 0.2s ease;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
 }
 
 .toggle-button:hover {
-    color: #a855f7;
+    color: var(--mauve-nebula);
+
+    transform: translateX(2px);
 }
 
-/* Responsivité mobile */
+/* ==========================================================================
+   TABLETTE
+   ========================================================================== */
+
+@media (max-width: 900px) {
+
+    .timeline-container {
+        padding-left: 1.8rem;
+    }
+
+    .timeline-item {
+        padding: 1.7rem;
+    }
+}
+
+/* ==========================================================================
+   MOBILE
+   ========================================================================== */
+
 @media (max-width: 600px) {
+
     .timeline-container {
         padding-left: 1rem;
+
+        border-left-width: 1px;
     }
+
+    .timeline-item {
+        padding: 1.25rem;
+
+        border-radius: 18px;
+
+        margin-bottom: 2rem;
+    }
+
+    .timeline-item::before {
+        left: calc(-1rem - 6px);
+
+        top: 1.6rem;
+
+        width: 10px;
+        height: 10px;
+    }
+
     .timeline-header {
         flex-direction: column;
+
         align-items: flex-start;
-        gap: 0.5rem;
+
+        gap: 0.7rem;
+
+        margin-bottom: 1.2rem;
     }
+
+    .title-block h3 {
+        font-size: 1.15rem;
+    }
+
+    .company {
+        font-size: 0.88rem;
+    }
+
+    .location {
+        font-size: 0.78rem;
+    }
+
     .date-block {
         align-self: flex-start;
+
+        font-size: 0.76rem;
+
+        padding: 5px 10px;
+    }
+
+    .partner-logos {
+        gap: 0.7rem;
+    }
+
+    .logo-partner {
+        height: 38px;
+
+        max-width: 130px;
+
+        padding: 6px 10px;
+
+        border-radius: 8px;
+    }
+
+    .mission-intro {
+        font-size: 0.94rem;
+
+        line-height: 1.65;
+    }
+
+    .experience-details ul li {
+        font-size: 0.9rem;
+
+        line-height: 1.65;
+    }
+
+    .btn-download {
+        width: 100%;
+
+        justify-content: center;
+
+        padding: 12px 16px;
+    }
+
+    .tech-tags {
+        gap: 0.45rem;
+    }
+
+    .tech-tags .tag {
+        font-size: 0.72rem;
+
+        padding: 5px 9px;
+    }
+
+    .toggle-button {
+        font-size: 0.8rem;
+    }
+}
+
+/* ==========================================================================
+   PETITS SMARTPHONES
+   ========================================================================== */
+
+@media (max-width: 420px) {
+
+    .timeline-item {
+        padding: 1rem;
+
+        border-radius: 16px;
+    }
+
+    .title-block h3 {
+        font-size: 1.02rem;
+    }
+
+    .mission-intro {
+        font-size: 0.9rem;
+    }
+
+    .logo-partner {
+        height: 34px;
+
+        max-width: 110px;
+    }
+
+    .tech-tags {
+        margin-top: 1.2rem;
+    }
+
+    .tech-tags .tag {
+        width: 100%;
+
+        justify-content: center;
     }
 }

@@ -1,127 +1,391 @@
 /* ==========================================================================
-   STRUCTURE DE LA NAVBAR
+   NAVBAR — STRUCTURE GLOBALE
    ========================================================================== */
+
 .navbar {
     display: flex;
+
     justify-content: space-between;
     align-items: center;
-    background-color: var(--bg-navbar);
-    padding: 0.8rem 2rem;
+
     position: sticky;
     top: 0;
+
     z-index: 1000;
-    /* Effet discret de vitre de vaisseau spatial (Glassmorphism) */
-    border-bottom: 1px solid rgba(168, 85, 247, 0.2); 
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+
+    padding: 0.9rem 2rem;
+
+    background: rgba(15, 15, 24, 0.78);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border-bottom: 1px solid rgba(168, 85, 247, 0.16);
+
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, 0.35);
+
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease;
 }
 
-/* Conteneur des onglets (Logo + Liens) */
+/* Glow discret */
+.navbar::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    pointer-events: none;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(168, 85, 247, 0.04),
+            transparent
+        );
+}
+
+/* ==========================================================================
+   TABS / NAVIGATION
+   ========================================================================== */
+
 .tabs {
     display: flex;
+
     align-items: center;
-    gap: 2.5rem; /* Espace entre chaque lien */
+
+    gap: 2.2rem;
 }
 
-/* Style du Logo */
+/* ==========================================================================
+   LOGO
+   ========================================================================== */
+
+.logo {
+    position: relative;
+}
+
 .logo img {
-    height: 45px; /* Ajuste selon ton image */
+    height: 48px;
     width: auto;
+
     display: block;
-    border-radius: 50%; /* Si tu veux un logo arrondi style planète */
-    transition: transform 0.3s ease;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        filter 0.35s ease;
 }
 
 .logo img:hover {
-    transform: rotate(10deg) scale(1.05); /* Léger effet de rotation au survol */
+    transform: rotate(8deg) scale(1.06);
+
+    box-shadow:
+        0 0 18px rgba(168, 85, 247, 0.35);
+
+    filter: brightness(1.08);
 }
 
 /* ==========================================================================
-   ANIMATION DES LIENS (Ligne progressive)
+   LIENS NAVIGATION
    ========================================================================== */
+
 .tab {
-    color: var(--text-muted);
-    text-decoration: none;
-    font-size: 0.95rem;
-    font-weight: 500;
-    letter-spacing: 0.5px;
     position: relative;
+
+    color: var(--text-muted);
+
+    text-decoration: none;
+
+    font-size: 0.94rem;
+    font-weight: 600;
+
+    letter-spacing: 0.5px;
+
     padding: 0.5rem 0;
-    transition: color 0.3s ease;
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
 }
 
-/* La ligne en dessous (cachée au départ) */
+/* Ligne animée */
 .tab::after {
-    content: '';
+    content: "";
+
     position: absolute;
-    bottom: 0;
+
     left: 0;
-    width: 0; /* Largeur initiale à 0 */
+    bottom: 0;
+
+    width: 0;
     height: 2px;
-    background: linear-gradient(90deg, var(--mauve-nebula), var(--mauve-glow));
-    box-shadow: 0 0 8px var(--mauve-nebula); /* Effet néon / laser */
-    transition: width 0.3s ease; /* Animation fluide de la gauche vers la droite */
+
+    border-radius: 999px;
+
+    background: linear-gradient(
+        90deg,
+        var(--mauve-nebula),
+        var(--mauve-glow)
+    );
+
+    box-shadow:
+        0 0 10px rgba(168, 85, 247, 0.55);
+
+    transition:
+        width 0.28s ease;
 }
 
-/* Au survol du lien */
 .tab:hover {
     color: var(--text-main);
+
+    transform: translateY(-1px);
 }
 
 .tab:hover::after {
-    width: 100%; /* La ligne se déploie sur toute la largeur */
+    width: 100%;
+}
+
+/* Onglet actif */
+.tab.active {
+    color: var(--text-main);
+}
+
+.tab.active::after {
+    width: 100%;
 }
 
 /* ==========================================================================
-   BOUTONS (Forme moderne avec angles adoucis)
+   BOUTONS
    ========================================================================== */
+
 .buttons {
     display: flex;
+
     align-items: center;
+
     gap: 1rem;
 }
 
-/* Style commun aux boutons */
+/* ==========================================================================
+   BASE BOUTONS
+   ========================================================================== */
+
 .btn {
-    display: inline-block;
-    padding: 0.6rem 1.4rem;
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 0.72rem 1.45rem;
+
     font-size: 0.9rem;
-    font-weight: 600;
+    font-weight: 700;
+
     text-decoration: none;
-    border-radius: 8px; /* Forme de bouton moderne (pas trop rond, pas trop carré) */
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    border-radius: 14px;
+
     cursor: pointer;
-    letter-spacing: 0.5px;
+
+    letter-spacing: 0.4px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.22s ease,
+        box-shadow 0.22s ease,
+        background 0.22s ease,
+        border-color 0.22s ease,
+        color 0.22s ease;
 }
 
-/* Bouton Tipeee (Plein - Attire l'attention comme une étoile) */
+/* ==========================================================================
+   TIPEEE BUTTON
+   ========================================================================== */
+
 .btn-tipeee {
-    background-color: var(--mauve-nebula);
+    background:
+        linear-gradient(
+            135deg,
+            var(--mauve-nebula),
+            var(--mauve-glow)
+        );
+
     color: var(--text-main);
-    border: 1px solid var(--mauve-nebula);
-    box-shadow: 0 0 15px rgba(168, 85, 247, 0.3);
+
+    border: 1px solid rgba(192, 132, 252, 0.45);
+
+    box-shadow:
+        0 0 18px rgba(168, 85, 247, 0.22);
 }
 
 .btn-tipeee:hover {
-    background-color: var(--mauve-glow);
-    border-color: var(--mauve-glow);
-    box-shadow: 0 0 20px rgba(192, 132, 252, 0.6);
-    transform: translateY(-2px); /* Léger effet de lévitation */
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 25px rgba(168, 85, 247, 0.35),
+        0 0 24px rgba(192, 132, 252, 0.25);
+
+    filter: brightness(1.05);
 }
 
-/* Bouton Contact (Style "Outline" transparent et discret) */
+/* ==========================================================================
+   CONTACT BUTTON
+   ========================================================================== */
+
 .btn-contact {
-    background-color: transparent;
+    background: rgba(255, 255, 255, 0.03);
+
     color: var(--text-main);
-    border: 1px solid rgba(244, 244, 246, 0.3); /* Bordure blanche transparente */
+
+    border: 1px solid rgba(255, 255, 255, 0.14);
+
+    backdrop-filter: blur(8px);
 }
 
 .btn-contact:hover {
-    background-color: rgba(244, 244, 246, 0.08); /* Léger fond blanc translucide */
-    border-color: var(--text-main);
+    background: rgba(255, 255, 255, 0.07);
+
+    border-color: rgba(255, 255, 255, 0.3);
+
     transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(255, 255, 255, 0.06);
 }
 
-/* Effet quand on clique sur les boutons (Enfoncement) */
+/* ==========================================================================
+   ACTIVE CLICK
+   ========================================================================== */
+
 .btn:active {
-    transform: translateY(0);
+    transform: scale(0.98);
+}
+
+/* ==========================================================================
+   TABLETTE
+   ========================================================================== */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        padding: 0.85rem 1.4rem;
+    }
+
+    .tabs {
+        gap: 1.4rem;
+    }
+
+    .tab {
+        font-size: 0.88rem;
+    }
+
+    .btn {
+        padding: 0.68rem 1.2rem;
+    }
+}
+
+/* ==========================================================================
+   MOBILE
+   ========================================================================== */
+
+@media (max-width: 700px) {
+
+    .navbar {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 1rem;
+
+        padding: 1rem;
+    }
+
+    .tabs {
+        width: 100%;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        gap: 1rem;
+    }
+
+    .logo {
+        display: flex;
+        justify-content: center;
+    }
+
+    .logo img {
+        height: 42px;
+    }
+
+    .buttons {
+        width: 100%;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        gap: 0.8rem;
+    }
+
+    .btn {
+        flex: 1;
+
+        min-width: 140px;
+
+        text-align: center;
+    }
+
+    .tab {
+        font-size: 0.85rem;
+
+        padding: 0.35rem 0;
+    }
+}
+
+/* ==========================================================================
+   PETITS SMARTPHONES
+   ========================================================================== */
+
+@media (max-width: 420px) {
+
+    .navbar {
+        padding: 0.85rem 0.8rem;
+    }
+
+    .tabs {
+        gap: 0.7rem 1rem;
+    }
+
+    .tab {
+        font-size: 0.8rem;
+    }
+
+    .btn {
+        width: 100%;
+
+        min-width: unset;
+
+        padding: 0.78rem 1rem;
+
+        font-size: 0.84rem;
+
+        border-radius: 12px;
+    }
+
+    .logo img {
+        height: 38px;
+    }
 }
