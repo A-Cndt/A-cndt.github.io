@@ -51,14 +51,7 @@ body {
     overflow-x: hidden;
 
     /* Dégradé sombre + image */
-    background:
-        linear-gradient(
-            180deg,
-            rgba(11, 13, 23, 0.82) 0%,
-            rgba(11, 13, 23, 0.88) 45%,
-            rgba(11, 13, 23, 0.95) 100%
-        ),
-        url("https://www.wallpaperalchemy.com/storage/wallpapers/129/galactic-wallpaper-4k.jpg");
+    background: url('https://www.wallpaperalchemy.com/storage/wallpapers/129/galactic-wallpaper-4k.jpg');
 
     background-position: center center;
     background-repeat: no-repeat;
