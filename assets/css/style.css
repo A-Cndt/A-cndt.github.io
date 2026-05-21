@@ -8,9 +8,6 @@
 @import "/assets/css/article.css";
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css");
 
-/* ==========================================================================
-   VARIABLES DE COULEURS
-   ========================================================================== */
 :root {
     --bg-space: #0b0d17;
     --card-bg: rgba(15, 23, 42, 0.72);
@@ -21,68 +18,53 @@
 }
 
 /* ==========================================================================
-   BODY / FOND GLOBAL
+   FOND UNIVERSEL (Net sur tout support)
    ========================================================================== */
 body {
+    margin: 0;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     color: var(--text-main);
     min-height: 100vh;
     overflow-x: hidden;
-    margin: 0;
     
-    /* Fond desktop */
-    background-color: #0b0d17;
+    /* Propriétés de rendu haute qualité */
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    
+    /* Configuration de l'image de fond */
+    background-color: var(--bg-space);
     background-image: url('https://www.wallpaperalchemy.com/storage/wallpapers/129/galactic-wallpaper-4k.jpg');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    background-attachment: fixed;
+    
+    /* Évite la pixellisation liée à 'fixed' sur Safari/iPhone */
+    background-attachment: scroll; 
 }
 
 /* ==========================================================================
-   RESPONSIVE SMARTPHONE (Optimisation iOS)
+   RESPONSIVE & OPTIMISATION ECRANS HAUTE DENSITÉ
    ========================================================================== */
 @media (max-width: 768px) {
     body {
-        /* On remplace par l'image verticale */
         background-image: url('/assets/images/background.jpeg');
-        
-        /* Pour iOS, il est crucial d'utiliser 'scroll' au lieu de 'fixed' 
-           pour empêcher Safari de dégrader la qualité de l'image */
-        background-attachment: scroll;
         background-position: center top;
-        background-size: cover;
+        
+        /* Force l'accélération matérielle */
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
         
         padding-left: 14px;
         padding-right: 14px;
-        
-    }
-
-    section, article, .card {
-        padding: 18px;
-        border-radius: 16px;
     }
 }
 
 /* ==========================================================================
-   PETITS SMARTPHONES
-   ========================================================================== */
-@media (max-width: 480px) {
-    body {
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-
-    h1 { font-size: 1.7rem; }
-    h2 { font-size: 1.3rem; }
-}
-
-/* ==========================================================================
-   ELEMENTS COMMUNS
+   COMPOSANTS
    ========================================================================== */
 .card, section, article {
     backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* Indispensable pour Safari */
     background: var(--card-bg);
     border: 1px solid var(--border-glow);
     border-radius: 20px;
